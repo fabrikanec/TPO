@@ -11,7 +11,6 @@ public class Main {
         arthur.palp();
         TerrifyingShadows terrifyingShadows = ford.getTerrifyingShadows();
         arthur.setTerrifyingShadows(terrifyingShadows);
-        Air air = new Air();
-        DeepNoise deepNoise = new DeepNoise();
+        arthur.putTogether();
     }
 }

@@ -10,5 +10,9 @@ public class Air {
         System.out.println("воздух был полон раздражавших его легкие прелых запахов, " +
                            "которые никак не идентифицировались; ");
     }
-    Stream<Smell> smells = Stream.generate(() -> null);
+    Stream<AbstractSmell> smells = Stream.generate(() -> null);
+
+    public Stream<AbstractSmell> getSmells() {
+        return smells;
+    }
 }

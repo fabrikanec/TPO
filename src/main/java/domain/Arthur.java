@@ -5,6 +5,7 @@ package domain;
  */
 public class Arthur {
     private TerrifyingShadows terrifyingShadows;
+    Environment env;
 
     public Arthur() {
         System.out.print("Aртур ");
@@ -19,6 +20,12 @@ public class Arthur {
     }
 
     public void putTogether() {
+        env = new Environment();
+        for (;;) {
+            if (env.getDeepNoise() != null) {
+                continue;
+            }
+        }
 
     }
 
@@ -27,5 +34,13 @@ public class Arthur {
             System.out.println("Ему казалось, что все вокруг него кишит зловещими нечеловеческими фигурами;");
         }
         this.terrifyingShadows = terrifyingShadows;
+    }
+
+    public Environment getEnv() {
+        return env;
+    }
+
+    public TerrifyingShadows getTerrifyingShadows() {
+        return terrifyingShadows;
     }
 }

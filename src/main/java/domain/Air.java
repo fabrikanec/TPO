@@ -8,7 +8,7 @@ import java.util.stream.Stream;
 public class Air {
     {
         System.out.println("воздух был полон раздражавших его легкие прелых запахов, " +
-                "           которые никак не идентифицировались;");
+                           "которые никак не идентифицировались; ");
     }
     Stream<Smell> smells = Stream.generate(() -> null);
 }

@@ -5,7 +5,7 @@ package domain;
  */
 public class TerrifyingShadows {
     public void sway() {
-        System.out.print("cнова закачались");
+        System.out.print("Снова закачались ");
     }
 
     public void runArround() {

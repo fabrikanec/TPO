@@ -10,93 +10,105 @@ import static org.junit.Assert.*;
  * Created by root on 3/16/17.
  */
 public class DomainModelTest {
-
     private Ford ford;
+    private TerrifyingShadows shadows;
     private Arthur arthur;
-    private Environment environment;
 
     @Before
     public void beforeClass() {
+        ford = new Ford();
+        ford.seekTheSwitch();
+        shadows = ford.getTerrifyingShadows();
+        arthur = shadows.getArthur();
+        //System.out.close();
+    }
+
+    @Test(expected = IllegalStateException.class)
+    public void testHasSwitchAndTryFindMore() throws IllegalStateException {
+        ford.seekTheSwitch();
+    }
+
+    @Test
+    public void testAppearanceShadowsBeforeLight() {
+        Ford ford = new Ford();
+        TerrifyingShadows shadows = ford.getTerrifyingShadows();
+        assertNull(shadows);
+
+    }
+
+    @Test
+    public void testAppearanceShadowsAfterLight() {
+        Ford ford = new Ford();
+        ford.lightUpTheMatch();
+        TerrifyingShadows shadows = ford.getTerrifyingShadows();
+        assertEquals(shadows.isLight(), true);
+
+    }
+
+    @Test
+    public void testArturSittingBeforeShadowAppearance() {
+        Arthur arthur = new Arthur();
+        assertEquals(arthur.isSitting(), true);
+    }
+
+    @Test
+    public void testArturStandingAfterShadowAppearance() {
         Ford ford = new Ford();
         ford.seekTheSwitch();
-        Arthur arthur = new Arthur(true);
-        arthur.standUp();
-        arthur.palp();
-        TerrifyingShadows terrifyingShadows = ford.getTerrifyingShadows();
-        arthur.setTerrifyingShadows(terrifyingShadows);
-        arthur.putTogether();
+        TerrifyingShadows shadows = ford.getTerrifyingShadows();
+        Arthur arthur = shadows.getArthur();
+        assertEquals(arthur.isSitting(), false);
     }
 
     @Test
-    public void testWhosArthurLookingAt() {
-        assertEquals(arthur.getEyes().getLookingAt(), ford);
+    public void testEvilShadowsBeforeShadowAppearance() {
+        Arthur arthur = new Arthur();
+        TerrifyingShadows shadows = arthur.getTerrifyingShadows();
+        assertNull(shadows);
     }
 
     @Test
-    public void testArthurIsNotYetConfident() {
-        assertFalse(arthur.isConfident());
+    public void testEvilShadowsAfterShadowAppearance() {
+        ford = new Ford();
+        ford.seekTheSwitch();
+        shadows = ford.getTerrifyingShadows();
+        arthur = shadows.getArthur();
+        assertNotNull(arthur.getTerrifyingShadows());
     }
 
     @Test
-    public void testArthurBecomesConfident() {
-        environment.addEnvironmentElement(new CerealPacket());
-        assertTrue(arthur.isConfident());
+    public void testEnvironmentBeforeEvilShadows() {
+        ford = new Ford();
+        arthur = new Arthur();
+        assertNull(arthur.getEnv());
     }
 
     @Test
-    public void testCarealPacketSimpe() {
-        assertTrue(new CerealPacket() instanceof Simple);
+    public void testAirAfterEvilShadows() {
+        ford = new Ford();
+        ford.seekTheSwitch();
+        shadows = ford.getTerrifyingShadows();
+        arthur = shadows.getArthur();
+        assertNotNull(arthur.getEnv().getAir());
     }
 
     @Test
-    public void testCarealPacketFamiliar() {
-        assertTrue(new CerealPacket() instanceof Familiar);
+    public void testIdentSmell() {
+        final int limit = 42;
+        ford = new Ford();
+        ford.seekTheSwitch();
+        shadows = ford.getTerrifyingShadows();
+        arthur = shadows.getArthur();
+        arthur.getEnv().getAir().getSmells().limit(42).forEach(x -> assertNull(x.getID()));
     }
 
     @Test
-    public void testArthursEyesBlink() {
-        assertTrue(arthur.getEyes().isBlinking());
-    }
+    public void testDeepNoizeAfterEvilShadows() {
+        ford = new Ford();
+        ford.seekTheSwitch();
+        shadows = ford.getTerrifyingShadows();
+        arthur = shadows.getArthur();
+        assertNotNull(arthur.getEnv().getDeepNoise());
 
-    @Test
-    public void testFishSwimming() {
-        assertTrue(((Bottle) ford.getHand().getHoldable()).getFish().isSwimming());
-    }
-
-    @Test
-    public void testFishShining() {
-        assertTrue(((Bottle) ford.getHand().getHoldable()).getFish().isShining());
-    }
-
-    @Test
-    public void testFordsFishIsLittle() {
-        assertEquals(((Bottle) ford.getHand().getHoldable()).getFish().getSize(), FishSize.SMALL);
-
-    }
-
-    @Test
-    public void testFordsFishIsYellow() {
-        assertEquals(((Bottle) ford.getHand().getHoldable()).getFish().getColor(), FishColor.YELLOW);
-
-    }
-
-    @Test
-    public void testBottleMaterial() {
-        assertEquals(((Bottle) ford.getHand().getHoldable()).getBottleMaterial(), BottleMaterial.GLASS);
-    }
-
-    @Test
-    public void testFordHandInit() {
-        assertNotNull("Ford has no hand!", ford.getHand());
-    }
-
-    @Test
-    public void testArthurEyesInit() {
-        assertNotNull("Arthur has no eyes!", arthur.getEyes());
-    }
-
-    @Test
-    public void testFordBottleInit() {
-        assertNotNull("Ford has no bottle in hand!", ford.getHand().getHoldable());
     }
 }

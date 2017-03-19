@@ -5,6 +5,7 @@ package domainModel;
  */
 public class TerrifyingShadows {
     private boolean light;
+    private Arthur arthur;
 
     public void setLight(boolean light) {
         this.light = light;
@@ -17,6 +18,19 @@ public class TerrifyingShadows {
     public void swayAndRunArround() {
         if (isLight()) {
             System.out.print("Снова закачались и заметались чудовищные тени. ");
+            arthurAction();
         }
+    }
+
+    public void arthurAction() {
+     this.arthur = new Arthur();
+     arthur.standUp();
+     arthur.palp();
+     arthur.setTerrifyingShadows(this);
+     arthur.putTogether();
+    }
+
+    public Arthur getArthur() {
+        return arthur;
     }
 }

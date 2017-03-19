@@ -1,5 +1,7 @@
 package domainModel;
 
+import com.sun.istack.internal.Nullable;
+
 /**
  * Created by root on 3/16/17.
  */
@@ -27,5 +29,10 @@ public class Smell extends AbstractSmell {
     @Override
     public boolean isRotten() {
         return super.isRotten();
+    }
+
+    @Nullable
+    public Smell getID() {
+        return null;
     }
 }

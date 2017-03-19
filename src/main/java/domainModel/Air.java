@@ -14,7 +14,7 @@ public class Air {
         this.arthur = arthur;
 
         if (arthur != null && !arthur.isSitting()) {
-            smells = Stream.generate(() -> null);
+            smells = Stream.generate(() -> new Smell(true, true));
             System.out.println("воздух был полон раздражавших его легкие прелых запахов, " +
                     "которые никак не идентифицировались; ");
         }

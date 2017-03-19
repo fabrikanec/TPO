@@ -5,13 +5,18 @@ package domainModel;
  */
 public class Ford {
     private TerrifyingShadows terrifyingShadows;
-
-    public void seekTheSwitch() {
-        lightUpTheMatch();
+    private boolean hasSwitch = false;
+    public void seekTheSwitch() throws IllegalStateException {
+        if (!hasSwitch) {
+            lightUpTheMatch();
+        } else {
+            throw new IllegalStateException();
+        }
     }
 
     public void lightUpTheMatch() {
         System.out.println("Форд зажег еще одну спичку, чтобы найти выключатель.");
+        hasSwitch = true;
         terrifyingShadows = new TerrifyingShadows();
         terrifyingShadows.setLight(true);
         terrifyingShadows.swayAndRunArround();
@@ -19,5 +24,9 @@ public class Ford {
 
     public TerrifyingShadows getTerrifyingShadows() {
         return terrifyingShadows;
+    }
+
+    public boolean hasSwith() {
+        return hasSwitch;
     }
 }

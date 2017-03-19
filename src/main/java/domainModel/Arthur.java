@@ -7,10 +7,9 @@ public class Arthur {
 
     private TerrifyingShadows terrifyingShadows;
     private Environment env;
-    private boolean isSitting;
+    private boolean isSitting = true;
 
-    public Arthur(boolean isSitting) {
-        this.isSitting = isSitting;
+    public Arthur() {
         System.out.print("Aртур ");
     }
 
@@ -29,7 +28,7 @@ public class Arthur {
         env.setDeepNoise(new DeepNoise(this));
         for (;;) {
             if (env.getDeepNoise() != null) {
-                continue;
+                break;
             }
         }
 

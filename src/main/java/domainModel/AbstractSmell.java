@@ -27,4 +27,6 @@ public abstract class AbstractSmell {
     public boolean isRotten() {
         return rotten;
     }
+
+    public abstract AbstractSmell getID();
 }

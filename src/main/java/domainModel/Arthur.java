@@ -1,17 +1,21 @@
-package domain;
+package domainModel;
 
 /**
  * Created by root on 3/16/17.
  */
 public class Arthur {
-    private TerrifyingShadows terrifyingShadows;
-    Environment env;
 
-    public Arthur() {
+    private TerrifyingShadows terrifyingShadows;
+    private Environment env;
+    private boolean isSitting;
+
+    public Arthur(boolean isSitting) {
+        this.isSitting = isSitting;
         System.out.print("Aртур ");
     }
 
     public void standUp() {
+        isSitting = false;
         System.out.print("с трудом встал на ноги");
     }
 
@@ -21,6 +25,8 @@ public class Arthur {
 
     public void putTogether() {
         env = new Environment();
+        env.setAir(new Air(this));
+        env.setDeepNoise(new DeepNoise(this));
         for (;;) {
             if (env.getDeepNoise() != null) {
                 continue;
@@ -42,5 +48,9 @@ public class Arthur {
 
     public TerrifyingShadows getTerrifyingShadows() {
         return terrifyingShadows;
+    }
+
+    public boolean isSitting() {
+        return isSitting;
     }
 }

@@ -1,4 +1,4 @@
-package domain;
+package domainModel;
 
 /**
  * Created by root on 3/19/17.
@@ -8,8 +8,6 @@ public class Environment {
     private DeepNoise deepNoise;
 
     public Environment() {
-        air = new Air();
-        deepNoise = new DeepNoise();
     }
 
     public Air getAir() {
@@ -18,5 +16,13 @@ public class Environment {
 
     public DeepNoise getDeepNoise() {
         return deepNoise;
+    }
+
+    public void setAir(Air air) {
+        this.air = air;
+    }
+
+    public void setDeepNoise(DeepNoise deepNoise) {
+        this.deepNoise = deepNoise;
     }
 }

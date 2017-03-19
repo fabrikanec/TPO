@@ -1,4 +1,4 @@
-package domain;
+package domainModel;
 
 /**
  * Created by root on 3/16/17.

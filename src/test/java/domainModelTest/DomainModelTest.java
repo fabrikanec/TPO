@@ -3,6 +3,12 @@ package domainModelTest;
 import org.junit.Before;
 import org.junit.Test;
 import domainModel.*;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.PrintStream;
+
 import static org.junit.Assert.*;
 
 
@@ -20,7 +26,13 @@ public class DomainModelTest {
         ford.seekTheSwitch();
         shadows = ford.getTerrifyingShadows();
         arthur = shadows.getArthur();
-        //System.out.close();
+        try {
+            File testLog = new File("testLog");
+            System.setOut(new PrintStream(testLog));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 
     @Test(expected = IllegalStateException.class)

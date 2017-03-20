@@ -3,9 +3,9 @@ package domainModelTest;
 import org.junit.Before;
 import org.junit.Test;
 import domainModel.*;
+import sun.util.locale.StringTokenIterator;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintStream;
 
@@ -96,12 +96,12 @@ public class DomainModelTest {
     }
 
     @Test
-    public void testAirAfterEvilShadows() {
+    public void testSmellingAirAfterEvilShadows() {
         ford = new Ford();
         ford.seekTheSwitch();
         shadows = ford.getTerrifyingShadows();
         arthur = shadows.getArthur();
-        assertNotNull(arthur.getEnv().getAir());
+        assertNotNull(arthur.getEnv().getSmellingAir());
     }
 
     @Test
@@ -111,7 +111,7 @@ public class DomainModelTest {
         ford.seekTheSwitch();
         shadows = ford.getTerrifyingShadows();
         arthur = shadows.getArthur();
-        arthur.getEnv().getAir().getSmells().limit(42).forEach(x -> assertNull(x.getID()));
+        arthur.getEnv().getSmellingAir().getSmells().limit(42).forEach(x -> assertNull(x.getID()));
     }
 
     @Test

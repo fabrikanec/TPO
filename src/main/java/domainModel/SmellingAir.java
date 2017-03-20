@@ -5,12 +5,12 @@ import java.util.stream.Stream;
 /**
  * Created by root on 3/16/17.
  */
-public class Air {
+public class SmellingAir {
     Stream<AbstractSmell> smells;
 
     private Arthur arthur;
 
-    public Air(Arthur arthur) {
+    public SmellingAir(Arthur arthur) {
         this.arthur = arthur;
 
         if (arthur != null && !arthur.isSitting()) {

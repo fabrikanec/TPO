@@ -24,7 +24,7 @@ public class Arthur {
 
     public void putTogether() {
         env = new Environment();
-        env.setAir(new Air(this));
+        env.setSmellingAir(new SmellingAir(this));
         env.setDeepNoise(new DeepNoise(this));
         for (;;) {
             if (env.getDeepNoise() != null) {

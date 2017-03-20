@@ -4,13 +4,13 @@ package domainModel;
  * Created by root on 3/19/17.
  */
 public class Environment {
-    private Air air;
+    private SmellingAir air;
     private DeepNoise deepNoise;
 
     public Environment() {
     }
 
-    public Air getAir() {
+    public SmellingAir getSmellingAir() {
         return air;
     }
 
@@ -18,7 +18,7 @@ public class Environment {
         return deepNoise;
     }
 
-    public void setAir(Air air) {
+    public void setSmellingAir(SmellingAir air) {
         this.air = air;
     }
 

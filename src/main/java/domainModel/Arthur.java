@@ -27,7 +27,7 @@ public class Arthur {
         env.setSmellingAir(new SmellingAir(this));
         env.setDeepNoise(new DeepNoise(this));
         for (;;) {
-            if (env.getDeepNoise() != null) {
+            if (env.getDeepNoise() != null) { // TODO: 3/20/17 22222
                 break;
             }
         }
@@ -50,6 +50,6 @@ public class Arthur {
     }
 
     public boolean isSitting() {
-        return isSitting;
+        return isSitting; // TODO: 3/20/17 111111
     }
 }

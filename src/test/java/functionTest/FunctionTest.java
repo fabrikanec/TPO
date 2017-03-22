@@ -10,6 +10,7 @@ import function.*;
 public class FunctionTest {
     public static final double EPS = 1E-7;
     public static final double DELTA = 1E-6;
+
     @Test
     public void testFunctionMinusOneL() { // x = -1 - 0.01
         double x = -1.01;
@@ -74,7 +75,7 @@ public class FunctionTest {
 
     @Test
     public void testFunctionOneL() { // x = 1 - 0.01
-        double x = 1;
+        double x = 0.99 ;
         assertEquals(Math.asin(x), Function.count(x, EPS), DELTA);
     }
     @Test
@@ -84,40 +85,96 @@ public class FunctionTest {
     }
     @Test
     public void testFunctionOneG() { // x = 1 + 0.01
-        double x = 1;
+        double x = 1.01;
         assertEquals(Math.asin(x), Function.count(x, EPS), DELTA);
     }
+
+    @Test
+    public void testFunctionInfL() { // x = INF - 0.01
+        double x = Double.POSITIVE_INFINITY - 1;
+        assertEquals(Double.NaN, Function.count(x, EPS), DELTA);
+    }
+
+    @Test
+    public void testFunctionInf() { // x = INF
+        double x = Double.POSITIVE_INFINITY;
+        assertEquals(Double.NaN, Function.count(x, EPS), DELTA);
+    }
+
+    @Test
+    public void testFunctionInfG() { // x = INF + 0.01
+        double x = Double.POSITIVE_INFINITY + 1;
+        assertEquals(Double.NaN, Function.count(x, EPS), DELTA);
+    }
+
+    @Test
+    public void testFunctionMinusInfL() { // x = -INF - 0.01
+        double x = Double.NEGATIVE_INFINITY - 1;
+        assertEquals(Double.NaN, Function.count(x, EPS), DELTA);
+    }
+
+    @Test
+    public void testFunctionMinusInf() { // x = -INF
+        double x = Double.NEGATIVE_INFINITY;
+        assertEquals(Double.NaN, Function.count(x, EPS), DELTA);
+    }
+
+    @Test
+    public void testFunctionMinusInfG() { // x = -INF + 0.01
+        double x = Double.NEGATIVE_INFINITY + 1;
+        assertEquals(Double.NaN, Function.count(x, EPS), DELTA);
+    }
+
     @Test
     public void testFunctionNaN() { // x < -1 || x > 1
         double x = 2;
         assertEquals(Double.NaN, Function.count(x, EPS), DELTA);
     }
     @Test
-    public void testFunctionEqMinusWrongTaylor() { //-1 < x < -0.95
+    public void testFunctionEqMinusWrongTaylorFirst() { //-1 < x < -0.95
         double x = -0.98;
-        double x1 = -0.97;
         assertEquals(Math.asin(x), Function.count(x, EPS), DELTA);
-        assertEquals(Math.asin(x1), Function.count(x1, EPS), DELTA);
     }
+
     @Test
-    public void testFunctionEquMinusTaylor() { // -0.95 < x < 0
+    public void testFunctionEqMinusWrongTaylorSecond() { //-1 < x < -0.95
+        double x = -0.97;
+        assertEquals(Math.asin(x), Function.count(x, EPS), DELTA);
+    }
+
+    @Test
+    public void testFunctionEquMinusTaylorFirst() { // -0.95 < x < 0
         double x = -0.5;
-        double x1 = -0.4;
         assertEquals(Math.asin(x), Function.count(x, EPS), DELTA);
-        assertEquals(Math.asin(x1), Function.count(x1, EPS), DELTA);
     }
+
     @Test
-    public void testFunctionEqTaylor() { // 0 < x < 0.95
+    public void testFunctionEquMinusTaylorSecond() { // -0.95 < x < 0
+        double x = -0.4;
+        assertEquals(Math.asin(x), Function.count(x, EPS), DELTA);
+    }
+
+    @Test
+    public void testFunctionEqTaylorFirst() { // 0 < x < 0.95
         double x = 0.5;
-        double x1 = 0.4;
         assertEquals(Math.asin(x), Function.count(x, EPS), DELTA);
-        assertEquals(Math.asin(x1), Function.count(x1, EPS), DELTA);
     }
+
     @Test
-    public void testFunctionEqWrongTaylor() { // 0.95 < x < 1
-        double x = 0.97;
-        double x1 = 0.98;
+    public void testFunctionEqTaylorSecond() { // 0 < x < 0.95
+        double x = 0.4;
         assertEquals(Math.asin(x), Function.count(x, EPS), DELTA);
-        assertEquals(Math.asin(x1), Function.count(x1, EPS), DELTA);
+    }
+
+    @Test
+    public void testFunctionEqWrongTaylorFirst() { // 0.95 < x < 1
+        double x = 0.97;
+        assertEquals(Math.asin(x), Function.count(x, EPS), DELTA);
+    }
+
+    @Test
+    public void testFunctionEqWrongTaylorSecond() { // 0.95 < x < 1
+        double x = 0.98;
+        assertEquals(Math.asin(x), Function.count(x, EPS), DELTA);
     }
 }

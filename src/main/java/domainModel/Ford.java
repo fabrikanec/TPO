@@ -16,7 +16,7 @@ public class Ford {
 
     public void lightUpTheMatch() {
         System.out.println("Форд зажег еще одну спичку, чтобы найти выключатель.");
-        hasSwitch = true;
+        hasSwitch = true; // TODO: 3/20/17 3333333
         terrifyingShadows = new TerrifyingShadows();
         terrifyingShadows.setLight(true);
         terrifyingShadows.swayAndRunArround();

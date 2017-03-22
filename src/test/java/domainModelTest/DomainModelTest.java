@@ -106,12 +106,12 @@ public class DomainModelTest {
 
     @Test
     public void testIdentSmell() {
-        final int limit = 42;
+        final int limit = 43;
         ford = new Ford();
         ford.seekTheSwitch();
         shadows = ford.getTerrifyingShadows();
         arthur = shadows.getArthur();
-        arthur.getEnv().getSmellingAir().getSmells().limit(42).forEach(x -> assertNull(x.getID()));
+        arthur.getEnv().getSmellingAir().getSmells().limit(limit).forEach(x -> assertNull(x.getID()));
     }
 
     @Test

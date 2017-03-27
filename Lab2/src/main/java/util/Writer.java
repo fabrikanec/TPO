@@ -155,7 +155,7 @@ public class Writer {
 
             fileWriter.flush();
             fileWriter.close();
-            fileWriter = new FileWriter("./canonical/Formula-canonical.csv", false);
+            fileWriter = new FileWriter("./canonical/Writer-canonical.csv", false);
 
             for(curr = lFrom; curr < lTo; curr += tStep)
                 fileWriter.append(String.format("%f%s%f\n", curr, SEPARATOR, new SystemFunctions(0, true).calc(curr)));

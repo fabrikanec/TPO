@@ -44,6 +44,7 @@ public class CosTest {
 
     @Test
     public void testCos() {
+        System.out.println(accuracy);
         double result = new Cos(accuracy).calc(argument);
         assertEquals(String.format("expected %f = %f +- %f = COS(%f)\n", expected, result, accuracy, argument),
                 expected, result, accuracy);

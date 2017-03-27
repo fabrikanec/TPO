@@ -5,6 +5,7 @@ import function.AbstractFunction;
 import function.logarithmic.Ln;
 import function.logarithmic.LogN;
 import function.trigonometric.*;
+import org.junit.After;
 import org.junit.Test;
 import util.Writer;
 
@@ -22,7 +23,7 @@ public class SystemFunctionsTest {
     private String ERROR_STR = "expected %f == %f +- %f == " + func.getClass().getSimpleName() + "(%f)\n";
 
     @Test
-    public void FormulaNegInfTest() {
+    public void systemNegInfTest() {
         arg = Double.NEGATIVE_INFINITY;
         expected = funcFromTable.calc(arg);
         result = func.calc(arg);
@@ -33,7 +34,7 @@ public class SystemFunctionsTest {
     }
 
     @Test
-    public void FormulaPosInfTest() {
+    public void systemPosInfTest() {
         arg = Double.POSITIVE_INFINITY;
         expected = funcFromTable.calc(arg);
         result = func.calc(arg);
@@ -44,7 +45,7 @@ public class SystemFunctionsTest {
     }
 
     @Test
-    public void FormulaZeroTest() {
+    public void systemZeroTest() {
         arg = 0;
         expected = funcFromTable.calc(arg);
         result = func.calc(arg);
@@ -55,7 +56,7 @@ public class SystemFunctionsTest {
     }
 
     @Test
-    public void FormulaZeroTestL() {
+    public void systemZeroTestL() {
         arg = 0 - 0.01;
         expected = funcFromTable.calc(arg);
         result = func.calc(arg);
@@ -66,7 +67,7 @@ public class SystemFunctionsTest {
     }
 
     @Test
-    public void FormulaZeroTestG() {
+    public void systemZeroTestG() {
         arg = 0 + 0.01;
         expected = funcFromTable.calc(arg);
         result = func.calc(arg);
@@ -77,7 +78,7 @@ public class SystemFunctionsTest {
     }
 
     @Test
-    public void FormulaOneTest() {
+    public void systemOneTest() {
         arg = 1;
         expected = funcFromTable.calc(arg);
         result = func.calc(arg);
@@ -88,7 +89,7 @@ public class SystemFunctionsTest {
     }
 
     @Test
-    public void FormulaOneTestL() {
+    public void systemOneTestL() {
         arg = 1 - 0.01;
         expected = funcFromTable.calc(arg);
         result = func.calc(arg);
@@ -99,7 +100,7 @@ public class SystemFunctionsTest {
     }
 
     @Test
-    public void FormulaOneTestG() {
+    public void systemOneTestG() {
         arg = 1 + 0.01;
         expected = funcFromTable.calc(arg);
         result = func.calc(arg);
@@ -110,7 +111,7 @@ public class SystemFunctionsTest {
     }
 
     @Test
-    public void FormulaMTwoPiTest() {
+    public void systemMTwoPiTest() {
         arg = -Math.PI*2;
         expected = funcFromTable.calc(arg);
         result = func.calc(arg);
@@ -121,7 +122,7 @@ public class SystemFunctionsTest {
     }
 
     @Test
-    public void FormulaMTwoPiTestL() {
+    public void systemMTwoPiTestL() {
         arg = - Math.PI * 2 - 0.01;
         expected = funcFromTable.calc(arg);
         result = func.calc(arg);
@@ -132,7 +133,7 @@ public class SystemFunctionsTest {
     }
 
     @Test
-    public void FormulaMTwoPiTestG() {
+    public void systemMTwoPiTestG() {
         arg = - Math.PI * 2 + 0.01;
         expected = funcFromTable.calc(arg);
         result = func.calc(arg);
@@ -181,11 +182,11 @@ public class SystemFunctionsTest {
         writer.toCSVFile(-Math.PI, Math.PI, 1e-4);
 
         writer.setFunction(new SystemFunctions(1e-4, false));
-                writer.toCSVFile(-2*Math.PI, 5.0, 1e-4);
+        writer.toCSVFile(-2*Math.PI, 5.0, 1e-4);
 
-        Writer.generateCanonicalCSVFiles(-Math.PI, Math.PI, .0, 12.0, 1e-5);
+        //Writer.generateCanonicalCSVFiles(- Math.PI, Math.PI, .0, 12.0, 1e-5);
 
-        Writer.generateCanonicalCSVFiles(-2.1*Math.PI, 0.1, 0, 3, 1e-6);
+        //Writer.generateCanonicalCSVFiles(-2.1 * Math.PI, 0.1, 0, 3, 1e-6);
     }
 }
 

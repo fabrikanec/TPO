@@ -70,13 +70,8 @@ public class SystemFunctions extends AbstractFunction {
                     (cos.calc(arg) +
                     cos.calc(arg)));
         } else if (arg > 0) {
-            return (pow(((log10.calc(arg) *
-                    log3.calc(arg)) -
-                    log5.calc(arg)) *
-                    (pow(log2.calc(arg), 3)), 2) -
-                    (ln.calc(arg) *
-                            (pow(log5.calc(arg), 2) +
-                                    (pow(log10.calc(arg), 3)))));
+            return (pow(((log10.calc(arg) * log3.calc(arg) - log5.calc(arg)) * (pow(log2.calc(arg), 3))), 2) -
+                    (ln.calc(arg) * (pow(log5.calc(arg), 2) + pow(log10.calc(arg), 3))));
         }
 
         return NaN;

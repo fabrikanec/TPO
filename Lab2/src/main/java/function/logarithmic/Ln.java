@@ -46,11 +46,12 @@ public class Ln extends AbstractFunction {
         int n = 2;
         do {
             previousValue = value;
-            term *= termFactor ;
+            term *= termFactor;
             value += term / n;
             n++;
+            System.out.println(value);
         } while (accuracy <= Math.abs(value - previousValue) && n < MAX_ITERATIONS);
-
+        System.out.println(value);
         return value;
 
     }

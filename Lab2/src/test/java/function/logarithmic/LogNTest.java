@@ -11,149 +11,153 @@ import static org.junit.Assert.*;
  * Created by ivan on 16.04.16.
  */
 public class LogNTest {
-    private AbstractFunction funcFromTable = new LogN(1e-5, true);
-    private AbstractFunction func = new LogN(1e-3);
-    private double expected, result, arg, logBase = 3;
+    private AbstractFunction funcFromTable = new LogN(1e-8, true, 3);
+    private AbstractFunction func = new LogN(1e-8, 3);
+    private double expected;
+    private double result;
+    private double arg;
+    private double logBase = 3;
+    private static final double DELTA = 1e-6;
 
     private String ERROR_STR = "expected %f == %f +- %f == " + func.getClass().getSimpleName() + "(%f)\n";
 
     @Test
-    public void LogarithmicTestNegInf() {
+    public void logarithmicTestNegInf() {
         arg = Double.NEGATIVE_INFINITY;
         expected = funcFromTable.calc(arg);
         result = func.calc(arg);
-        assertEquals(String.format(ERROR_STR, expected, result, func.getAccuracy(), arg),
+        assertEquals(String.format(ERROR_STR, expected, result, DELTA, arg),
                 expected,
                 result,
-                func.getAccuracy());
+                DELTA);
     }
 
     @Test
-    public void LogarithmicTestPosInf() {
+    public void logarithmicTestPosInf() {
         arg = Double.POSITIVE_INFINITY;
         expected = funcFromTable.calc(arg);
         result = func.calc(arg);
-        assertEquals(String.format(ERROR_STR, expected, result, func.getAccuracy(), arg),
+        assertEquals(String.format(ERROR_STR, expected, result, DELTA, arg),
                 expected,
                 result,
-                func.getAccuracy());
+                DELTA);
     }
 
     @Test
-    public void LogarithmicTestNaN() {
+    public void logarithmicTestNaN() {
         arg = Double.NaN;
         expected = funcFromTable.calc(arg);
         result = func.calc(arg);
-        assertEquals(String.format(ERROR_STR, expected, result, func.getAccuracy(), arg),
+        assertEquals(String.format(ERROR_STR, expected, result, DELTA, arg),
                 expected,
                 result,
-                func.getAccuracy());
+                DELTA);
     }
 
     @Test
-    public void LogarithmicTestZeroL() {
+    public void logarithmicTestZeroL() {
         arg = -0.01;
         expected = funcFromTable.calc(arg);
         result = func.calc(arg);
-        assertEquals(String.format(ERROR_STR, expected, result, func.getAccuracy(), arg),
+        assertEquals(String.format(ERROR_STR, expected, result, DELTA, arg),
                 expected,
                 result,
-                func.getAccuracy());
+                DELTA);
     }
 
     @Test
-    public void LogarithmicTestZero() {
+    public void logarithmicTestZero() {
         arg = 0.0;
         expected = funcFromTable.calc(arg);
         result = func.calc(arg);
-        assertEquals(String.format(ERROR_STR, expected, result, func.getAccuracy(), arg),
+        assertEquals(String.format(ERROR_STR, expected, result, DELTA, arg),
                 expected,
                 result,
-                func.getAccuracy());
+                DELTA);
     }
 
     @Test
-    public void LogarithmicTestZeroR() {
+    public void logarithmicTestZeroG() {
         arg = 0.01;
         expected = funcFromTable.calc(arg);
         result = func.calc(arg);
-        assertEquals(String.format(ERROR_STR, expected, result, func.getAccuracy(), arg),
+        assertEquals(String.format(ERROR_STR, expected, result, DELTA, arg),
                 expected,
                 result,
-                func.getAccuracy());
+                DELTA);
     }
 
     @Test
-    public void LogarithmicTestOneR() {
-        arg = 1-0.01;
+    public void logarithmicTestOneL() {
+        arg = 1 - 0.01;
         expected = funcFromTable.calc(arg);
         result = func.calc(arg);
-        assertEquals(String.format(ERROR_STR, expected, result, func.getAccuracy(), arg),
+        assertEquals(String.format(ERROR_STR, expected, result, DELTA, arg),
                 expected,
                 result,
-                func.getAccuracy());
+                DELTA);
     }
 
     @Test
-    public void LogarithmicTestOne() {
+    public void logarithmicTestOne() {
         arg = 1;
         expected = funcFromTable.calc(arg);
         result = func.calc(arg);
-        assertEquals(String.format(ERROR_STR, expected, result, func.getAccuracy(), arg),
+        assertEquals(String.format(ERROR_STR, expected, result, DELTA, arg),
                 expected,
                 result,
-                func.getAccuracy());
+                DELTA);
     }
 
     @Test
-    public void LogarithmicTestOneL() {
-        arg = 1+0.01;
+    public void logarithmicTestOneG() {
+        arg = 1 + 0.01;
         expected = funcFromTable.calc(arg);
         result = func.calc(arg);
-        assertEquals(String.format(ERROR_STR, expected, result, func.getAccuracy(), arg),
+        assertEquals(String.format(ERROR_STR, expected, result, DELTA, arg),
                 expected,
                 result,
-                func.getAccuracy());
+                DELTA);
     }
 
     @Test
-    public void LogarithmicTestBaseL() {
+    public void logarithmicTestBaseL() {
         arg = logBase-0.01;
         expected = funcFromTable.calc(arg);
         result = func.calc(arg);
-        assertEquals(String.format(ERROR_STR, expected, result, func.getAccuracy(), arg),
+        assertEquals(String.format(ERROR_STR, expected, result, DELTA, arg),
                 expected,
                 result,
-                func.getAccuracy());
+                DELTA);
     }
 
     @Test
-    public void LogarithmicTestBase() {
+    public void logarithmicTestBase() {
         arg = logBase;
         expected = funcFromTable.calc(arg);
         result = func.calc(arg);
-        assertEquals(String.format(ERROR_STR, expected, result, func.getAccuracy(), arg),
+        assertEquals(String.format(ERROR_STR, expected, result, DELTA, arg),
                 expected,
                 result,
-                func.getAccuracy());
+                DELTA);
     }
 
     @Test
-    public void LogarithmicTestBaseR() {
-        arg = logBase+0.01;
+    public void logarithmicTestBaseG() {
+        arg = logBase + 0.01;
         expected = funcFromTable.calc(arg);
         result = func.calc(arg);
-        assertEquals(String.format(ERROR_STR, expected, result, func.getAccuracy(), arg),
+        assertEquals(String.format(ERROR_STR, expected, result, DELTA, arg),
                 expected,
                 result,
-                func.getAccuracy());
+                DELTA);
     }
 
     @Ignore
     @Test
     public void generate() {
         Writer writer = new Writer();
-        writer.setFunction(new LogN(1e-4, 2));
+        writer.setFunction(new LogN(1e-4, 3));
         writer.toCSVFile(0.0, 5.0, 0.001);
     }
 }

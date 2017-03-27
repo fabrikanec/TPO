@@ -8,7 +8,7 @@ import util.Writer;
 import static org.junit.Assert.*;
 
 /**
- * Created by ivan on 16.04.16.
+ * Created by cezar on 16.04.16.
  */
 public class LogNTest {
     private AbstractFunction funcFromTable = new LogN(1e-8, true, 3);
@@ -17,7 +17,7 @@ public class LogNTest {
     private double result;
     private double arg;
     private double logBase = 3;
-    private static final double DELTA = 1e-6;
+    private static final double DELTA = 1e-5;
 
     private String ERROR_STR = "expected %f == %f +- %f == " + func.getClass().getSimpleName() + "(%f)\n";
 
@@ -122,7 +122,7 @@ public class LogNTest {
 
     @Test
     public void logarithmicTestBaseL() {
-        arg = logBase-0.01;
+        arg = logBase - 0.01;
         expected = funcFromTable.calc(arg);
         result = func.calc(arg);
         assertEquals(String.format(ERROR_STR, expected, result, DELTA, arg),

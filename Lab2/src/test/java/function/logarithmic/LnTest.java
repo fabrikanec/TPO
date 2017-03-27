@@ -8,7 +8,7 @@ import util.Writer;
 import static org.junit.Assert.*;
 
 /**
- * Created by ivan on 16.04.16.
+ * Created by cezar on 16.04.16.
  */
 public class LnTest {
     private AbstractFunction funcFromTable = new Ln(1e-8, true);
@@ -17,7 +17,7 @@ public class LnTest {
     private double result;
     private double arg;
     private final double logBase = Math.E;
-    private static final double DELTA = 1e-6;
+    private static final double DELTA = 1e-5;
 
     private String ERROR_STR = "expected %f == %f +- %f == " + func.getClass().getSimpleName() + "(%f)\n";
 

@@ -6,6 +6,7 @@ import function.logarithmic.Ln;
 import function.logarithmic.LogN;
 import function.trigonometric.*;
 import org.junit.After;
+import org.junit.Ignore;
 import org.junit.Test;
 import util.Writer;
 
@@ -143,7 +144,7 @@ public class SystemFunctionsTest {
                 func.getAccuracy());
     }
 
-    //@Ignore
+    @Ignore
     @Test
     public void generate() {
         Writer writer = new Writer();

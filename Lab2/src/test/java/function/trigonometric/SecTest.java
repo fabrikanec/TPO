@@ -42,7 +42,7 @@ public class SecTest {
         return data;
     }
 
-    @Test
+    @Test(expected = IllegalArgumentException.class)
     public void testSec() {
         double result = new Sec(accuracy).calc(argument);
         assertEquals(String.format("expected %f = %f +- %f = Sec(%f)\n", expected, result, accuracy, argument),

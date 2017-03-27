@@ -43,7 +43,7 @@ public class TanTest {
         return data;
     }
 
-    @Test
+    @Test(expected = IllegalArgumentException.class)
     public void testTan() {
         double result = new Tan(accuracy).calc(argument);
         assertEquals(String.format("expected %f = %f +- %f = Cot(%f)\n", expected, result, accuracy, argument),

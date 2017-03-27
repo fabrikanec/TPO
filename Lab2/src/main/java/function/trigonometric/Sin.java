@@ -29,17 +29,15 @@ public class Sin extends AbstractFunction {
             return Math.sin(arg);
 
         double prev;
-        double cur = 0.0;
-        double result = 0.0;
-        int i = 0;
+        double value = 0.0;
+        int k = 0;
 
         do {
-            prev = cur;
-            cur = (pow(-1, i) * pow(arg, 2 * i + 1)) / FactorialSeries.factorial(2 * i + 1);
-            i++;
-            result += cur;
-        } while (abs(prev - cur) > accuracy && i < MAX_ITERATIONS);
+            prev = value;
+            value += (pow(-1, k) * pow(arg, 2 * k + 1)) / FactorialSeries.factorial(2 * k + 1);
+            k++;
+        } while (accuracy <= abs(value - prev) && k < MAX_ITERATIONS);
 
-        return result;
+        return value;
     }
 }

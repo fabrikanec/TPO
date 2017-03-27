@@ -17,9 +17,10 @@ import static org.junit.Assert.assertEquals;
  */
 public class SystemFunctionsTest {
 
-    private AbstractFunction funcFromTable = new SystemFunctions(1e-5, true);
-    private AbstractFunction func = new SystemFunctions(1e-3);
+    private AbstractFunction funcFromTable = new SystemFunctions(1e-10, true);
+    private AbstractFunction func = new SystemFunctions(1e-10);
     private double expected, result, arg;
+    private static final double DELTA = 1e-5; 
 
     private String ERROR_STR = "expected %f == %f +- %f == " + func.getClass().getSimpleName() + "(%f)\n";
 
@@ -28,10 +29,10 @@ public class SystemFunctionsTest {
         arg = Double.NEGATIVE_INFINITY;
         expected = funcFromTable.calc(arg);
         result = func.calc(arg);
-        assertEquals(String.format(ERROR_STR, expected, result, func.getAccuracy(), arg),
+        assertEquals(String.format(ERROR_STR, expected, result, DELTA, arg),
                 expected,
                 result,
-                func.getAccuracy());
+                DELTA);
     }
 
     @Test
@@ -39,10 +40,10 @@ public class SystemFunctionsTest {
         arg = Double.POSITIVE_INFINITY;
         expected = funcFromTable.calc(arg);
         result = func.calc(arg);
-        assertEquals(String.format(ERROR_STR, expected, result, func.getAccuracy(), arg),
+        assertEquals(String.format(ERROR_STR, expected, result, DELTA, arg),
                 expected,
                 result,
-                func.getAccuracy());
+                DELTA);
     }
 
     @Test
@@ -50,10 +51,10 @@ public class SystemFunctionsTest {
         arg = 0;
         expected = funcFromTable.calc(arg);
         result = func.calc(arg);
-        assertEquals(String.format(ERROR_STR, expected, result, func.getAccuracy(), arg),
+        assertEquals(String.format(ERROR_STR, expected, result, DELTA, arg),
                 expected,
                 result,
-                func.getAccuracy());
+                DELTA);
     }
 
     @Test
@@ -61,10 +62,10 @@ public class SystemFunctionsTest {
         arg = 0 - 0.01;
         expected = funcFromTable.calc(arg);
         result = func.calc(arg);
-        assertEquals(String.format(ERROR_STR, expected, result, func.getAccuracy(), arg),
+        assertEquals(String.format(ERROR_STR, expected, result, DELTA, arg),
                 expected,
                 result,
-                func.getAccuracy());
+                DELTA);
     }
 
     @Test
@@ -72,10 +73,10 @@ public class SystemFunctionsTest {
         arg = 0 + 0.01;
         expected = funcFromTable.calc(arg);
         result = func.calc(arg);
-        assertEquals(String.format(ERROR_STR, expected, result, func.getAccuracy(), arg),
+        assertEquals(String.format(ERROR_STR, expected, result, DELTA, arg),
                 expected,
                 result,
-                func.getAccuracy());
+                DELTA);
     }
 
     @Test
@@ -83,10 +84,10 @@ public class SystemFunctionsTest {
         arg = 1;
         expected = funcFromTable.calc(arg);
         result = func.calc(arg);
-        assertEquals(String.format(ERROR_STR, expected, result, func.getAccuracy(), arg),
+        assertEquals(String.format(ERROR_STR, expected, result, DELTA, arg),
                 expected,
                 result,
-                func.getAccuracy());
+                DELTA);
     }
 
     @Test
@@ -94,10 +95,10 @@ public class SystemFunctionsTest {
         arg = 1 - 0.01;
         expected = funcFromTable.calc(arg);
         result = func.calc(arg);
-        assertEquals(String.format(ERROR_STR, expected, result, func.getAccuracy(), arg),
+        assertEquals(String.format(ERROR_STR, expected, result, DELTA, arg),
                 expected,
                 result,
-                func.getAccuracy());
+                DELTA);
     }
 
     @Test
@@ -105,10 +106,10 @@ public class SystemFunctionsTest {
         arg = 1 + 0.01;
         expected = funcFromTable.calc(arg);
         result = func.calc(arg);
-        assertEquals(String.format(ERROR_STR, expected, result, func.getAccuracy(), arg),
+        assertEquals(String.format(ERROR_STR, expected, result, DELTA, arg),
                 expected,
                 result,
-                func.getAccuracy());
+                DELTA);
     }
 
     @Test
@@ -116,10 +117,10 @@ public class SystemFunctionsTest {
         arg = -Math.PI*2;
         expected = funcFromTable.calc(arg);
         result = func.calc(arg);
-        assertEquals(String.format(ERROR_STR, expected, result, func.getAccuracy(), arg),
+        assertEquals(String.format(ERROR_STR, expected, result, DELTA, arg),
                 expected,
                 result,
-                func.getAccuracy());
+                DELTA);
     }
 
     @Test
@@ -127,10 +128,10 @@ public class SystemFunctionsTest {
         arg = - Math.PI * 2 - 0.01;
         expected = funcFromTable.calc(arg);
         result = func.calc(arg);
-        assertEquals(String.format(ERROR_STR, expected, result, func.getAccuracy(), arg),
+        assertEquals(String.format(ERROR_STR, expected, result, DELTA, arg),
                 expected,
                 result,
-                func.getAccuracy());
+                DELTA);
     }
 
     @Test
@@ -138,10 +139,10 @@ public class SystemFunctionsTest {
         arg = - Math.PI * 2 + 0.01;
         expected = funcFromTable.calc(arg);
         result = func.calc(arg);
-        assertEquals(String.format(ERROR_STR, expected, result, func.getAccuracy(), arg),
+        assertEquals(String.format(ERROR_STR, expected, result, DELTA, arg),
                 expected,
                 result,
-                func.getAccuracy());
+                DELTA);
     }
 
     @Ignore

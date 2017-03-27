@@ -42,7 +42,7 @@ public class CotTest {
         return data;
     }
 
-    @Test
+    @Test(expected = IllegalArgumentException.class)
     public void testCot() {
         double result = new Cot(accuracy).calc(argument);
         assertEquals(String.format("expected %f = %f +- %f = Cot(%f)\n", expected, result, accuracy, argument),

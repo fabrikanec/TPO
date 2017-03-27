@@ -42,7 +42,7 @@ public class CscTest {
         return data;
     }
 
-    @Test
+    @Test(expected = IllegalArgumentException.class)
     public void testCsc() {
         double result = new Csc(accuracy).calc(argument);
         assertEquals(String.format("expected %f = %f +- %f = Csc(%f)\n", expected, result, accuracy, argument),

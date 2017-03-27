@@ -36,22 +36,7 @@ public class Ln extends AbstractFunction {
 
         if(fromTable)
             return Math.log(arg);
-        /*
-        double x = (arg)/(arg - 1);
-        double previousValue;
-        double termFactor = 1/x;
-        double term = 1/x;
-        double value = term;
-        int n = 2;
-        do {
-            previousValue = value;
-            term *= termFactor;
-            value += term / n;
-            n++;
-        } while (accuracy <= Math.abs(value - previousValue) && n < MAX_ITERATIONS);
-        System.out.println(value);
-        return value;
-        */
+
         double value = 0;
         double preValue;
         int n = 1;
@@ -59,13 +44,13 @@ public class Ln extends AbstractFunction {
         if (Math.abs(arg - 1) <= 1) {
             do {
                 preValue = value;
-                value -= ((Math.pow(-1, n) * Math.pow(-1 + arg, n)) / n);
+                value -= ((Math.pow(-1, n) * Math.pow(arg - 1, n)) / n);
                 n++;
             } while (accuracy <= Math.abs(value - preValue) && n < MAX_ITERATIONS);
         } else {
             do {
                 preValue = value;
-                value -=((Math.pow(-1, n) * Math.pow(-1 + arg, n)) / n);
+                value -=((Math.pow(-1, k) * Math.pow(arg - 1, -k)) / k);
                 k++;
             } while (accuracy <= Math.abs(value - preValue) && k < MAX_ITERATIONS);
             value += calc(arg - 1);

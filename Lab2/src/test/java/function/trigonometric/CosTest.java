@@ -42,7 +42,7 @@ public class CosTest {
         return data;
     }
 
-    @Test
+    @Test(expected = IllegalArgumentException.class)
     public void testCos() {
         System.out.println(accuracy);
         double result = new Cos(accuracy).calc(argument);

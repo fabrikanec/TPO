@@ -42,7 +42,7 @@ public class SinTest {
         return data;
     }
 
-    @Test
+    @Test(expected = IllegalArgumentException.class)
     public void testSin() {
         double result = new Sin(accuracy).calc(argument);
         assertEquals(String.format("expected %f = %f +- %f = Sin(%f)\n", expected, result, accuracy, argument),

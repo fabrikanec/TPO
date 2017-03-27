@@ -11,8 +11,8 @@ import static org.junit.Assert.*;
  * Created by cezar on 16.04.16.
  */
 public class LogNTest {
-    private AbstractFunction funcFromTable = new LogN(1e-8, true, 3);
-    private AbstractFunction func = new LogN(1e-8, 3);
+    private AbstractFunction funcFromTable = new LogN(1e-10, true, 3);
+    private AbstractFunction func = new LogN(1e-10, 3);
     private double expected;
     private double result;
     private double arg;

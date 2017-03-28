@@ -14,7 +14,9 @@ import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
 public class CotTestZeroToHalfPi {
-    private final double argument;
+    private static final double DELTA = 1e-5;
+
+	private final double argument;
 
     private final double accuracy;
 
@@ -41,7 +43,7 @@ public class CotTestZeroToHalfPi {
     @Test
     public void testCot() {
         double result = new Cot(accuracy).calc(argument);;
-        assertEquals(String.format("expected %f = %f +- %f = Cot(%f)\n", expected, result, accuracy, argument),
+        assertEquals(String.format("expected %f = %f +- %f = Cot(%f)\n", expected, result, DELTA, argument),
                 expected, result, accuracy);
     }
 }

@@ -18,7 +18,6 @@ public class LogNTest {
     private double arg;
     private double logBase = 3;
     private static final double DELTA = 1e-5;
-
     private String ERROR_STR = "expected %f == %f +- %f == " + func.getClass().getSimpleName() + "(%f)\n";
 
     @Test

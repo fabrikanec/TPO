@@ -13,7 +13,9 @@ import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
 public class SecTestZero {
-    private final double argument;
+    private static final double DELTA = 1e-5;
+
+	private final double argument;
 
     private final double accuracy;
 
@@ -40,7 +42,7 @@ public class SecTestZero {
     @Test
     public void testSec() {
         double result = new Sec(accuracy).calc(argument);;
-        assertEquals(String.format("expected %f = %f +- %f = Sec(%f)\n", expected, result, accuracy, argument),
+        assertEquals(String.format("expected %f = %f +- %f = Sec(%f)\n", expected, result, DELTA, argument),
                 expected, result, accuracy);
     }
 }

@@ -1,7 +1,9 @@
 package function.trigonometric;
 
 
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.ExpectedException;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
@@ -15,37 +17,48 @@ import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
 public class CotTest {
-    private final double argument;
+    private static final double DELTA = 1e-5;
+
+	private final double argument;
 
     private final double accuracy;
 
     private final double expected;
 
-    public CotTest(double argument, double accuracy, double expected) {
+    private Class<? extends Throwable> errorClass;
+
+    public CotTest(double argument, double accuracy, double expected, Class<? extends Throwable> errorClass) {
         this.argument = argument;
         this.accuracy = accuracy;
         this.expected = expected;
+        this.errorClass = errorClass;
     }
 
-    @Parameters
-    public static List<Double[]> data() {
-        List<Double[]> data = new ArrayList<>();
+    @Rule
+    public ExpectedException exception = ExpectedException.none();
 
-        data.addAll(Arrays.asList(new Double[][] {
-                { NaN, NaN, NaN },
-                { NaN, 1e-3, NaN },
-                { 1.0, NaN, NaN },
-                { Double.POSITIVE_INFINITY, 1e-3, NaN },
-                { Double.NEGATIVE_INFINITY, 1e-3, NaN },
+    @Parameters
+    public static List<Object[]> data() {
+        List<Object[]> data = new ArrayList<>();
+
+        data.addAll(Arrays.asList(new Object[][] {
+                { NaN, NaN, NaN, IllegalArgumentException.class },
+                { NaN, 1e-3, NaN, null },
+                { 1.0, NaN, NaN, IllegalArgumentException.class },
+                { Double.POSITIVE_INFINITY, 1e-3, NaN, null },
+                { Double.NEGATIVE_INFINITY, 1e-3, NaN, null },
         }));
 
         return data;
     }
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test
     public void testCot() {
+        if (errorClass != null) {
+            exception.expect(errorClass);
+        }
         double result = new Cot(accuracy).calc(argument);
-        assertEquals(String.format("expected %f = %f +- %f = Cot(%f)\n", expected, result, accuracy, argument),
+        assertEquals(String.format("expected %f = %f +- %f = Cot(%f)\n", expected, result, DELTA, argument),
                 expected, result, accuracy);
     }
 }

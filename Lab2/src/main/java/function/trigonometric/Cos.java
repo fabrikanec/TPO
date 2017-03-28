@@ -26,14 +26,12 @@ public class Cos extends AbstractFunction {
 
         sin.setAccuracy(accuracy);
 
-        double unsignedCos = sqrt(1 - pow(sin.calc(arg), 2)), cos;
+        double unsignedCos = sqrt(1 - pow(sin.calc(arg), 2));
         double tmpA = abs(abs(arg) > PI*2 ? arg % PI*2 : arg);
 
         if(tmpA >= 0 && tmpA <= PI/2 || tmpA >= 3*PI/2 && tmpA <= 2*PI)
-            cos = unsignedCos;
+            return unsignedCos;
         else
-            cos = -unsignedCos;
-
-        return cos;
+            return  -unsignedCos;
     }
 }

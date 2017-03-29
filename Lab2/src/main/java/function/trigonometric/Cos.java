@@ -7,6 +7,8 @@ import java.math.MathContext;
 import java.math.RoundingMode;
 
 import static java.lang.Math.*;
+import static java.lang.Double.*;
+import static java.math.BigDecimal.*;
 
 public class Cos extends AbstractFunction {
     Sin sin = new Sin();
@@ -28,12 +30,17 @@ public class Cos extends AbstractFunction {
         if(fromTable)
             return Math.cos(arg);
 
+        if (isNaN(arg) || isInfinite(arg)) {
+            return NaN;
+        }
+
         sin.setAccuracy(accuracy);
 
         //double unsignedCos = (sqrt(1 - pow(sin.calc(arg), 2)));
-        double unsignedCos = BigDecimal.ONE.subtract(BigDecimal.valueOf(sin.calc(arg))
-                             .pow(2, MathContext.DECIMAL128), MathContext.DECIMAL128)
-                             .pow(-2, MathContext.DECIMAL128).doubleValue();
+        double unsignedCos = sqrt((new BigDecimal(1, MathContext.UNLIMITED).
+                                subtract(new BigDecimal(sin.calc(arg), MathContext.UNLIMITED).
+                                        pow(2))))
+                                        .setScale(100, RoundingMode.UP).doubleValue();
 
         double tmpA = abs(abs(arg) > PI*2 ? arg % PI*2 : arg);
 
@@ -42,4 +49,24 @@ public class Cos extends AbstractFunction {
         else
             return -unsignedCos;
     }
+
+    private static BigDecimal sqrt(BigDecimal value) {
+        BigDecimal x = new BigDecimal(Math.sqrt(value.doubleValue()), MathContext.UNLIMITED);
+        return x.add(new BigDecimal(value.subtract(x.multiply(x)).doubleValue() / (x.doubleValue() * 2.0)));
+    }
+
+    private static BigDecimal sqrt(BigDecimal A, final int SCALE) {
+        BigDecimal x0 = new BigDecimal("0");
+        BigDecimal x1 = new BigDecimal(Math.sqrt(A.doubleValue()));
+        while (!x0.equals(x1)) {
+            x0 = x1;
+            x1 = A.divide(x0, SCALE, ROUND_HALF_UP);
+            x1 = x1.add(x0);
+            x1 = x1.divide(new BigDecimal(2), SCALE, ROUND_HALF_UP);
+
+        }
+        return x1;
+    }
+
 }
+

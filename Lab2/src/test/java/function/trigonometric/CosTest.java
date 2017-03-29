@@ -57,7 +57,6 @@ public class CosTest {
         if (errorClass != null) {
             exception.expect(errorClass);
         }
-        System.out.println(accuracy);
         double result = new Cos(accuracy).calc(argument);
         assertEquals(String.format("expected %f = %f +- %f = COS(%f)\n", expected, result, DELTA, argument),
                 expected, result, accuracy);

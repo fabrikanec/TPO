@@ -32,7 +32,7 @@ public class CotTestPi {
     public static List<Double[]> data() {
         List<Double[]> data = new ArrayList<>();
 
-        for (double acc = 1e-5;acc > 1e-7; acc *= 1e-1) {
+        for (double acc = 1e-6;acc > 1e-6; acc *= 1e-1) {
             for (double x = PI-0.001; x < PI+0.001; x += 0.001) {
                 data.add(new Double[] { x, acc, new Cot(acc, true).calc(x) });
             }

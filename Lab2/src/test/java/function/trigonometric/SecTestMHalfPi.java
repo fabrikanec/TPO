@@ -15,6 +15,7 @@ import static org.junit.Assert.assertEquals;
 @RunWith(Parameterized.class)
 public class SecTestMHalfPi {
     private static final double DELTA = 1e-4;
+    private static final double PRECISION = 1e-6;
 
 	private final double argument;
 
@@ -32,9 +33,9 @@ public class SecTestMHalfPi {
     public static List<Double[]> data() {
         List<Double[]> data = new ArrayList<>();
 
-        for (double acc = 1e-5;acc > 1e-7; acc *= 1e-1) {
+        for (double acc = 1e-6;acc > 1e-6; acc *= 1e-1) {
             for (double x = -(PI/2)-0.001; x < -(PI/2)+0.001; x += 0.001) {
-                data.add(new Double[] { x, acc, new Sec(acc, true).calc(x) });
+                data.add(new Double[] { x, PRECISION, new Sec(PRECISION, true).calc(x) });
             }
         }
         return data;

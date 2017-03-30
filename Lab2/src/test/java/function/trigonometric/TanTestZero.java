@@ -14,7 +14,7 @@ import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
 public class TanTestZero {
-    private static final double DELTA = 1e-5;
+    private static final double DELTA = 1e-3;
 
 	private final double argument;
 
@@ -44,6 +44,6 @@ public class TanTestZero {
     public void testTan() {
         double result = new Tan(accuracy).calc(argument);;
         assertEquals(String.format("expected %f = %f +- %f = Tan(%f)\n", expected, result, DELTA, argument),
-                expected, result, accuracy);
+                expected, result, DELTA);
     }
 }

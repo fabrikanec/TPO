@@ -191,4 +191,3 @@ public class SystemFunctionsTest {
         //Writer.generateCanonicalCSVFiles(-2.1 * Math.PI, 0.1, 0, 3, 1e-6);
     }
 }
-

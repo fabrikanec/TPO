@@ -15,7 +15,7 @@ import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
 public class TanTestHalfPi {
-    private static final double DELTA = 1e-5;
+    private static final double DELTA = 1e-3;
 
 	private final double argument;
 
@@ -45,6 +45,6 @@ public class TanTestHalfPi {
     public void testTan() {
         double result = new Cot(accuracy).calc(argument);
         assertEquals(String.format("expected %f = %f +- %f = Cot(%f)\n", expected, result, DELTA, argument),
-                expected, result, accuracy);
+                expected, result, DELTA);
     }
 }

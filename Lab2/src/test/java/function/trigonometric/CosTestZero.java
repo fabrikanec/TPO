@@ -13,7 +13,7 @@ import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
 public class CosTestZero {
-    private static final double DELTA = 1e-5;
+    private static final double DELTA = 1e-3;
 
 	private final double argument;
 
@@ -43,6 +43,6 @@ public class CosTestZero {
     public void testCos() {
         double result = new Cos(accuracy).calc(argument);;
         assertEquals(String.format("expected %f = %f +- %f = COS(%f)\n", expected, result, DELTA, argument),
-                expected, result, accuracy);
+                expected, result, DELTA);
     }
 }

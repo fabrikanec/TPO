@@ -57,6 +57,10 @@ public class Sin extends AbstractFunction {
             n++;
         } while (accuracy <= value.subtract(last).abs().doubleValue() && n < MAX_ITERATIONS);
 
-        return value.setScale(100, RoundingMode.UP).doubleValue();
+        double bigDecimalValueToDoble = value.setScale(100, RoundingMode.UP).doubleValue();
+
+        double modifiedVlue = bigDecimalValueToDoble > 1? 0.9999999999999999 : bigDecimalValueToDoble;
+        modifiedVlue = modifiedVlue < -1 ? -0.9999999999999999 : modifiedVlue;
+        return modifiedVlue;
     }
 }

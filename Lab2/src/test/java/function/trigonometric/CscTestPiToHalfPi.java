@@ -14,7 +14,7 @@ import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
 public class CscTestPiToHalfPi {
-    private static final double DELTA = 1e-5;
+    private static final double DELTA = 1e-3;
 
 	private final double argument;
 
@@ -44,6 +44,6 @@ public class CscTestPiToHalfPi {
     public void testCsc() {
         double result = new Csc(accuracy).calc(argument);;
         assertEquals(String.format("expected %f = %f +- %f = Csc(%f)\n", expected, result, DELTA, argument),
-                expected, result, accuracy);
+                expected, result, DELTA);
     }
 }

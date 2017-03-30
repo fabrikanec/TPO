@@ -15,7 +15,7 @@ import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
 public class TanTestMHalfPiToZero {
-    private static final double DELTA = 1e-3;
+    private static final double DELTA = 1e-4;
 
 	private final double argument;
 
@@ -33,9 +33,9 @@ public class TanTestMHalfPiToZero {
     public static List<Double[]> data() {
         List<Double[]> data = new ArrayList<>();
 
-        for (double acc = 1e-3; acc > 1e-7; acc *= 1e-1) {
+        for (double acc = 1e-5;acc > 1e-7; acc *= 1e-1) {
             for (double x = -PI/2; x < 0; x += PI/4) {
-                data.add(new Double[] { x, acc, new Cot(acc, true).calc(x) });
+                data.add(new Double[] { x, acc, new Tan(acc, true).calc(x) });
             }
         }
         return data;
@@ -43,7 +43,7 @@ public class TanTestMHalfPiToZero {
 
     @Test
     public void testTan() {
-        double result = new Cot(accuracy).calc(argument);
+        double result = new Tan(accuracy).calc(argument);
         assertEquals(String.format("expected %f = %f +- %f = Cot(%f)\n", expected, result, DELTA, argument),
                 expected, result, DELTA);
     }

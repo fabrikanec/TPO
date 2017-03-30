@@ -17,7 +17,7 @@ import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
 public class SecTest {
-    private static final double DELTA = 1e-3;
+    private static final double DELTA = 1e-4;
 
 	private final double argument;
 

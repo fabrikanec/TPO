@@ -11,6 +11,7 @@ import util.Writer;
  */
 public abstract class AbstractFunction {
 
+    protected static final double DELTA = 1e-5;
     public static final int MAX_ITERATIONS = 500000;
     private static final double DEFAULT_ACCURACY = 1e-4;
 

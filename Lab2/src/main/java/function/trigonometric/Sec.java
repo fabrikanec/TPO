@@ -1,6 +1,9 @@
 package function.trigonometric;
 
+import com.fasterxml.jackson.core.sym.NameN;
 import function.AbstractFunction;
+
+import java.util.function.DoubleBinaryOperator;
 
 public class Sec extends AbstractFunction {
     Cos cos = new Cos();
@@ -19,8 +22,16 @@ public class Sec extends AbstractFunction {
 
     public double calc(double arg) {
 
+        if (Math.abs(arg - Math.PI/2) < DELTA ||
+                Math.abs(arg + Math.PI/2) < DELTA ||
+                Math.abs(arg - 3*Math.PI/2) < DELTA ||
+                Math.abs(arg + 3*Math.PI/2) < DELTA) {
+            return Double.NaN;
+        }
+
         if(fromTable)
             return 1 / Math.cos(arg);
+
 
         cos.setAccuracy(accuracy);
         return 1 / cos.calc(arg);

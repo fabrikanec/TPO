@@ -19,6 +19,15 @@ public class Csc extends AbstractFunction {
 
     public double calc(double arg) {
 
+        if (Math.abs(arg - Math.PI) < DELTA ||
+                Math.abs(arg + Math.PI) < DELTA ||
+                Math.abs(arg - 2*Math.PI) < DELTA ||
+                Math.abs(arg + 2*Math.PI) < DELTA ||
+                Math.abs(arg) < DELTA) {
+            return Double.NaN;
+
+        }
+
         if(fromTable)
             return 1 / Math.sin(arg);
 

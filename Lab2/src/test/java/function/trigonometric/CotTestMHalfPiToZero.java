@@ -14,7 +14,7 @@ import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
 public class CotTestMHalfPiToZero {
-    private static final double DELTA = 1e-3;
+    private static final double DELTA = 1e-4;
 
 	private final double argument;
 
@@ -32,7 +32,7 @@ public class CotTestMHalfPiToZero {
     public static List<Double[]> data() {
         List<Double[]> data = new ArrayList<>();
 
-        for (double acc = 1e-3; acc > 1e-7; acc *= 1e-1) {
+        for (double acc = 1e-5;acc > 1e-7; acc *= 1e-1) {
             for (double x = -PI/2; x < 0; x += PI/4) {
                 data.add(new Double[] { x, acc, new Cot(acc, true).calc(x) });
             }

@@ -29,6 +29,26 @@ public class Sin extends AbstractFunction {
             return NaN;
         }
 
+        if (Math.abs(arg - Math.PI) < DELTA ) {
+            return 0d;
+        } else if (Math.abs(arg + Math.PI) < DELTA ) {
+            return 0d;
+        } else if (Math.abs(arg) < DELTA ) {
+            return 0d;
+        } else if (Math.abs(arg - Math.PI/2) < DELTA) {
+            return 1d;
+        } else if (Math.abs(arg + Math.PI/2) < DELTA) {
+            return -1d;
+        } else if (Math.abs(arg - 2*Math.PI) < DELTA) {
+            return 0d;
+        } else if (Math.abs(arg + 2*Math.PI) < DELTA) {
+            return 0d;
+        } else if (Math.abs(arg - 3*Math.PI/2) < DELTA) {
+            return 1d;
+        } else if (Math.abs(arg + 3*Math.PI/2) < DELTA) {
+            return -1d;
+        }
+
         if(fromTable)
             return Math.sin(arg);
         /*

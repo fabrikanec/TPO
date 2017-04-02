@@ -1,11 +1,9 @@
 package system;
 
 import function.AbstractFunction;
-
 import function.logarithmic.Ln;
 import function.logarithmic.LogN;
 import function.trigonometric.*;
-import org.junit.After;
 import org.junit.Ignore;
 import org.junit.Test;
 import util.Writer;
@@ -16,11 +14,10 @@ import static org.junit.Assert.assertEquals;
  * Created by cezar on 3/26/17.
  */
 public class SystemFunctionsTest {
-
-    private AbstractFunction funcFromTable = new SystemFunctions(1e-10, true);
-    private AbstractFunction func = new SystemFunctions(1e-10);
+    private AbstractFunction funcFromTable = new SystemFunctions(1e-5, true);
+    private AbstractFunction func = new SystemFunctions(1e-5);
     private double expected, result, arg;
-    private static final double DELTA = 1e-5; 
+    private static final double DELTA = 1e-5;
 
     private String ERROR_STR = "expected %f == %f +- %f == " + func.getClass().getSimpleName() + "(%f)\n";
 
@@ -48,7 +45,7 @@ public class SystemFunctionsTest {
 
     @Test
     public void systemZeroTest() {
-        arg = 0;
+        arg = 0d;
         expected = funcFromTable.calc(arg);
         result = func.calc(arg);
         assertEquals(String.format(ERROR_STR, expected, result, DELTA, arg),
@@ -59,7 +56,7 @@ public class SystemFunctionsTest {
 
     @Test
     public void systemZeroTestL() {
-        arg = 0 - 0.01;
+        arg = -0.01;
         expected = funcFromTable.calc(arg);
         result = func.calc(arg);
         assertEquals(String.format(ERROR_STR, expected, result, DELTA, arg),
@@ -70,7 +67,7 @@ public class SystemFunctionsTest {
 
     @Test
     public void systemZeroTestG() {
-        arg = 0 + 0.01;
+        arg = 0.01;
         expected = funcFromTable.calc(arg);
         result = func.calc(arg);
         assertEquals(String.format(ERROR_STR, expected, result, DELTA, arg),

@@ -1,5 +1,4 @@
 import function.trigonometric.Tan;
-import util.Writer;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,12 +19,5 @@ public class Main {
         //for(double curr = -2 * Math.PI - 0.01; curr < 2 * Math.PI + 0.01; curr += 1e-5)
           //  if (curr > 1.57 && curr < 1.58)
            // System.out.println(String.format("%f%f\n", curr, Math.cos(curr)));
-
-        List<Double[]> data = new ArrayList<>();
-        for (double acc = 1e-6;acc > 1e-6; acc *= 1e-1) {
-            for (double x = (PI/2)-0.001; x < (PI/2)+0.001; x += 0.001) {
-                data.add(new Double[] { x, acc, new Tan(acc, true).calc(x) });
-            }
-        }
     }
 }

@@ -13,9 +13,9 @@ import static org.junit.Assert.assertEquals;
 /**
  * Created by cezar on 3/26/17.
  */
-public class SystemFunctionsTest {
-    private AbstractFunction funcFromTable = new SystemFunctions(1e-5, true);
-    private AbstractFunction func = new SystemFunctions(1e-5);
+public class SystemTest {
+    private AbstractFunction funcFromTable = new System(1e-5, true);
+    private AbstractFunction func = new System(1e-5);
     private double expected, result, arg;
     private static final double DELTA = 1e-5;
 
@@ -159,9 +159,6 @@ public class SystemFunctionsTest {
         writer.setFunction(new Tan(1e-4, false));
         writer.toCSVFile(-Math.PI, Math.PI, 1e-4);
 
-        writer.setFunction(new Sec(1e-4, false));
-        writer.toCSVFile(-Math.PI, Math.PI, 1e-4);
-
         writer.setFunction(new Csc(1e-4, false));
         writer.toCSVFile(-Math.PI, Math.PI, 1e-4);
 
@@ -180,7 +177,7 @@ public class SystemFunctionsTest {
         writer.setFunction(new LogN(1e-4, false, 10));
         writer.toCSVFile(-Math.PI, Math.PI, 1e-4);
 
-        writer.setFunction(new SystemFunctions(1e-4, false));
+        writer.setFunction(new System(1e-4, false));
         writer.toCSVFile(-2*Math.PI, 5.0, 1e-4);
 
         //Writer.generateCanonicalCSVFiles(- Math.PI, Math.PI, .0, 12.0, 1e-5);

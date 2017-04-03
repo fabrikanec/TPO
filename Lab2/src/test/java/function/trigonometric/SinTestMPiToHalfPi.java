@@ -35,7 +35,7 @@ public class SinTestMPiToHalfPi {
 
         for (double acc = 1e-5;acc > 1e-7; acc *= 1e-1) {
             for (double x = -PI; x < -PI/2; x += PI/4) {
-                data.add(new Double[] { x, acc, new Sin(acc, true).calc(x) });
+                data.add(new Double[] { x, acc, new SinStub(acc).calc(x) });
             }
         }
         return data;

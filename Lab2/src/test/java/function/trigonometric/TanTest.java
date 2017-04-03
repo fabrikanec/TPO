@@ -59,7 +59,7 @@ public class TanTest {
             exception.expect(errorClass);
         }
         double result = new Tan(accuracy).calc(argument);
-        assertEquals(String.format("expected %f = %f +- %f = Cot(%f)\n", expected, result, DELTA, argument),
+        assertEquals(String.format("expected %f = %f +- %f = Tan(%f)\n", expected, result, DELTA, argument),
                 expected, result, DELTA);
     }
 }

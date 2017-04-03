@@ -9,10 +9,6 @@ public class Tan extends AbstractFunction {
     private AbstractFunction sin = new Sin();
     private AbstractFunction cos = new Cos();
 
-    public Tan(double accuracy, boolean fromTable) {
-        super(accuracy, fromTable);
-    }
-
     public Tan(double accuracy) {
         super(accuracy);
     }
@@ -44,8 +40,6 @@ public class Tan extends AbstractFunction {
             return NaN;
         }
 
-        if(isFromTable())
-            return Math.sin(arg) / Math.cos(arg);
 
         sin.setAccuracy(getAccuracy());
         cos.setAccuracy(getAccuracy());

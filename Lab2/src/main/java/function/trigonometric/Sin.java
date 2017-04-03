@@ -11,10 +11,6 @@ import static java.lang.Double.*;
 
 public class Sin extends AbstractFunction {
 
-    public Sin(double accuracy, boolean fromTable) {
-        super(accuracy, fromTable);
-    }
-
     public Sin(double accuracy) {
         super(accuracy);
     }
@@ -49,8 +45,6 @@ public class Sin extends AbstractFunction {
             return -1d;
         }
 
-        if(isFromTable())
-            return Math.sin(arg);
         /*
         double prev;
         double value = 0.0;

@@ -17,23 +17,13 @@ public class Logarithmic extends AbstractFunction {
     private AbstractFunction log5;
     private AbstractFunction log10;
 
-
-    public Logarithmic(double accuracy, boolean fromTable) {
-        super(accuracy, fromTable);
-
-        ln = new Ln(accuracy, fromTable);
-        log2 = new LogN(accuracy, fromTable, 2);
-        log3 = new LogN(accuracy, fromTable, 3);
-        log5 = new LogN(accuracy, fromTable, 5);
-        log10 = new LogN(accuracy, fromTable, 10);
-    }
-
     public Logarithmic(double accuracy) {
         super(accuracy);
-    }
-
-    public Logarithmic() {
-        super();
+        ln = new Ln(accuracy);
+        log2 = new LogN(accuracy, 2);
+        log3 = new LogN(accuracy, 3);
+        log5 = new LogN(accuracy, 5);
+        log10 = new LogN(accuracy, 10);
     }
 
     @Override
@@ -53,7 +43,6 @@ public class Logarithmic extends AbstractFunction {
         BigDecimal fth = thd.pow(2);
         BigDecimal fith = new BigDecimal(log5.calc(arg), MathContext.UNLIMITED).pow(2).add(new BigDecimal(log10.calc(arg), MathContext.UNLIMITED).pow(3));
         BigDecimal sth  = fith.multiply(new BigDecimal(ln.calc(arg), MathContext.UNLIMITED));
-        double res = fth.subtract(sth).doubleValue();
-        return res;
+        return fth.subtract(sth).doubleValue();
     }
 }

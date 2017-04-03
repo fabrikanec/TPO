@@ -5,10 +5,6 @@ import function.AbstractFunction;
 public class Csc extends AbstractFunction {
     private AbstractFunction sin = new Sin();
 
-    public Csc(double accuracy, boolean fromTable) {
-        super(accuracy, fromTable);
-    }
-
     public Csc(double accuracy) {
         super(accuracy);
     }
@@ -27,9 +23,6 @@ public class Csc extends AbstractFunction {
                 Math.abs(arg) < DELTA) {
             return Double.NaN;
         }
-
-        if(isFromTable())
-            return 1 / Math.sin(arg);
 
         sin.setAccuracy(getAccuracy());
         return 1 / sin.calc(arg);

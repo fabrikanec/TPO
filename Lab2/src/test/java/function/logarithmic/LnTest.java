@@ -12,7 +12,7 @@ import static org.junit.Assert.*;
  * Created by cezar on 16.04.16.
  */
 public class LnTest {
-    private AbstractFunction funcFromTable = new Ln(1e-10, true);
+    private AbstractFunction funcFromTable = new Ln(1e-10);
     private AbstractFunction func = new Ln(1e-10);
     private double expected;
     private double result;

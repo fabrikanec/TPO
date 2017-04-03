@@ -16,7 +16,6 @@ public abstract class AbstractFunction {
     private static final double DEFAULT_ACCURACY = 1e-7;
 
     private double accuracy;
-    private boolean fromTable;
     private Map<Double, Double> canonicalResTable;
     private Writer writer = new Writer();
 
@@ -25,7 +24,6 @@ public abstract class AbstractFunction {
             throw new IllegalArgumentException("accuracy");
         }
 
-        this.fromTable = fromTable;
         this.accuracy = accuracy;
 
         if(fromTable)
@@ -38,14 +36,6 @@ public abstract class AbstractFunction {
 
     public AbstractFunction() {
         this(DEFAULT_ACCURACY, false);
-    }
-
-    public boolean isFromTable() {
-        return fromTable;
-    }
-
-    public void setFromTable(boolean fromTable) {
-        this.fromTable = fromTable;
     }
 
 

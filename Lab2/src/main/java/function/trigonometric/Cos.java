@@ -11,10 +11,6 @@ import static util.BigDecimalSqrt.sqrt;
 public class Cos extends AbstractFunction {
     private AbstractFunction sin = new Sin();
 
-    public Cos(double accuracy, boolean fromTable) {
-        super(accuracy, fromTable);
-    }
-
     public Cos(double accuracy) {
         super(accuracy);
     }
@@ -25,9 +21,6 @@ public class Cos extends AbstractFunction {
 
     @Override
     public double calc(double arg) {
-        if(isFromTable()) {
-            return Math.cos(arg);
-        }
 
         if (isNaN(arg) || isInfinite(arg)) {
             return NaN;

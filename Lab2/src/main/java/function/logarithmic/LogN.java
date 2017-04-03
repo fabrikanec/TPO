@@ -60,9 +60,6 @@ public class LogN extends AbstractFunction {
             return 0d;
         }
 
-        if(isFromTable())
-            return Math.log(arg)/Math.log(BASE);
-
         ln.setAccuracy(getAccuracy());
         return ln.calc(arg) / ln.calc(BASE);
     }

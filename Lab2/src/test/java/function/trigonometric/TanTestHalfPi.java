@@ -35,7 +35,7 @@ public class TanTestHalfPi {
 
         for (double acc = 1e-12;acc > 1e-14; acc *= 1e-1) {
             for (double x = (PI/2)-0.001; x < (PI/2)+0.001; x += 0.001) {
-                data.add(new Double[] { x, acc, new Tan(acc, true).calc(x) });
+                data.add(new Double[] { x, acc, new TanStub(acc).calc(x) });
             }
         }
         return data;
@@ -44,7 +44,7 @@ public class TanTestHalfPi {
     @Test
     public void testTan() {
         double result = new Tan(accuracy).calc(argument);
-        assertEquals(String.format("expected %f = %f +- %f = Cot(%f)\n", expected, result, DELTA, argument),
+        assertEquals(String.format("expected %f = %f +- %f = Tan(%f)\n", expected, result, DELTA, argument),
                 expected, result, DELTA);
     }
 

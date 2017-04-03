@@ -35,7 +35,7 @@ public class CscTestZeroToHalfPi {
 
         for (double acc = 1e-5;acc > 1e-7; acc *= 1e-1) {
             for (double x = 0; x < PI/2; x += PI/4) {
-                data.add(new Double[] { x, acc, new Csc(acc, true).calc(x) });
+                data.add(new Double[] { x, acc, new CscStub(acc).calc(x) });
             }
         }
         return data;

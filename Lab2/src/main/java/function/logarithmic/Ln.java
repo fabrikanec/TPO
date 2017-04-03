@@ -13,10 +13,6 @@ import static java.lang.Double.*;
  */
 public class Ln extends AbstractFunction {
 
-    public Ln(double accuracy, boolean fromTable) {
-        super(accuracy, fromTable);
-    }
-
     public Ln(double accuracy) {
         super(accuracy);
     }
@@ -39,10 +35,6 @@ public class Ln extends AbstractFunction {
             return NEGATIVE_INFINITY;
         }
 
-        if(isFromTable())
-            return Math.log(arg);
-
-        //TODO change fromTable to stub
         double value = 0;
         double preValue;
         int n = 1;

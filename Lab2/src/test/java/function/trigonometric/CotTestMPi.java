@@ -35,7 +35,7 @@ public class CotTestMPi {
 
         for (double acc = 1e-9;acc > 1e-11; acc *= 1e-1) {
             for (double x = -PI-0.001; x < -PI+0.001; x += 0.001) {
-                data.add(new Double[] { x, acc, new Cot(acc, true).calc(x) });
+                data.add(new Double[] { x, acc, new CotStub(acc).calc(x) });
             }
         }
         return data;

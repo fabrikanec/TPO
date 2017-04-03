@@ -8,10 +8,6 @@ public class Cot extends AbstractFunction {
     private AbstractFunction sin = new Sin();
     private AbstractFunction cos = new Cos();
 
-    public Cot(double accuracy, boolean fromTable) {
-        super(accuracy, fromTable);
-    }
-
     public Cot(double accuracy) {
         super(accuracy);
     }
@@ -42,9 +38,6 @@ public class Cot extends AbstractFunction {
         } else if (Math.abs(arg + 3*Math.PI/2) < DELTA) {
             return 0d;
         }
-
-        if(isFromTable())
-            return Math.cos(arg) / Math.sin(arg);
 
         sin.setAccuracy(getAccuracy());
         cos.setAccuracy(getAccuracy());

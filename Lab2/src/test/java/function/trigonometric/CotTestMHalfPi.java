@@ -35,7 +35,7 @@ public class CotTestMHalfPi {
 
         for (double acc = 1e-5;acc > 1e-7; acc *= 1e-1) {
             for (double x = -(PI/2)-0.001; x < -(PI/2)+0.001; x += 0.001) {
-                data.add(new Double[] { x, acc, new Cot(acc, true).calc(x) });
+                data.add(new Double[] { x, acc, new CotStub(acc).calc(x) });
             }
         }
         return data;

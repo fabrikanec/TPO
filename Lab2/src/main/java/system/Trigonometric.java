@@ -10,18 +10,13 @@ public class Trigonometric extends AbstractFunction {
     private AbstractFunction cot;
     private AbstractFunction tan;
 
-    public Trigonometric(double accuracy, boolean fromTable) {
-        super(accuracy, fromTable);
-
-        sin = new Sin(accuracy, fromTable);
-        cos = new Cos(accuracy, fromTable);
-        csc = new Csc(accuracy, fromTable);
-        cot = new Cot(accuracy, fromTable);
-        tan = new Tan(accuracy, fromTable);
-    }
-
     public Trigonometric(double accuracy) {
         super(accuracy);
+        sin = new Sin(accuracy);
+        cos = new Cos(accuracy);
+        csc = new Csc(accuracy);
+        cot = new Cot(accuracy);
+        tan = new Tan(accuracy);
     }
 
     public Trigonometric() {

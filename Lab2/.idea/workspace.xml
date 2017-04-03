@@ -17,46 +17,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="Cos.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/function/trigonometric/Cos.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="10" column="13" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CosStub.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/function/trigonometric/CosStub.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
-              <caret line="24" column="29" lean-forward="true" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SinStub.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/function/trigonometric/SinStub.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="24" column="5" lean-forward="false" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
-              <folding>
-                <element signature="e#422#423#0" expanded="true" />
-                <element signature="e#458#459#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Cot.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/function/trigonometric/Cot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="10" column="48" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+            <state relative-caret-position="303">
+              <caret line="39" column="9" lean-forward="true" selection-start-line="21" selection-start-column="8" selection-end-line="39" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -67,45 +32,12 @@
       <file leaf-file-name="CotStub.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/function/trigonometric/CotStub.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-              <folding>
-                <element signature="e#422#423#0" expanded="true" />
-                <element signature="e#474#475#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CscStub.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/function/trigonometric/CscStub.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="22" column="36" lean-forward="false" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
-              <folding>
-                <element signature="e#462#463#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TanStub.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/function/trigonometric/TanStub.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Tan.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/function/trigonometric/Tan.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="7" column="13" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+            <state relative-caret-position="464">
+              <caret line="35" column="9" lean-forward="false" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#226#227#0" expanded="true" />
+                <element signature="e#263#264#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -114,8 +46,18 @@
       <file leaf-file-name="Csc.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/function/trigonometric/Csc.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="4" column="13" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+            <state relative-caret-position="269">
+              <caret line="24" column="9" lean-forward="true" selection-start-line="18" selection-start-column="7" selection-end-line="24" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CscStub.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/function/trigonometric/CscStub.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="437">
+              <caret line="21" column="9" lean-forward="false" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -124,10 +66,68 @@
       <file leaf-file-name="Sin.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/function/trigonometric/Sin.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="23">
-              <caret line="11" column="13" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="85" selection-end-column="1" />
+            <state relative-caret-position="165">
+              <caret line="46" column="0" lean-forward="true" selection-start-line="23" selection-start-column="8" selection-end-line="46" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SinStub.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/function/trigonometric/SinStub.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="464">
+              <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Tan.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/function/trigonometric/Tan.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="69">
+              <caret line="22" column="8" lean-forward="false" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="115">
+              <caret line="5" column="19" lean-forward="true" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SystemTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/system/SystemTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="253">
+              <caret line="70" column="42" lean-forward="false" selection-start-line="70" selection-start-column="42" selection-end-line="70" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TanStub.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/function/trigonometric/TanStub.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="24" column="43" lean-forward="false" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#230#231#0" expanded="true" />
+                <element signature="e#267#268#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -151,6 +151,11 @@
       <find>private static final double DELTA = 1e-4;</find>
       <find>import static java.lang.Math.PI;</find>
       <find>import static function.AbstractFunction.DELTA;\nimport static function.AbstractFunction.DELTA;</find>
+      <find>acc, new Cos(acc, true)</find>
+      <find>acc, new Sin(acc, true)</find>
+      <find>acc, new Csc(acc, true)</find>
+      <find>acc, new Cot(acc, true)</find>
+      <find>acc, new Tan(acc, true)</find>
     </findStrings>
     <replaceStrings>
       <replace>logar</replace>
@@ -158,6 +163,11 @@
       <replace />
       <replace>import static java.lang.Math.PI;\nimport static function.AbstractFunction.DELTA;</replace>
       <replace>import static function.AbstractFunction.DELTA;</replace>
+      <replace>acc, new CosStub(acc)</replace>
+      <replace>acc, new SinStub(acc)</replace>
+      <replace>acc, new CscStub(acc)</replace>
+      <replace>acc, new CotStub(acc)</replace>
+      <replace>acc, new TanStub(acc)</replace>
     </replaceStrings>
   </component>
   <component name="GradleLocalSettings">
@@ -168,34 +178,15 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/test/java/function/trigonometric/TanTestMHalfPi.java" />
-        <option value="$PROJECT_DIR$/src/test/java/function/trigonometric/TanTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/function/trigonometric/CotTestMPiToHalfPi.java" />
-        <option value="$PROJECT_DIR$/src/test/java/function/trigonometric/CscTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/function/trigonometric/CotTestMPi.java" />
-        <option value="$PROJECT_DIR$/src/test/java/function/trigonometric/TanTestMPi.java" />
-        <option value="$PROJECT_DIR$/src/test/java/function/trigonometric/CscTestZero.java" />
-        <option value="$PROJECT_DIR$/src/test/java/function/trigonometric/CotTestMHalfPi.java" />
-        <option value="$PROJECT_DIR$/src/test/java/function/trigonometric/CosTestMPiToHalfPi.java" />
-        <option value="$PROJECT_DIR$/src/test/java/function/trigonometric/CscTestPi.java" />
-        <option value="$PROJECT_DIR$/src/test/java/function/trigonometric/SinTestMHalfPi.java" />
-        <option value="$PROJECT_DIR$/src/test/java/function/trigonometric/CotTestZeroToHalfPi.java" />
-        <option value="$PROJECT_DIR$/src/test/java/function/trigonometric/SinTestMHalfPiToZero.java" />
-        <option value="$PROJECT_DIR$/src/test/java/function/trigonometric/CotTestPi.java" />
-        <option value="$PROJECT_DIR$/src/test/java/function/trigonometric/SinTestZeroToHalfPi.java" />
-        <option value="$PROJECT_DIR$/src/test/java/function/trigonometric/SinTestMPi.java" />
         <option value="$PROJECT_DIR$/src/test/java/function/trigonometric/CscTestMHalfPi.java" />
         <option value="$PROJECT_DIR$/src/test/java/function/trigonometric/CscTestMPiToHalfPi.java" />
         <option value="$PROJECT_DIR$/src/test/java/function/trigonometric/SinTestPi.java" />
         <option value="$PROJECT_DIR$/src/test/java/function/trigonometric/SinTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/function/trigonometric/CosTestPi.java" />
         <option value="$PROJECT_DIR$/src/test/java/function/trigonometric/CscTestZeroToHalfPi.java" />
-        <option value="$PROJECT_DIR$/src/test/java/function/trigonometric/SinTestHalfPi.java" />
         <option value="$PROJECT_DIR$/src/test/java/function/trigonometric/SinTestMPiToHalfPi.java" />
         <option value="$PROJECT_DIR$/src/test/java/function/trigonometric/CscTestMHalfPiToZero.java" />
-        <option value="$PROJECT_DIR$/src/test/java/function/trigonometric/CotTestHalfPi.java" />
         <option value="$PROJECT_DIR$/src/test/java/function/trigonometric/CscTestMPi.java" />
-        <option value="$PROJECT_DIR$/src/test/java/function/trigonometric/TanTestMPiToHalfPi.java" />
         <option value="$PROJECT_DIR$/src/test/java/function/trigonometric/CotTestPiToHalfPi.java" />
         <option value="$PROJECT_DIR$/src/test/java/function/trigonometric/CosTestZeroToHalfPi.java" />
         <option value="$PROJECT_DIR$/src/test/java/function/trigonometric/CotTestMHalfPiToZero.java" />
@@ -203,22 +194,41 @@
         <option value="$PROJECT_DIR$/src/test/java/function/trigonometric/SinTestZero.java" />
         <option value="$PROJECT_DIR$/src/test/java/function/trigonometric/CotTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/function/trigonometric/SinTestPiToHalfPi.java" />
-        <option value="$PROJECT_DIR$/src/test/java/function/trigonometric/CscTestHalfPi.java" />
         <option value="$PROJECT_DIR$/src/test/java/function/trigonometric/TanTestPi.java" />
         <option value="$PROJECT_DIR$/src/test/java/function/trigonometric/CotTestZero.java" />
         <option value="$PROJECT_DIR$/src/test/java/function/trigonometric/CscTestPiToHalfPi.java" />
-        <option value="$PROJECT_DIR$/src/test/java/function/logarithmic/LnTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/function/AbstractFunction.java" />
-        <option value="$PROJECT_DIR$/src/main/java/system/Logarithmic.java" />
-        <option value="$PROJECT_DIR$/src/main/java/function/logarithmic/LogN.java" />
-        <option value="$PROJECT_DIR$/src/test/java/system/SystemTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/function/logarithmic/Ln.java" />
         <option value="$PROJECT_DIR$/src/main/java/function/trigonometric/СosStub.java" />
+        <option value="$PROJECT_DIR$/src/main/java/function/AbstractFunction.java" />
+        <option value="$PROJECT_DIR$/src/main/java/function/trigonometric/Cos.java" />
+        <option value="$PROJECT_DIR$/src/main/java/function/trigonometric/Cot.java" />
+        <option value="$PROJECT_DIR$/src/main/java/function/trigonometric/Csc.java" />
+        <option value="$PROJECT_DIR$/src/main/java/function/trigonometric/Sin.java" />
+        <option value="$PROJECT_DIR$/src/main/java/function/trigonometric/Tan.java" />
+        <option value="$PROJECT_DIR$/src/main/java/function/logarithmic/LogN.java" />
+        <option value="$PROJECT_DIR$/src/main/java/function/logarithmic/LogNStub.java" />
+        <option value="$PROJECT_DIR$/src/main/java/function/logarithmic/LnStub.java" />
+        <option value="$PROJECT_DIR$/src/main/java/function/logarithmic/Ln.java" />
+        <option value="$PROJECT_DIR$/src/test/java/function/trigonometric/CosTestHalfPi.java" />
+        <option value="$PROJECT_DIR$/src/test/java/function/trigonometric/SinTestHalfPi.java" />
+        <option value="$PROJECT_DIR$/src/test/java/function/trigonometric/CscTestHalfPi.java" />
+        <option value="$PROJECT_DIR$/src/test/java/function/trigonometric/CotTestHalfPi.java" />
+        <option value="$PROJECT_DIR$/src/test/java/function/trigonometric/TanTestMPiToHalfPi.java" />
+        <option value="$PROJECT_DIR$/src/test/java/function/trigonometric/TanTestMPi.java" />
+        <option value="$PROJECT_DIR$/src/test/java/function/trigonometric/TanTestMHalfPiToZero.java" />
+        <option value="$PROJECT_DIR$/src/test/java/function/trigonometric/TanTestHalfPi.java" />
+        <option value="$PROJECT_DIR$/src/test/java/function/trigonometric/TanTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/system/Logarithmic.java" />
+        <option value="$PROJECT_DIR$/src/main/java/system/Trigonometric.java" />
+        <option value="$PROJECT_DIR$/src/main/java/system/System.java" />
+        <option value="$PROJECT_DIR$/src/main/java/util/Writer.java" />
+        <option value="$PROJECT_DIR$/src/test/java/function/logarithmic/LnTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/function/trigonometric/CosStub.java" />
         <option value="$PROJECT_DIR$/src/main/java/function/trigonometric/CotStub.java" />
+        <option value="$PROJECT_DIR$/src/main/java/function/trigonometric/CscStub.java" />
         <option value="$PROJECT_DIR$/src/main/java/function/trigonometric/SinStub.java" />
         <option value="$PROJECT_DIR$/src/main/java/function/trigonometric/TanStub.java" />
-        <option value="$PROJECT_DIR$/src/main/java/function/trigonometric/CscStub.java" />
+        <option value="$PROJECT_DIR$/src/test/java/system/SystemTest.java" />
       </list>
     </option>
   </component>
@@ -343,36 +353,6 @@
               <option name="myItemId" value="function" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="trigonometric" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Lab2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Lab2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="function" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -496,36 +476,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Lab2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Lab2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="function" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="logarithmic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -555,7 +505,7 @@
       <recent name="$PROJECT_DIR$/src/main/java/function" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SystemTest">
+  <component name="RunManager" selected="JUnit.All in Lab2">
     <configuration default="false" name="SystemTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -634,17 +584,12 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="system in Lab2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="system.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+    <configuration default="false" name="All in Lab2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="Lab2" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="system" />
+      <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="package" />
@@ -660,12 +605,17 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="All in Lab2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+    <configuration default="false" name="function.trigonometric in Lab2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="function.trigonometric.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <module name="Lab2" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="function.trigonometric" />
       <option name="MAIN_CLASS_NAME" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="package" />
@@ -1065,16 +1015,16 @@
       <item index="0" class="java.lang.String" itemvalue="JUnit.SystemTest" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.function.logarithmic in Lab2" />
       <item index="2" class="java.lang.String" itemvalue="JUnit.SystemTest.systemZeroTestG" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.system in Lab2" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.All in Lab2" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.All in Lab2" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.function.trigonometric in Lab2" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.SystemTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.SystemTest.systemZeroTestG" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.All in Lab2" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.system in Lab2" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.function.logarithmic in Lab2" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.All in Lab2" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.function.trigonometric in Lab2" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.SystemTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.function.logarithmic in Lab2" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.SystemTest.systemZeroTestG" />
       </list>
     </recent_temporary>
   </component>
@@ -1090,22 +1040,16 @@
       <updated>1490461851306</updated>
       <workItem from="1490461855634" duration="8164000" />
       <workItem from="1490551140249" duration="8860000" />
-      <workItem from="1491170601109" duration="17362000" />
+      <workItem from="1491170601109" duration="20188000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="SystemTest - 2017.04.03 at 06h 48m 22s.xml">
-      <configuration name="SystemTest" configurationId="JUnit" />
+    <history-entry file="All_in_Lab2 - 2017.04.03 at 15h 33m 16s.xml">
+      <configuration name="All in Lab2" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SystemTest - 2017.04.03 at 06h 50m 13s.xml">
-      <configuration name="SystemTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SystemTest - 2017.04.03 at 06h 57m 40s.xml">
-      <configuration name="SystemTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SystemTest - 2017.04.03 at 06h 57m 55s.xml">
-      <configuration name="SystemTest" configurationId="JUnit" />
+    <history-entry file="All_in_Lab2 - 2017.04.03 at 15h 36m 40s.xml">
+      <configuration name="All in Lab2" configurationId="JUnit" />
     </history-entry>
     <history-entry file="SystemTest - 2017.04.03 at 06h 58m 38s.xml">
       <configuration name="SystemTest" configurationId="JUnit" />
@@ -1113,21 +1057,27 @@
     <history-entry file="SystemTest - 2017.04.03 at 14h 29m 36s.xml">
       <configuration name="SystemTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SystemTest_systemZeroTestG - 2017.04.03 at 06h 39m 56s.xml">
-      <configuration name="SystemTest.systemZeroTestG" configurationId="JUnit" />
+    <history-entry file="SystemTest - 2017.04.03 at 15h 26m 40s.xml">
+      <configuration name="SystemTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SystemTest_systemZeroTestG - 2017.04.03 at 06h 40m 33s.xml">
-      <configuration name="SystemTest.systemZeroTestG" configurationId="JUnit" />
+    <history-entry file="function_logarithmic_in_Lab2 - 2017.04.03 at 15h 24m 31s.xml">
+      <configuration name="function.logarithmic in Lab2" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SystemTest_systemZeroTestG - 2017.04.03 at 06h 45m 00s.xml">
-      <configuration name="SystemTest.systemZeroTestG" configurationId="JUnit" />
+    <history-entry file="function_logarithmic_in_Lab2 - 2017.04.03 at 15h 25m 02s.xml">
+      <configuration name="function.logarithmic in Lab2" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SystemTest_systemZeroTestG - 2017.04.03 at 06h 46m 15s.xml">
-      <configuration name="SystemTest.systemZeroTestG" configurationId="JUnit" />
+    <history-entry file="function_trigonometric_in_Lab2 - 2017.04.03 at 15h 25m 13s.xml">
+      <configuration name="function.trigonometric in Lab2" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="function_trigonometric_in_Lab2 - 2017.04.03 at 15h 26m 50s.xml">
+      <configuration name="function.trigonometric in Lab2" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="function_trigonometric_in_Lab2 - 2017.04.03 at 15h 31m 37s.xml">
+      <configuration name="function.trigonometric in Lab2" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34386000" />
+    <option name="totallyTimeSpent" value="37212000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2" y="25" width="1924" height="1036" extended-state="7" />
@@ -1181,118 +1131,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/java/function/trigonometric/CscTestPi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="47" column="34" lean-forward="false" selection-start-line="47" selection-start-column="34" selection-end-line="47" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/function/trigonometric/SinTestMHalfPi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="562">
-          <caret line="46" column="93" lean-forward="false" selection-start-line="46" selection-start-column="93" selection-end-line="46" selection-end-column="93" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/function/trigonometric/CotTestZeroToHalfPi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="46" column="91" lean-forward="false" selection-start-line="46" selection-start-column="91" selection-end-line="46" selection-end-column="91" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/function/trigonometric/SinTestMHalfPiToZero.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="46" column="91" lean-forward="false" selection-start-line="46" selection-start-column="91" selection-end-line="46" selection-end-column="91" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/function/trigonometric/CotTestPi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="46" column="91" lean-forward="false" selection-start-line="46" selection-start-column="91" selection-end-line="46" selection-end-column="91" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/function/trigonometric/SinTestZeroToHalfPi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="47" column="34" lean-forward="false" selection-start-line="47" selection-start-column="34" selection-end-line="47" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/function/trigonometric/SinTestMPi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="46" column="91" lean-forward="false" selection-start-line="46" selection-start-column="91" selection-end-line="46" selection-end-column="91" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/function/trigonometric/CscTestMHalfPi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="47" column="34" lean-forward="false" selection-start-line="47" selection-start-column="34" selection-end-line="47" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/function/trigonometric/CscTestMPiToHalfPi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="47" column="34" lean-forward="false" selection-start-line="47" selection-start-column="34" selection-end-line="47" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/function/trigonometric/SinTestPi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="47" column="34" lean-forward="false" selection-start-line="47" selection-start-column="34" selection-end-line="47" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/function/trigonometric/SinTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="61" column="91" lean-forward="false" selection-start-line="61" selection-start-column="91" selection-end-line="61" selection-end-column="91" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/function/trigonometric/CosTestPi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="47" column="34" lean-forward="false" selection-start-line="47" selection-start-column="34" selection-end-line="47" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/function/trigonometric/CscTestZeroToHalfPi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="47" column="34" lean-forward="false" selection-start-line="47" selection-start-column="34" selection-end-line="47" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/function/trigonometric/SinTestHalfPi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="46" column="91" lean-forward="false" selection-start-line="46" selection-start-column="91" selection-end-line="46" selection-end-column="91" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/function/trigonometric/SinTestMPiToHalfPi.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="337">
@@ -1309,23 +1147,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/function/trigonometric/CotTestHalfPi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="562">
-          <caret line="46" column="91" lean-forward="false" selection-start-line="46" selection-start-column="91" selection-end-line="46" selection-end-column="91" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/function/trigonometric/CscTestMPi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="47" column="34" lean-forward="false" selection-start-line="47" selection-start-column="34" selection-end-line="47" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/function/trigonometric/TanTestMPiToHalfPi.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="337">
           <caret line="47" column="34" lean-forward="false" selection-start-line="47" selection-start-column="34" selection-end-line="47" selection-end-column="34" />
@@ -1393,22 +1215,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/function/trigonometric/CscTestHalfPi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="47" column="34" lean-forward="false" selection-start-line="47" selection-start-column="34" selection-end-line="47" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/function/trigonometric/TanTestPi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="47" column="34" lean-forward="false" selection-start-line="47" selection-start-column="34" selection-end-line="47" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/function/trigonometric/CotTestZero.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="562">
@@ -1435,11 +1241,331 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/function/AbstractFunction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/function/logarithmic/LogNStub.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="20" column="19" lean-forward="false" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/function/logarithmic/Ln.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#304#305#0" expanded="true" />
+            <element signature="e#335#336#0" expanded="true" />
+            <element signature="e#354#355#0" expanded="true" />
+            <element signature="e#377#378#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/function/logarithmic/LnStub.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="15" column="17" lean-forward="false" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#312#313#0" expanded="true" />
+            <element signature="e#349#350#0" expanded="true" />
+            <element signature="e#401#402#0" expanded="true" />
+            <element signature="e#437#438#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/function/logarithmic/LogN.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="539">
+          <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/function/trigonometric/CosTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-250">
+          <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/function/trigonometric/CosTestHalfPi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="36" column="43" lean-forward="false" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/function/trigonometric/SinTestHalfPi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="37" column="43" lean-forward="false" selection-start-line="37" selection-start-column="43" selection-end-line="37" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/function/trigonometric/CscTestHalfPi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="37" column="43" lean-forward="false" selection-start-line="37" selection-start-column="43" selection-end-line="37" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/function/trigonometric/CotTestHalfPi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="37" column="43" lean-forward="false" selection-start-line="37" selection-start-column="43" selection-end-line="37" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/function/trigonometric/TanTestZeroToHalfPi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="562">
+          <caret line="46" column="64" lean-forward="false" selection-start-line="46" selection-start-column="61" selection-end-line="46" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/function/trigonometric/TanTestZero.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-128">
+          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/function/trigonometric/TanTestPi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="47" column="34" lean-forward="false" selection-start-line="47" selection-start-column="34" selection-end-line="47" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/function/trigonometric/TanTestMPiToHalfPi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="562">
+          <caret line="46" column="64" lean-forward="false" selection-start-line="46" selection-start-column="61" selection-end-line="46" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/function/trigonometric/TanTestMPi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="562">
+          <caret line="46" column="64" lean-forward="false" selection-start-line="46" selection-start-column="64" selection-end-line="46" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/function/trigonometric/TanTestMHalfPiToZero.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="562">
+          <caret line="46" column="64" lean-forward="false" selection-start-line="46" selection-start-column="64" selection-end-line="46" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/function/trigonometric/TanTestMHalfPi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-128">
+          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/function/trigonometric/TanTestHalfPi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="516">
+          <caret line="46" column="64" lean-forward="false" selection-start-line="46" selection-start-column="64" selection-end-line="46" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/function/trigonometric/TanTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="562">
+          <caret line="61" column="64" lean-forward="false" selection-start-line="61" selection-start-column="64" selection-end-line="61" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/function/trigonometric/SinTestZeroToHalfPi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/system/Logarithmic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="449">
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/system/Trigonometric.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="10" column="33" lean-forward="false" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/system/System.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/util/Writer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="160" column="89" lean-forward="false" selection-start-line="160" selection-start-column="89" selection-end-line="160" selection-end-column="89" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/function/logarithmic/LnTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3496">
-          <caret line="158" column="38" lean-forward="false" selection-start-line="158" selection-start-column="38" selection-end-line="158" selection-end-column="38" />
+        <state relative-caret-position="-1280">
+          <caret line="14" column="45" lean-forward="false" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/function/trigonometric/TanTestPiToHalfPi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/function/trigonometric/Cos.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="46" column="9" lean-forward="true" selection-start-line="24" selection-start-column="8" selection-end-line="46" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/function/trigonometric/CosStub.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/function/trigonometric/Cot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="39" column="9" lean-forward="true" selection-start-line="21" selection-start-column="8" selection-end-line="39" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/function/trigonometric/CotStub.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="35" column="9" lean-forward="false" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#226#227#0" expanded="true" />
+            <element signature="e#263#264#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/function/trigonometric/Csc.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="24" column="9" lean-forward="true" selection-start-line="18" selection-start-column="7" selection-end-line="24" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/function/trigonometric/CscStub.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="21" column="9" lean-forward="false" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/function/trigonometric/Sin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="46" column="0" lean-forward="true" selection-start-line="23" selection-start-column="8" selection-end-line="46" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/function/trigonometric/SinStub.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/function/trigonometric/TanStub.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="24" column="43" lean-forward="false" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#230#231#0" expanded="true" />
+            <element signature="e#267#268#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/function/trigonometric/Tan.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="22" column="8" lean-forward="false" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1451,170 +1577,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/function/AbstractFunction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="14" column="46" lean-forward="false" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/function/logarithmic/LogN.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="556">
-          <caret line="68" column="1" lean-forward="true" selection-start-line="68" selection-start-column="1" selection-end-line="68" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/system/System.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/system/Logarithmic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1242">
-          <caret line="58" column="1" lean-forward="true" selection-start-line="58" selection-start-column="1" selection-end-line="58" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/function/logarithmic/Ln.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="834">
-          <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/system/SystemTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1449">
-          <caret line="71" column="34" lean-forward="false" selection-start-line="71" selection-start-column="34" selection-end-line="71" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/function/trigonometric/CosTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-525">
-          <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/function/trigonometric/CosTestHalfPi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-387">
-          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/function/trigonometric/Cos.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/function/trigonometric/Sin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="11" column="13" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="85" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/function/trigonometric/Cot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="10" column="48" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/function/trigonometric/Csc.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/function/trigonometric/Tan.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/function/trigonometric/TanStub.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/function/trigonometric/SinStub.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="24" column="5" lean-forward="false" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
-          <folding>
-            <element signature="e#422#423#0" expanded="true" />
-            <element signature="e#458#459#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/function/trigonometric/CscStub.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="22" column="36" lean-forward="false" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
-          <folding>
-            <element signature="e#462#463#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/function/trigonometric/CotStub.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding>
-            <element signature="e#422#423#0" expanded="true" />
-            <element signature="e#474#475#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/function/trigonometric/CosStub.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="24" column="29" lean-forward="true" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
+        <state relative-caret-position="253">
+          <caret line="70" column="42" lean-forward="false" selection-start-line="70" selection-start-column="42" selection-end-line="70" selection-end-column="42" />
           <folding />
         </state>
       </provider>

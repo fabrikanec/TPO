@@ -5,8 +5,8 @@ import function.AbstractFunction;
 import static java.lang.Math.PI;
 
 public class Cot extends AbstractFunction {
-    Sin sin = new Sin();
-    Cos cos = new Cos();
+    private AbstractFunction sin = new Sin();
+    private AbstractFunction cos = new Cos();
 
     public Cot(double accuracy, boolean fromTable) {
         super(accuracy, fromTable);
@@ -20,6 +20,7 @@ public class Cot extends AbstractFunction {
         super();
     }
 
+    @Override
     public double calc(double arg) {
 
         if (Math.abs(arg - Math.PI) < DELTA ) {
@@ -42,11 +43,11 @@ public class Cot extends AbstractFunction {
             return 0d;
         }
 
-        if(fromTable)
+        if(isFromTable())
             return Math.cos(arg) / Math.sin(arg);
 
-        sin.setAccuracy(accuracy);
-        cos.setAccuracy(accuracy);
+        sin.setAccuracy(getAccuracy());
+        cos.setAccuracy(getAccuracy());
         return cos.calc(arg) / sin.calc(arg);
     }
 }

@@ -1,7 +1,6 @@
 package function.trigonometric;
 
 
-import function.trigonometric.Cot;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -10,12 +9,13 @@ import org.junit.runners.Parameterized.Parameters;
 import java.util.ArrayList;
 import java.util.List;
 
+import static function.AbstractFunction.DELTA;
 import static java.lang.Math.PI;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
 public class TanTestMHalfPi {
-    private static final double DELTA = 1e-4;
+
 
 	private final double argument;
 

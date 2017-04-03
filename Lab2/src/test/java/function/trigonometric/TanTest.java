@@ -1,7 +1,6 @@
 package function.trigonometric;
 
 
-import function.trigonometric.Tan;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
@@ -13,12 +12,13 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import static function.AbstractFunction.DELTA;
 import static java.lang.Double.NaN;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
 public class TanTest {
-    private static final double DELTA = 1e-4;
+
 
 	private final double argument;
 

@@ -4,11 +4,11 @@ import function.AbstractFunction;
 import function.trigonometric.*;
 
 public class Trigonometric extends AbstractFunction {
-    private Sin sin = new Sin();
-    private Cos cos = new Cos();
-    private Csc csc = new Csc();
-    private Cot cot = new Cot();
-    private Tan tan = new Tan();
+    private AbstractFunction sin;
+    private AbstractFunction cos;
+    private AbstractFunction csc;
+    private AbstractFunction cot;
+    private AbstractFunction tan;
 
     public Trigonometric(double accuracy, boolean fromTable) {
         super(accuracy, fromTable);
@@ -30,10 +30,10 @@ public class Trigonometric extends AbstractFunction {
 
     @Override
     public double calc(double arg) {
-        sin.setAccuracy(accuracy);
-        cos.setAccuracy(accuracy);
-        csc.setAccuracy(accuracy);
-        cot.setAccuracy(accuracy);
+        sin.setAccuracy(getAccuracy());
+        cos.setAccuracy(getAccuracy());
+        csc.setAccuracy(getAccuracy());
+        cot.setAccuracy(getAccuracy());
 
         return (((((cot.calc(arg) -
                 csc.calc(arg)) *

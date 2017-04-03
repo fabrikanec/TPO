@@ -6,8 +6,8 @@ import static java.lang.Double.NaN;
 
 
 public class Tan extends AbstractFunction {
-    Sin sin = new Sin();
-    Cos cos = new Cos();
+    private AbstractFunction sin = new Sin();
+    private AbstractFunction cos = new Cos();
 
     public Tan(double accuracy, boolean fromTable) {
         super(accuracy, fromTable);
@@ -21,6 +21,7 @@ public class Tan extends AbstractFunction {
         super();
     }
 
+    @Override
     public double calc(double arg) {
 
         if (Math.abs(arg - Math.PI) < DELTA ) {
@@ -43,11 +44,11 @@ public class Tan extends AbstractFunction {
             return NaN;
         }
 
-        if(fromTable)
+        if(isFromTable())
             return Math.sin(arg) / Math.cos(arg);
 
-        sin.setAccuracy(accuracy);
-        cos.setAccuracy(accuracy);
+        sin.setAccuracy(getAccuracy());
+        cos.setAccuracy(getAccuracy());
         return sin.calc(arg) / cos.calc(arg);
     }
 }

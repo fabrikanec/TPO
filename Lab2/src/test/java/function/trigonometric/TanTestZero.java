@@ -1,7 +1,6 @@
 package function.trigonometric;
 
 
-import function.trigonometric.Tan;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -10,11 +9,12 @@ import org.junit.runners.Parameterized.Parameters;
 import java.util.ArrayList;
 import java.util.List;
 
+import static function.AbstractFunction.DELTA;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
 public class TanTestZero {
-    private static final double DELTA = 1e-4;
+
 
 	private final double argument;
 

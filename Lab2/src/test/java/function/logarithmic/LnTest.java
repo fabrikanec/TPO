@@ -5,6 +5,7 @@ import org.junit.Ignore;
 import org.junit.Test;
 import util.Writer;
 
+import static function.AbstractFunction.DELTA;
 import static org.junit.Assert.*;
 
 /**
@@ -17,7 +18,6 @@ public class LnTest {
     private double result;
     private double arg;
     private final double logBase = Math.E;
-    private static final double DELTA = 1e-5;
     private String ERROR_STR = "expected %f == %f +- %f == " + func.getClass().getSimpleName() + "(%f)\n";
 
     @Test

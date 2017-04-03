@@ -3,7 +3,7 @@ package function.trigonometric;
 import function.AbstractFunction;
 
 public class Csc extends AbstractFunction {
-    Sin sin = new Sin();
+    private AbstractFunction sin = new Sin();
 
     public Csc(double accuracy, boolean fromTable) {
         super(accuracy, fromTable);
@@ -17,6 +17,7 @@ public class Csc extends AbstractFunction {
         super();
     }
 
+    @Override
     public double calc(double arg) {
 
         if (Math.abs(arg - Math.PI) < DELTA ||
@@ -25,13 +26,12 @@ public class Csc extends AbstractFunction {
                 Math.abs(arg + 2*Math.PI) < DELTA ||
                 Math.abs(arg) < DELTA) {
             return Double.NaN;
-
         }
 
-        if(fromTable)
+        if(isFromTable())
             return 1 / Math.sin(arg);
 
-        sin.setAccuracy(accuracy);
+        sin.setAccuracy(getAccuracy());
         return 1 / sin.calc(arg);
     }
 }

@@ -1,21 +1,15 @@
 package function.trigonometric;
 
 import function.AbstractFunction;
-
 import java.math.BigDecimal;
-import java.math.BigInteger;
 import java.math.MathContext;
-import java.math.RoundingMode;
-import java.util.ArrayList;
-import java.util.List;
 
 import static java.lang.Math.*;
 import static java.lang.Double.*;
-import static java.math.BigDecimal.*;
 import static util.BigDecimalSqrt.sqrt;
 
 public class Cos extends AbstractFunction {
-    Sin sin = new Sin();
+    private AbstractFunction sin = new Sin();
 
     public Cos(double accuracy, boolean fromTable) {
         super(accuracy, fromTable);
@@ -31,7 +25,7 @@ public class Cos extends AbstractFunction {
 
     @Override
     public double calc(double arg) {
-        if(fromTable) {
+        if(isFromTable()) {
             return Math.cos(arg);
         }
 
@@ -59,7 +53,7 @@ public class Cos extends AbstractFunction {
             return 1d;
         }
 
-        sin.setAccuracy(accuracy);
+        sin.setAccuracy(getAccuracy());
 
         //double unsignedCos = (sqrt(1 - pow(sin.calc(arg), 2)));
         double unsignedCos = sqrt((new BigDecimal(1, MathContext.UNLIMITED).
@@ -67,7 +61,7 @@ public class Cos extends AbstractFunction {
                                         pow(2))), MathContext.DECIMAL128).doubleValue();
                                         //setScale(10, RoundingMode.UP).doubleValue();
 
-        double modifiedValue = unsignedCos > 1? 0.9999999999999999 : unsignedCos;
+        double modifiedValue = unsignedCos > 1? 0.9999999999999999 : unsignedCos; //TODO make it better
 
         double tmpA = abs(abs(arg) > PI*2 ? arg % PI*2 : arg);
 

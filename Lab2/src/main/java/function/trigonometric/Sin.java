@@ -2,13 +2,12 @@ package function.trigonometric;
 
 import function.AbstractFunction;
 import util.FactorialSeries;
-
 import java.math.BigDecimal;
 import java.math.MathContext;
 import java.math.RoundingMode;
 
 import static java.lang.Double.*;
-import static java.lang.Math.*;
+
 
 public class Sin extends AbstractFunction {
 
@@ -24,6 +23,7 @@ public class Sin extends AbstractFunction {
         super();
     }
 
+    @Override
     public double calc(double arg) {
         if (isNaN(arg) || isInfinite(arg)) {
             return NaN;
@@ -49,7 +49,7 @@ public class Sin extends AbstractFunction {
             return -1d;
         }
 
-        if(fromTable)
+        if(isFromTable())
             return Math.sin(arg);
         /*
         double prev;
@@ -75,12 +75,12 @@ public class Sin extends AbstractFunction {
                                             divide(new BigDecimal(FactorialSeries.factorial(2 * n + 1)),
                                                     15, RoundingMode.HALF_UP));
             n++;
-        } while (accuracy <= value.subtract(last).abs().doubleValue() && n < MAX_ITERATIONS);
+        } while (getAccuracy() <= value.subtract(last).abs().doubleValue() && n < MAX_ITERATIONS);
 
         double bigDecimalValueToDoble = value.setScale(100, RoundingMode.UP).doubleValue();
 
         double modifiedVlue = bigDecimalValueToDoble > 1? 0.9999999999999999 : bigDecimalValueToDoble;
-        modifiedVlue = modifiedVlue < -1 ? -0.9999999999999999 : modifiedVlue;
+        modifiedVlue = modifiedVlue < -1 ? -0.9999999999999999 : modifiedVlue; //TODO make it better
         return modifiedVlue;
     }
 }

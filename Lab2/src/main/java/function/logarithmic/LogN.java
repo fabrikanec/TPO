@@ -8,7 +8,7 @@ import function.AbstractFunction;
 public class LogN extends AbstractFunction {
     public final int BASE;
     public static final int DEFAULT_BASE = 2;
-    private Ln ln = new Ln();
+    private AbstractFunction ln = new Ln();
 
     public LogN(double accuracy, boolean fromTable, int base) {
         super(accuracy, fromTable);
@@ -49,12 +49,21 @@ public class LogN extends AbstractFunction {
         BASE = DEFAULT_BASE;
     }
 
+    @Override
     public double calc(double arg) {
 
-        if(fromTable)
+        if (Math.abs(arg - BASE) < 1e-5) {
+            return 1d;
+        }
+
+        if (Math.abs(arg - 1d) < 1e-5) {
+            return 0d;
+        }
+
+        if(isFromTable())
             return Math.log(arg)/Math.log(BASE);
 
-        ln.setAccuracy(accuracy);
+        ln.setAccuracy(getAccuracy());
         return ln.calc(arg) / ln.calc(BASE);
     }
 }

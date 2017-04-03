@@ -1,13 +1,6 @@
 package system;
 
 import function.AbstractFunction;
-import function.logarithmic.Ln;
-import function.logarithmic.LogN;
-import function.trigonometric.*;
-
-import java.math.BigDecimal;
-import java.math.MathContext;
-import java.math.RoundingMode;
 
 import static java.lang.Double.*;
 
@@ -27,6 +20,8 @@ public class System extends AbstractFunction {
 
     public System(double accuracy) {
         super(accuracy);
+        tr = new Trigonometric(accuracy, isFromTable());
+        log = new Logarithmic(accuracy, isFromTable());
     }
 
     public System() {
@@ -40,11 +35,9 @@ public class System extends AbstractFunction {
 
         if (arg <= 0) {
             return tr.calc(arg);
-        } else if (arg > 0) {
+        } else {
             return log.calc(arg);
         }
-
-        return NaN;
     }
 }
 

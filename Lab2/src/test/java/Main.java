@@ -1,9 +1,4 @@
-import function.trigonometric.Tan;
-
-import java.util.ArrayList;
-import java.util.List;
-
-import static java.lang.Math.PI;
+import util.Writer;
 
 /**
  * Created by cezar on 3/29/17.
@@ -11,8 +6,8 @@ import static java.lang.Math.PI;
 public class Main {
     public static void main(String[] args) {
         System.out.println(Math.cos(Double.POSITIVE_INFINITY));
-        //Writer.generateCanonicalCSVFiles(-Math.PI, Math.PI, .0, 12.0, 1e-5);
-        //Writer.generateCanonicalCSVFiles(-2.1 * Math.PI, 0.1, 0, 3, 1e-6);
+        Writer.generateCanonicalCSVFiles(-Math.PI, Math.PI, .0, 12.0, 1e-5);
+        Writer.generateCanonicalCSVFiles(-2.1 * Math.PI, 0.1, 0, 3, 1e-6);
         //Writer.generateCanonicalCSVFiles(-2 * Math.PI, 2 * Math.PI, 0, 3, 1e-5);
         //Writer.generateCanonicalCSVFiles(-2 * Math.PI - 0.01, 2 * Math.PI + 0.01, 0, 12, 1e-5); //last
 

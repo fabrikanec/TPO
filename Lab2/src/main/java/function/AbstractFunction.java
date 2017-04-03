@@ -1,24 +1,23 @@
 package function;
 
 import java.util.Map;
+import util.Writer;
 
 import static java.lang.Double.isInfinite;
 import static java.lang.Double.isNaN;
-import util.Writer;
 
 /**
  * Created by cezar on 3/25/17.
  */
 public abstract class AbstractFunction {
 
-    protected static final double DELTA = 1e-5;
-    public static final int MAX_ITERATIONS = 500000;
-    private static final double DEFAULT_ACCURACY = 1e-4;
+    public static final double DELTA = 1e-4;
+    public static final int MAX_ITERATIONS = 1_000_000;
+    private static final double DEFAULT_ACCURACY = 1e-7;
 
-    protected double accuracy;
-    protected boolean fromTable = false;
-    protected Map<Double, Double> canonicalResTable;
-
+    private double accuracy;
+    private boolean fromTable;
+    private Map<Double, Double> canonicalResTable;
     private Writer writer = new Writer();
 
     public AbstractFunction(double accuracy, boolean fromTable) {
@@ -41,6 +40,15 @@ public abstract class AbstractFunction {
         this(DEFAULT_ACCURACY, false);
     }
 
+    public boolean isFromTable() {
+        return fromTable;
+    }
+
+    public void setFromTable(boolean fromTable) {
+        this.fromTable = fromTable;
+    }
+
+
     public double getAccuracy() {
         return accuracy;
     }
@@ -59,6 +67,14 @@ public abstract class AbstractFunction {
 
     public void setWriter(Writer writer) {
         this.writer = writer;
+    }
+
+    public Map<Double, Double> getCanonicalResTable() {
+        return canonicalResTable;
+    }
+
+    public void setCanonicalResTable(Map<Double, Double> canonicalResTable) {
+        this.canonicalResTable = canonicalResTable;
     }
 
     public abstract double calc(double arg);

@@ -14,10 +14,10 @@ import static org.junit.Assert.assertEquals;
  * Created by cezar on 3/26/17.
  */
 public class SystemTest {
-    private AbstractFunction funcFromTable = new System(1e-5, true);
-    private AbstractFunction func = new System(1e-5);
+    private AbstractFunction funcFromTable = new System(1e-12, true);
+    private AbstractFunction func = new System(1e-20);
     private double expected, result, arg;
-    private static final double DELTA = 1e-5;
+    private static final double DELTA = 1e-3;
 
     private String ERROR_STR = "expected %f == %f +- %f == " + func.getClass().getSimpleName() + "(%f)\n";
 
@@ -68,8 +68,8 @@ public class SystemTest {
     @Test
     public void systemZeroTestG() {
         arg = 0.01;
-        expected = funcFromTable.calc(arg);
-        result = func.calc(arg);
+        expected = funcFromTable.calc(arg);// / 100000d;
+        result = func.calc(arg);// / 100000d;
         assertEquals(String.format(ERROR_STR, expected, result, DELTA, arg),
                 expected,
                 result,
@@ -180,8 +180,8 @@ public class SystemTest {
         writer.setFunction(new System(1e-4, false));
         writer.toCSVFile(-2*Math.PI, 5.0, 1e-4);
 
-        //Writer.generateCanonicalCSVFiles(- Math.PI, Math.PI, .0, 12.0, 1e-5);
+        Writer.generateCanonicalCSVFiles(- Math.PI, Math.PI, .0, 12.0, 1e-5);
 
-        //Writer.generateCanonicalCSVFiles(-2.1 * Math.PI, 0.1, 0, 3, 1e-6);
+        Writer.generateCanonicalCSVFiles(-2.1 * Math.PI, 0.1, 0, 3, 1e-6);
     }
 }

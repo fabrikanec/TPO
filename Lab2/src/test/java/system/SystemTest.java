@@ -68,8 +68,8 @@ public class SystemTest {
     @Test
     public void systemZeroTestG() {
         arg = 0.01;
-        expected = funcFromTable.calc(arg) / 100d;
-        result = func.calc(arg) / 100d;
+        expected = funcFromTable.calc(arg) / 10d;
+        result = func.calc(arg) / 10d;
         assertEquals(String.format(ERROR_STR, expected, result, DELTA, arg),
                 expected,
                 result,

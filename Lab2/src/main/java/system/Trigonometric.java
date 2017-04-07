@@ -3,7 +3,7 @@ package system;
 import function.AbstractFunction;
 import function.Level;
 import function.trigonometric.*;
-
+import static java.lang.Double.*;
 public class Trigonometric extends AbstractFunction {
     private AbstractFunction sin;
     private AbstractFunction cos;
@@ -26,6 +26,9 @@ public class Trigonometric extends AbstractFunction {
 
     @Override
     public double calc(double arg) {
+        if (isNaN(arg) || isInfinite(arg)) {
+            return NaN;
+        }
         sin.setAccuracy(getAccuracy());
         cos.setAccuracy(getAccuracy());
         csc.setAccuracy(getAccuracy());

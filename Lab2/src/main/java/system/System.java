@@ -1,6 +1,7 @@
 package system;
 
 import function.AbstractFunction;
+import function.Level;
 
 import static java.lang.Double.*;
 
@@ -11,10 +12,10 @@ public class System extends AbstractFunction {
     private AbstractFunction tr;
     private AbstractFunction log;
 
-    public System(double accuracy) {
-        super(accuracy);
-        tr = new Trigonometric(accuracy);
-        log = new Logarithmic(accuracy);
+    public System(double accuracy, Level lvl) {
+        super(accuracy, lvl);
+        tr = new Trigonometric(accuracy, lvl);
+        log = new Logarithmic(accuracy, lvl);
     }
 
     public double calc(double arg) {

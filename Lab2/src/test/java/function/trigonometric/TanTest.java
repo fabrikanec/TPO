@@ -1,6 +1,7 @@
 package function.trigonometric;
 
 
+import function.Level;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
@@ -58,7 +59,7 @@ public class TanTest {
         if (errorClass != null) {
             exception.expect(errorClass);
         }
-        double result = new Tan(accuracy).calc(argument);
+        double result = new Tan(accuracy, Level.Two).calc(argument);
         assertEquals(String.format("expected %f = %f +- %f = Tan(%f)\n", expected, result, DELTA, argument),
                 expected, result, DELTA);
     }

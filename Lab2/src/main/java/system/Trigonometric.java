@@ -1,6 +1,7 @@
 package system;
 
 import function.AbstractFunction;
+import function.Level;
 import function.trigonometric.*;
 
 public class Trigonometric extends AbstractFunction {
@@ -10,13 +11,13 @@ public class Trigonometric extends AbstractFunction {
     private AbstractFunction cot;
     private AbstractFunction tan;
 
-    public Trigonometric(double accuracy) {
-        super(accuracy);
-        sin = new Sin(accuracy);
-        cos = new Cos(accuracy);
-        csc = new Csc(accuracy);
-        cot = new Cot(accuracy);
-        tan = new Tan(accuracy);
+    public Trigonometric(double accuracy, Level lvl) {
+        super(accuracy, lvl);
+        sin = new Sin(accuracy, lvl);
+        cos = new Cos(accuracy, lvl);
+        csc = new Csc(accuracy, lvl);
+        cot = new Cot(accuracy, lvl);
+        tan = new Tan(accuracy, lvl);
     }
 
     public Trigonometric() {

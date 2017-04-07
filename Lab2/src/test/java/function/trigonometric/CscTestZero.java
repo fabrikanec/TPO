@@ -1,6 +1,7 @@
 package function.trigonometric;
 
 
+import function.Level;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -34,7 +35,7 @@ public class CscTestZero {
 
         for (double acc = 1e-5;acc > 1e-7; acc *= 1e-1) {
             for (double x = -0.001; x < 0.001; x += 0.001) {
-                data.add(new Double[] { x, acc, new CscStub(acc).calc(x) });
+                data.add(new Double[] { x, acc, new Csc(acc, Level.One).calc(x) });
             }
         }
         return data;
@@ -42,7 +43,7 @@ public class CscTestZero {
 
     @Test
     public void testCsc() {
-        double result = new Csc(accuracy).calc(argument);;
+        double result = new Csc(accuracy, Level.Two).calc(argument);;
         assertEquals(String.format("expected %f = %f +- %f = Csc(%f)\n", expected, result, DELTA, argument),
                 expected, result, DELTA);
     }

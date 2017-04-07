@@ -1,6 +1,7 @@
 package function.trigonometric;
 
 
+import function.Level;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -34,7 +35,7 @@ public class CosTestMPi {
 
         for (double acc = 1e-5;acc > 1e-7; acc *= 1e-1) {
             for (double x = -PI-0.001; x < -PI+0.001; x += 0.001) {
-                data.add(new Double[] { x, acc, new CosStub(acc).calc(x) });
+                data.add(new Double[] { x, acc, new Cos(acc, Level.One).calc(x) });
             }
         }
         return data;
@@ -42,7 +43,7 @@ public class CosTestMPi {
 
     @Test
     public void testCos() {
-        double result = new Cos(accuracy).calc(argument);
+        double result = new Cos(accuracy, Level.Two).calc(argument);
         assertEquals(String.format("expected %f = %f +- %f = COS(%f)\n", expected, result, DELTA, argument),
                 expected, result, DELTA);
     }

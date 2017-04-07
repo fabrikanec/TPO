@@ -1,6 +1,7 @@
 package system;
 
 import function.AbstractFunction;
+import function.Level;
 import function.logarithmic.Ln;
 import function.logarithmic.LogN;
 import function.trigonometric.*;
@@ -14,8 +15,8 @@ import static org.junit.Assert.assertEquals;
  * Created by cezar on 3/26/17.
  */
 public class SystemTest {
-    private AbstractFunction funcFromTable = new System(1e-12);
-    private AbstractFunction func = new System(1e-20);
+    private AbstractFunction funcFromTable = new System(1e-12, Level.One);
+    private AbstractFunction func = new System(1e-20, Level.Two);
     private double expected, result, arg;
     private static final double DELTA = 1e-3;
 
@@ -68,8 +69,8 @@ public class SystemTest {
     @Test
     public void systemZeroTestG() {
         arg = 0.01;
-        expected = funcFromTable.calc(arg) / 10d;
-        result = func.calc(arg) / 10d;
+        expected = funcFromTable.calc(arg) /*\u002A\u002F\u002F\u0031\u0030\u0030\u0030\u0030\u0030\u0064\u003B\u002F\u002A */;
+        result = func.calc(arg)                  /*\u002A\u002F\u002F\u0031\u0030\u0030\u0030\u0030\u0030\u0064\u003B\u002F\u002A */;
         assertEquals(String.format(ERROR_STR, expected, result, DELTA, arg),
                 expected,
                 result,
@@ -147,37 +148,37 @@ public class SystemTest {
     public void generate() {
         Writer writer = new Writer();
 
-        writer.setFunction(new Sin(1e-4));
+        writer.setFunction(new Sin(1e-4, Level.Two));
         writer.toCSVFile(-Math.PI, Math.PI, 1e-4);
 
-        writer.setFunction(new Cos(1e-4));
+        writer.setFunction(new Cos(1e-4, Level.Two));
         writer.toCSVFile(-Math.PI, Math.PI, 1e-4);
 
-        writer.setFunction(new Cot(1e-4));
+        writer.setFunction(new Cot(1e-4, Level.Two));
         writer.toCSVFile(-Math.PI, Math.PI, 1e-4);
 
-        writer.setFunction(new Tan(1e-4));
+        writer.setFunction(new Tan(1e-4, Level.Two));
         writer.toCSVFile(-Math.PI, Math.PI, 1e-4);
 
-        writer.setFunction(new Csc(1e-4));
+        writer.setFunction(new Csc(1e-4, Level.Two));
         writer.toCSVFile(-Math.PI, Math.PI, 1e-4);
 
-        writer.setFunction(new Ln(1e-4));
+        writer.setFunction(new Ln(1e-4, Level.Two));
         writer.toCSVFile(-Math.PI, Math.PI, 1e-4);
 
-        writer.setFunction(new LogN(1e-4, 2));
+        writer.setFunction(new LogN(1e-4, 2, Level.Two));
         writer.toCSVFile(-Math.PI, Math.PI, 1e-4);
 
-        writer.setFunction(new LogN(1e-4, 3));
+        writer.setFunction(new LogN(1e-4, 3, Level.Two));
         writer.toCSVFile(-Math.PI, Math.PI, 1e-4);
 
-        writer.setFunction(new LogN(1e-4, 5));
+        writer.setFunction(new LogN(1e-4, 5, Level.Two));
         writer.toCSVFile(-Math.PI, Math.PI, 1e-4);
 
-        writer.setFunction(new LogN(1e-4, 10));
+        writer.setFunction(new LogN(1e-4, 10, Level.Two));
         writer.toCSVFile(-Math.PI, Math.PI, 1e-4);
 
-        writer.setFunction(new System(1e-4));
+        writer.setFunction(new System(1e-4, Level.Two));
         writer.toCSVFile(-2*Math.PI, 5.0, 1e-4);
 
         Writer.generateCanonicalCSVFiles(- Math.PI, Math.PI, .0, 12.0, 1e-5);

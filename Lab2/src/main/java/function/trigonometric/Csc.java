@@ -1,30 +1,28 @@
 package function.trigonometric;
 
 import function.AbstractFunction;
+import function.Level;
 
-public class Csc extends AbstractFunction {
-    private AbstractFunction sin = new Sin();
-
-    public Csc(double accuracy) {
-        super(accuracy);
-    }
-
-    public Csc() {
-        super();
+/**
+ * Created by cezar on 4/7/17.
+ */
+public class Csc extends AbstractFunction{
+    public Csc(double accuracy, Level lvl) {
+        super(accuracy, lvl);
+        level = lvl;
     }
 
     @Override
     public double calc(double arg) {
-
-        if (Math.abs(arg - Math.PI) < DELTA ||
-                Math.abs(arg + Math.PI) < DELTA ||
-                Math.abs(arg - 2*Math.PI) < DELTA ||
-                Math.abs(arg + 2*Math.PI) < DELTA ||
-                Math.abs(arg) < DELTA) {
-            return Double.NaN;
+        switch (level) {
+            case One:
+                return new CscStub(getAccuracy(), level).calc(arg);
+            case Two:
+                return new CscImpl(getAccuracy(), level).calc(arg);
+            case Three:
+                break;
         }
-
-        sin.setAccuracy(getAccuracy());
-        return 1 / sin.calc(arg);
+        throw new RuntimeException();
     }
 }
+

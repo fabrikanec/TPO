@@ -1,6 +1,7 @@
 package function.trigonometric;
 
 import function.AbstractFunction;
+import function.Level;
 
 import static java.lang.Math.PI;
 
@@ -9,8 +10,8 @@ import static java.lang.Math.PI;
  */
 public class CotStub extends AbstractFunction {
 
-    public CotStub(double accuracy) {
-        super(accuracy, true);
+    public CotStub(double accuracy, Level lvl) {
+        super(accuracy, true, lvl);
     }
 
     @Override

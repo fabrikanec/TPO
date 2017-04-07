@@ -1,14 +1,15 @@
 package function.trigonometric;
 
 import function.AbstractFunction;
+import function.Level;
 
 /**
  * Created by cezar on 4/3/17.
  */
 public class CscStub extends AbstractFunction {
 
-    public CscStub(double accuracy) {
-        super(accuracy, true);
+    public CscStub(double accuracy, Level lvl) {
+        super(accuracy, true, lvl);
     }
 
     @Override

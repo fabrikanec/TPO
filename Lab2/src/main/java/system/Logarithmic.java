@@ -1,8 +1,11 @@
 package system;
 
 import function.AbstractFunction;
+import function.Level;
 import function.logarithmic.Ln;
 import function.logarithmic.LogN;
+
+import java.lang.*;
 import java.math.BigDecimal;
 import java.math.MathContext;
 import java.math.RoundingMode;
@@ -17,13 +20,13 @@ public class Logarithmic extends AbstractFunction {
     private AbstractFunction log5;
     private AbstractFunction log10;
 
-    public Logarithmic(double accuracy) {
-        super(accuracy);
-        ln = new Ln(accuracy);
-        log2 = new LogN(accuracy, 2);
-        log3 = new LogN(accuracy, 3);
-        log5 = new LogN(accuracy, 5);
-        log10 = new LogN(accuracy, 10);
+    public Logarithmic(double accuracy, Level lvl) {
+        super(accuracy, lvl);
+        ln = new Ln(accuracy, lvl);
+        log2 = new LogN(accuracy, 2, lvl);
+        log3 = new LogN(accuracy, 3, lvl);
+        log5 = new LogN(accuracy, 5, lvl);
+        log10 = new LogN(accuracy, 10, lvl);
     }
 
     @Override

@@ -1,6 +1,7 @@
 package function.trigonometric;
 
 
+import function.Level;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
@@ -58,7 +59,7 @@ public class CotTest {
         if (errorClass != null) {
             exception.expect(errorClass);
         }
-        double result = new Cot(accuracy).calc(argument);
+        double result = new Cot(accuracy, Level.Two).calc(argument);
         assertEquals(String.format("expected %f = %f +- %f = Cot(%f)\n", expected, result, DELTA, argument),
                 expected, result, DELTA);
     }

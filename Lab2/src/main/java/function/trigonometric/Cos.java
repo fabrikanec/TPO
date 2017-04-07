@@ -1,67 +1,29 @@
 package function.trigonometric;
 
 import function.AbstractFunction;
-import java.math.BigDecimal;
-import java.math.MathContext;
+import function.Level;
+import function.logarithmic.LnImpl;
+import function.logarithmic.LnStub;
 
-import static java.lang.Math.*;
-import static java.lang.Double.*;
-import static util.BigDecimalSqrt.sqrt;
-
+/**
+ * Created by cezar on 4/7/17.
+ */
 public class Cos extends AbstractFunction {
-    private AbstractFunction sin = new Sin();
-
-    public Cos(double accuracy) {
-        super(accuracy);
-    }
-
-    public Cos() {
-        super();
+    public Cos(double accuracy, Level lvl) {
+        super(accuracy, lvl);
+        level = lvl;
     }
 
     @Override
     public double calc(double arg) {
-
-        if (isNaN(arg) || isInfinite(arg)) {
-            return NaN;
+        switch (level) {
+            case One:
+                return new CosStub(getAccuracy(), level).calc(arg);
+            case Two:
+                return new CosImpl(getAccuracy(), level).calc(arg);
+            case Three:
+                break;
         }
-
-        if (Math.abs(arg - Math.PI) < DELTA ) {
-            return -1d;
-        } else if (Math.abs(arg + Math.PI) < DELTA ) {
-            return -1d;
-        } else if (Math.abs(arg) < DELTA ) {
-            return 1d;
-        } else if (Math.abs(arg - Math.PI/2) < DELTA) {
-            return 0d;
-        } else if (Math.abs(arg - 3*Math.PI/2) < DELTA) {
-            return 0d;
-        } else if (Math.abs(arg + 3*Math.PI/2) < DELTA) {
-            return 0d;
-        } else if (Math.abs(arg + Math.PI/2) < DELTA) {
-            return 0d;
-        } else if (Math.abs(arg - 2*Math.PI) < DELTA) {
-            return 1d;
-        } else if (Math.abs(arg + 2*Math.PI) < DELTA) {
-            return 1d;
-        }
-
-        sin.setAccuracy(getAccuracy());
-
-        //double unsignedCos = (sqrt(1 - pow(sin.calc(arg), 2)));
-        double unsignedCos = sqrt((new BigDecimal(1, MathContext.UNLIMITED).
-                                subtract(new BigDecimal(sin.calc(arg), MathContext.UNLIMITED).
-                                        pow(2))), MathContext.DECIMAL128).doubleValue();
-                                        //setScale(10, RoundingMode.UP).doubleValue();
-
-        double modifiedValue = unsignedCos > 1? 0.9999999999999999 : unsignedCos; //TODO make it better
-
-        double tmpA = abs(abs(arg) > PI*2 ? arg % PI*2 : arg);
-
-        if(tmpA >= 0 && tmpA <= PI/2 || tmpA >= 3*PI/2 && tmpA <= 2*PI)
-            return modifiedValue;
-        else
-            return -modifiedValue;
+        throw new RuntimeException();
     }
 }
-

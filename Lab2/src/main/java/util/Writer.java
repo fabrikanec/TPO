@@ -1,6 +1,7 @@
 package util;
 
 import function.AbstractFunction;
+import function.Level;
 import system.System;
 
 import java.io.BufferedReader;
@@ -158,7 +159,7 @@ public class Writer {
             fileWriter = new FileWriter("./canonical/Writer-canonical.csv", false);
 
             for(curr = lFrom; curr < lTo; curr += tStep)
-                fileWriter.append(String.format("%f%s%f\n", curr, SEPARATOR, new System(0).calc(curr)));
+                fileWriter.append(String.format("%f%s%f\n", curr, SEPARATOR, new System(1e-5, Level.One).calc(curr)));
 
             fileWriter.flush();
             fileWriter.close();

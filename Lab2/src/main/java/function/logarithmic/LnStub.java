@@ -1,6 +1,7 @@
 package function.logarithmic;
 
 import function.AbstractFunction;
+import function.Level;
 import util.BigDecimalSqrt;
 
 import java.math.BigDecimal;
@@ -13,8 +14,8 @@ import static java.lang.Double.*;
  */
 public class LnStub extends AbstractFunction {
 
-    public LnStub(double accuracy) {
-        super(accuracy, true);
+    public LnStub(double accuracy, Level lvl) {
+        super(accuracy, true, lvl);
     }
 
     @Override

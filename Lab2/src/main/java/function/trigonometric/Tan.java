@@ -1,48 +1,27 @@
 package function.trigonometric;
 
 import function.AbstractFunction;
+import function.Level;
 
-import static java.lang.Double.NaN;
-
-
+/**
+ * Created by cezar on 4/7/17.
+ */
 public class Tan extends AbstractFunction {
-    private AbstractFunction sin = new Sin();
-    private AbstractFunction cos = new Cos();
-
-    public Tan(double accuracy) {
-        super(accuracy);
-    }
-
-    public Tan() {
-        super();
+    public Tan(double accuracy, Level lvl) {
+        super(accuracy, lvl);
+        level = lvl;
     }
 
     @Override
     public double calc(double arg) {
-
-        if (Math.abs(arg - Math.PI) < DELTA ) {
-            return 0d;
-        } else if (Math.abs(arg + Math.PI) < DELTA ) {
-            return 0d;
-        } else if (Math.abs(arg) < DELTA ) {
-            return 0d;
-        } else if (Math.abs(arg - Math.PI/2) < DELTA) {
-            return NaN;
-        } else if (Math.abs(arg + Math.PI/2) < DELTA) {
-            return NaN;
-        } else if (Math.abs(arg - 2*Math.PI) < DELTA) {
-            return 0d;
-        } else if (Math.abs(arg + 2*Math.PI) < DELTA) {
-            return 0d;
-        } else if (Math.abs(arg - 3*Math.PI/2) < DELTA) {
-            return NaN;
-        } else if (Math.abs(arg + 3*Math.PI/2) < DELTA) {
-            return NaN;
+        switch (level) {
+            case One:
+                return new TanStub(getAccuracy(), level).calc(arg);
+            case Two:
+                return new TanImpl(getAccuracy(), level).calc(arg);
+            case Three:
+                break;
         }
-
-
-        sin.setAccuracy(getAccuracy());
-        cos.setAccuracy(getAccuracy());
-        return sin.calc(arg) / cos.calc(arg);
+        throw new RuntimeException();
     }
 }

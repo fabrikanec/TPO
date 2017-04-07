@@ -1,46 +1,28 @@
 package function.trigonometric;
 
 import function.AbstractFunction;
+import function.Level;
 
-import static java.lang.Math.PI;
-
+/**
+ * Created by cezar on 4/7/17.
+ */
 public class Cot extends AbstractFunction {
-    private AbstractFunction sin = new Sin();
-    private AbstractFunction cos = new Cos();
-
-    public Cot(double accuracy) {
-        super(accuracy);
-    }
-
-    public Cot() {
-        super();
+    public Cot(double accuracy, Level lvl) {
+        super(accuracy, lvl);
+        level = lvl;
     }
 
     @Override
     public double calc(double arg) {
-
-        if (Math.abs(arg - Math.PI) < DELTA ) {
-            return Double.NaN;
-        } else if (Math.abs(arg + Math.PI) < DELTA ) {
-            return Double.NaN;
-        } else if (Math.abs(arg) < DELTA ) {
-            return Double.NaN;
-        } else if (Math.abs(arg - Math.PI/2) < DELTA) {
-            return 0d;
-        } else if (Math.abs(arg + PI/2) < DELTA) {
-            return 0d;
-        } else if (Math.abs(arg - 2*PI) < DELTA) {
-            return Double.NaN;
-        } else if (Math.abs(arg + 2*PI) < DELTA) {
-            return Double.NaN;
-        } else if (Math.abs(arg - 3*Math.PI/2) < DELTA) {
-            return 0d;
-        } else if (Math.abs(arg + 3*Math.PI/2) < DELTA) {
-            return 0d;
+        switch (level) {
+            case One:
+                return new CotStub(getAccuracy(), level).calc(arg);
+            case Two:
+                return new CotImpl(getAccuracy(), level).calc(arg);
+            case Three:
+                break;
         }
-
-        sin.setAccuracy(getAccuracy());
-        cos.setAccuracy(getAccuracy());
-        return cos.calc(arg) / sin.calc(arg);
+        throw new RuntimeException();
     }
 }
+

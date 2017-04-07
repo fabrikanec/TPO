@@ -1,6 +1,7 @@
 package function.logarithmic;
 
 import function.AbstractFunction;
+import function.Level;
 import org.junit.Ignore;
 import org.junit.Test;
 import util.Writer;
@@ -12,8 +13,8 @@ import static org.junit.Assert.*;
  * Created by cezar on 16.04.16.
  */
 public class LnTest {
-    private AbstractFunction funcFromTable = new Ln(1e-10);
-    private AbstractFunction func = new Ln(1e-10);
+    private AbstractFunction funcFromTable = new Ln(1e-10, Level.One);
+    private AbstractFunction func = new Ln(1e-10, Level.Two);
     private double expected;
     private double result;
     private double arg;
@@ -156,7 +157,7 @@ public class LnTest {
     @Test
     public void generate() {
         Writer writer = new Writer();
-        writer.setFunction(new Ln(1e-3));
+        writer.setFunction(new Ln(1e-3, Level.Two));
         writer.toCSVFile(0.0, 5.0, 0.001);
     }
 }

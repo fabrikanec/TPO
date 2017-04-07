@@ -1,66 +1,39 @@
 package function.logarithmic;
 
 import function.AbstractFunction;
+import function.Level;
 
 /**
- * Created by cezar on 3/25/17.
+ * Created by cezar on 4/6/17.
  */
 public class LogN extends AbstractFunction {
-    public final int BASE;
-    public static final int DEFAULT_BASE = 2;
-    private AbstractFunction ln = new Ln();
 
-    public LogN(double accuracy, boolean fromTable, int base) {
-        super(accuracy, fromTable);
-        if (base < 0 || base == 1) {
-            throw new IllegalArgumentException();
-        }
-        BASE = base;
-    }
+    private final int BASE;
+    private static final int DEFAULT_BASE = 2;
 
-    public LogN(double accuracy, int base) {
-        super(accuracy);
-        if (base < 0 || base == 1) {
-            throw new IllegalArgumentException();
-        }
-        BASE = base;
-    }
-
-    public LogN(int base) {
-        super();
-        if (base < 0 || base == 1) {
-            throw new IllegalArgumentException();
-        }
-        BASE = base;
-    }
-
-    public LogN(double accuracy, boolean fromTable) {
-        super(accuracy, fromTable);
+    public LogN(double accuracy, Level lvl) {
+        super(accuracy, lvl);
         BASE = DEFAULT_BASE;
+        level = lvl;
+
     }
 
-    public LogN(double accuracy) {
-        super(accuracy);
-        BASE = DEFAULT_BASE;
-    }
-
-    public LogN() {
-        super();
-        BASE = DEFAULT_BASE;
+    public LogN(double accuracy, int base, Level lvl) {
+        super(accuracy, lvl);
+        BASE = base;
+        level = lvl;
     }
 
     @Override
     public double calc(double arg) {
-
-        if (Math.abs(arg - BASE) < 1e-5) {
-            return 1d;
+        switch (level) {
+            case One:
+                return new LogNStub(getAccuracy(), BASE, level).calc(arg);
+            case Two:
+                return new LogNImpl(getAccuracy(), BASE, level).calc(arg);
+            case Three:
+                break;
         }
-
-        if (Math.abs(arg - 1d) < 1e-5) {
-            return 0d;
-        }
-
-        ln.setAccuracy(getAccuracy());
-        return ln.calc(arg) / ln.calc(BASE);
+        throw new RuntimeException();
     }
 }

@@ -5,13 +5,14 @@ package function.trigonometric;
  */
 
 import function.AbstractFunction;
+import function.Level;
 
 import static java.lang.Double.NaN;
 
 public class TanStub extends AbstractFunction {
 
-    public TanStub(double accuracy) {
-        super(accuracy, true);
+    public TanStub(double accuracy, Level lvl) {
+        super(accuracy, true, lvl);
     }
 
     @Override

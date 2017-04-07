@@ -1,6 +1,7 @@
 package function.trigonometric;
 
 import function.AbstractFunction;
+import function.Level;
 
 import static java.lang.Double.NaN;
 import static java.lang.Double.isInfinite;
@@ -11,8 +12,8 @@ import static java.lang.Double.isNaN;
  */
 public class CosStub extends AbstractFunction {
 
-    public CosStub(double accuracy) {
-        super(accuracy, true);
+    public CosStub(double accuracy, Level lvl) {
+        super(accuracy, true, lvl);
     }
 
     @Override

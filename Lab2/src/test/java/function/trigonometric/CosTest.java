@@ -1,6 +1,7 @@
 package function.trigonometric;
 
 
+import function.Level;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
@@ -57,7 +58,7 @@ public class CosTest {
         if (errorClass != null) {
             exception.expect(errorClass);
         }
-        double result = new Cos(accuracy).calc(argument);
+        double result = new Cos(accuracy, Level.Two).calc(argument);
         assertEquals(String.format("expected %f = %f +- %f = COS(%f)\n", expected, result, DELTA, argument),
                 expected, result, DELTA);
     }

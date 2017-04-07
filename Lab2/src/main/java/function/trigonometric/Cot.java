@@ -2,6 +2,8 @@ package function.trigonometric;
 
 import function.AbstractFunction;
 import function.Level;
+import implementation.trigonometric.CotImpl;
+import stubs.CotStub;
 
 /**
  * Created by cezar on 4/7/17.

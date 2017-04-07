@@ -2,8 +2,8 @@ package function.trigonometric;
 
 import function.AbstractFunction;
 import function.Level;
-import function.logarithmic.LnImpl;
-import function.logarithmic.LnStub;
+import implementation.trigonometric.CosImpl;
+import stubs.CosStub;
 
 /**
  * Created by cezar on 4/7/17.

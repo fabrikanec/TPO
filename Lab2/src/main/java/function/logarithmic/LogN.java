@@ -2,6 +2,8 @@ package function.logarithmic;
 
 import function.AbstractFunction;
 import function.Level;
+import implementation.logarithmic.LogNImpl;
+import stubs.LogNStub;
 
 /**
  * Created by cezar on 4/6/17.

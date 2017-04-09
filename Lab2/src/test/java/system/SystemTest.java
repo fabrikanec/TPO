@@ -144,7 +144,7 @@ public class SystemTest {
     }
 
     @Ignore
-    @Test
+    @Test(timeout = 10000)
     public void generate() {
         Writer writer = new Writer();
 

@@ -154,7 +154,7 @@ public class LnTest {
     }
 
     @Ignore
-    @Test
+    @Test(timeout = 10000)
     public void generate() {
         Writer writer = new Writer();
         writer.setFunction(new Ln(1e-3, Level.Two));

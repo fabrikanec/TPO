@@ -11,6 +11,8 @@ import org.junit.Test;
 import org.openqa.grid.web.servlet.handler.SeleniumBasedRequest;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebDriverBackedSelenium;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
 
@@ -19,6 +21,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertTrue;
 
+import com.thoughtworks.selenium.*;
 /**
  * Created by cezar on 4/15/17.
  */
@@ -31,6 +34,7 @@ public class GuessRoleTest extends JUnitTestBase {
     private RestorePasswordPage passwordPage;
     private CreateVacantPage createVacantPage;
     private RegistrationPage registrationPage;
+    private Selenium selenium;
 
     @Before
     public void initPageObjects() {
@@ -41,6 +45,7 @@ public class GuessRoleTest extends JUnitTestBase {
         passwordPage = PageFactory.initElements(driver, RestorePasswordPage.class);
         createVacantPage = PageFactory.initElements(driver, CreateVacantPage.class);
         registrationPage = PageFactory.initElements(driver, RegistrationPage.class);
+        selenium = new WebDriverBackedSelenium(driver, baseUrl);
     }
 
     @Test(expected = Exception.class)
@@ -49,7 +54,6 @@ public class GuessRoleTest extends JUnitTestBase {
         guestMainPage.loginFormLogin.sendKeys("lol");
         guestMainPage.loginFormLogin.sendKeys(Keys.ENTER);
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-        driver.quit();
     }
 
     @Test
@@ -58,6 +62,7 @@ public class GuessRoleTest extends JUnitTestBase {
         guestMainPage.searchField.sendKeys("devops");
         guestMainPage.searchButton.click();
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);*/
+
             selenium.open("/");
             selenium.type("//input[@name='text']", "devops");
             selenium.click("//button[@type='submit']");

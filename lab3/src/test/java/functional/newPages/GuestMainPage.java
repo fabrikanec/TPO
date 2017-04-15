@@ -10,7 +10,7 @@ import org.openqa.selenium.support.FindBy;
  * Created by cezar on 4/15/17.
  */
 public class GuestMainPage extends MainPage {
-    public static String URL = "https://spb.hh.ru/";
+    public static String URL = "http://spb.hh.ru/";
 
     @FindBy(xpath = "//form[@class='login-form']/label[@class='login-input']/input[@type='text']")
     @CacheLookup

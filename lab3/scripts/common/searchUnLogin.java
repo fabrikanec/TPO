@@ -17,7 +17,7 @@ public class searchUnLogin {
 	@Before
 	public void setUp() throws Exception {
 		WebDriver driver = new FirefoxDriver();
-		String baseUrl = "https://spb.hh.ru/";
+		String baseUrl = "http://spb.hh.ru/";
 		selenium = new WebDriverBackedSelenium(driver, baseUrl);
 	}
 

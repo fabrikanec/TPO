@@ -1,7 +1,11 @@
 package functional.roles;
 
+import com.thoughtworks.selenium.Selenium;
 import functional.newPages.*;
+import org.junit.Before;
 import org.junit.Test;
+import org.openqa.selenium.WebDriverBackedSelenium;
+import org.openqa.selenium.support.PageFactory;
 
 /**
  * Created by cezar on 4/15/17.
@@ -13,6 +17,18 @@ public class UserRoleTest extends JUnitTestBase {
     private OrderCVPage orderCVPage;
     private SuiteableVacantPage suiteableVacantPage;
     private ProfTestPage profTestPage;
+    private Selenium selenium;
+
+    @Before
+    public void initPageObjects() {
+        createCVPage = PageFactory.initElements(driver, CreateCVPage.class);
+        loginPage = PageFactory.initElements(driver, LoginPage.class);
+        cVsChekingPage = PageFactory.initElements(driver, CVsChekingPage.class);
+        orderCVPage = PageFactory.initElements(driver, OrderCVPage.class);
+        suiteableVacantPage = PageFactory.initElements(driver, SuiteableVacantPage.class);
+        profTestPage = PageFactory.initElements(driver, ProfTestPage.class);
+        selenium = new WebDriverBackedSelenium(driver, baseUrl);
+    }
 
     @Test
     public void testHelpLogin() throws Exception {
@@ -30,7 +46,7 @@ public class UserRoleTest extends JUnitTestBase {
         selenium.waitForPageToLoad("30000");
         selenium.click("//a[contains(@href, '/article/proforientation_promo?from=menu')]");
         selenium.waitForPageToLoad("30000");
-        selenium.click("//a[contains(@href, 'https://hh.ru/applicant/proforientation')]");
+        selenium.click("//a[contains(@href, 'http://hh.ru/applicant/proforientation')]");
     }
 
     @Test
@@ -134,7 +150,4 @@ public class UserRoleTest extends JUnitTestBase {
         selenium.click("//form/span");
         selenium.waitForPageToLoad("30000");
     }
-
-
-
 }

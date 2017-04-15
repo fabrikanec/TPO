@@ -12,11 +12,10 @@ public class MaitTest {
     public static void main(String[] args) {
         System.setProperty("webdriver.gecko.driver", "/home/cezar/Downloads/geckodriver");
         WebDriver driver = new FirefoxDriver();
-        driver.get("https://hh.ru/");
+        driver.get("http://hh.ru/");
 
         System.out.println(driver.getCurrentUrl());
         //driver.findElement(By.xpath());
 
-        driver.quit();
     }
 }

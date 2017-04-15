@@ -35,7 +35,9 @@ public class JUnitTestBase {
             //WebDriverPool dp = new ThreadLocalSingleWebDriverPool();
             //driver = dp.getDriver(gridHubUrl, capabilities);
             System.setProperty("webdriver.gecko.driver", "/home/cezar/Downloads/geckodriver");
-            driver = new FirefoxDriver();
+            if (driver == null) {
+                driver = new FirefoxDriver();
+            }
         };
     };
 }

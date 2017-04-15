@@ -17,7 +17,7 @@ public class profTest {
 	@Before
 	public void setUp() throws Exception {
 		WebDriver driver = new FirefoxDriver();
-		String baseUrl = "https://spb.hh.ru/";
+		String baseUrl = "http://spb.hh.ru/";
 		selenium = new WebDriverBackedSelenium(driver, baseUrl);
 	}
 
@@ -28,7 +28,7 @@ public class profTest {
 		selenium.waitForPageToLoad("30000");
 		selenium.click("//a[contains(@href, '/article/proforientation_promo?from=menu')]");
 		selenium.waitForPageToLoad("30000");
-		selenium.click("//a[contains(@href, 'https://hh.ru/applicant/proforientation')]");
+		selenium.click("//a[contains(@href, 'http://hh.ru/applicant/proforientation')]");
 	}
 
 	@After

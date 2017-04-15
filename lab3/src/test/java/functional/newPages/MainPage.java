@@ -7,7 +7,7 @@ import org.openqa.selenium.WebDriver;
  * Created by cezar on 4/15/17.
  */
 public class MainPage extends Page {
-    public static String URL = "https://spb.hh.ru/";
+    public static String URL = "http://spb.hh.ru/";
 
     /*
      *

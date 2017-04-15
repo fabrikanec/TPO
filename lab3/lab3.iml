@@ -62,5 +62,7 @@
     <orderEntry type="library" name="Maven: org.seleniumhq.selenium:selenium:2.0a5" level="project" />
     <orderEntry type="library" name="Maven: org.seleniumhq.selenium:selenium-htmlunit-driver:2.0a5" level="project" />
     <orderEntry type="library" name="Maven: org.seleniumhq.selenium:selenium-common:2.0a5" level="project" />
+    <orderEntry type="library" name="Maven: org.seleniumhq.selenium:selenium-remote-control:2.0rc2" level="project" />
+    <orderEntry type="library" name="Maven: org.seleniumhq.selenium:selenium-iphone-driver:2.0rc2" level="project" />
   </component>
 </module>

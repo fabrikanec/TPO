@@ -59,5 +59,8 @@
     <orderEntry type="library" name="Maven: org.seleniumhq.selenium:jetty-repacked:9.4.1.v20170120" level="project" />
     <orderEntry type="library" name="Maven: javax.servlet:javax.servlet-api:3.1.0" level="project" />
     <orderEntry type="library" name="Maven: org.yaml:snakeyaml:1.15" level="project" />
+    <orderEntry type="library" name="Maven: org.seleniumhq.selenium:selenium:2.0a5" level="project" />
+    <orderEntry type="library" name="Maven: org.seleniumhq.selenium:selenium-htmlunit-driver:2.0a5" level="project" />
+    <orderEntry type="library" name="Maven: org.seleniumhq.selenium:selenium-common:2.0a5" level="project" />
   </component>
 </module>

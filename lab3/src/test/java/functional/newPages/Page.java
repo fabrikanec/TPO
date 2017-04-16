@@ -20,6 +20,15 @@ public abstract class Page {
     @CacheLookup
     public WebElement searchButton;
 
+    @FindBy(xpath = "//div[contains(@class,'navi-item__dropdown HH-Navi-MenuItems-Dropdown HH-Navi-MenuItems-StaticDropdown')]/div[@class='navi-dropdown']/ul[@class='navi-dropdown__list navi-dropdown__list_small']/li[@class='navi-item navi-item_level-2'][2]/a[@class='navi-dropdown-link navi-dropdown-link_long']")
+    @CacheLookup
+    public WebElement enLanguageButton;
+
+    @FindBy(xpath = "//div[contains(@class, 'navi-item__dropdown HH-Navi-MenuItems-Dropdown HH-Navi-MenuItems-StaticDropdown')]/div[@class='navi-dropdown']/ul[@class='navi-dropdown__list navi-dropdown__list_small']/li[@class='navi-item navi-item_level-2'][1]/span[@class='navi-dropdown-link navi-dropdown-link_long navi-dropdown-link_selected']")
+    @CacheLookup
+    public WebElement ruLanguageButton;
+
+
     protected WebDriver driver;
 
     public Page(WebDriver driver) {

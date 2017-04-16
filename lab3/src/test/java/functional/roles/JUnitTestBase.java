@@ -6,7 +6,7 @@ import org.junit.Rule;
 import org.junit.rules.ExternalResource;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 /**
  * Created by cezar on 4/15/17.
@@ -34,9 +34,9 @@ public class JUnitTestBase {
         protected void before() throws Throwable {
             //WebDriverPool dp = new ThreadLocalSingleWebDriverPool();
             //driver = dp.getDriver(gridHubUrl, capabilities);
-            System.setProperty("webdriver.gecko.driver", "/home/cezar/Downloads/geckodriver");
+            System.setProperty("webdriver.chrome.driver", "/home/izoomko/wrk/3grade/testing/chromedriver");
             if (driver == null) {
-                driver = new FirefoxDriver();
+                driver = new ChromeDriver();
             }
         };
     };

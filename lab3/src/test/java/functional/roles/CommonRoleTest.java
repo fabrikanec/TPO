@@ -4,6 +4,7 @@ import com.thoughtworks.selenium.Selenium;
 import functional.newPages.*;
 import org.junit.Before;
 import org.junit.Test;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriverBackedSelenium;
 import org.openqa.selenium.support.PageFactory;
 
@@ -55,11 +56,11 @@ public class CommonRoleTest extends JUnitTestBase {
     @Test
     public void testCatalogCom() throws Exception {
         selenium.open("/");
-        selenium.click("//a[contains(@href, '/employers_company')]");
+        selenium.click("xpath=(//a[contains(@href, '/employers_company')])");
         selenium.waitForPageToLoad("30000");
-        selenium.click("//a[contains(text(),'Информационные технологии, системная интеграция, интернет')]");
+        selenium.click("xpath=(//a[contains(text(),'Информационные технологии, системная интеграция, интернет')])");
         selenium.waitForPageToLoad("30000");
-        selenium.click("//a[contains(text(),'08')]");
+        selenium.click("xpath=(//a[contains(text(),'08')])");
         selenium.waitForPageToLoad("30000");
     }
 

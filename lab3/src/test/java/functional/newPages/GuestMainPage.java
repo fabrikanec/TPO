@@ -32,14 +32,6 @@ public class GuestMainPage extends MainPage {
     @CacheLookup
     public WebElement publishCV;
 
-    @FindBy(xpath = "//input[@name='text']")
-    @CacheLookup
-    public WebElement searchField;
-
-    @FindBy(xpath = "//button[@type='submit']")
-    @CacheLookup
-    public WebElement searchButton;
-
 
     public GuestMainPage(WebDriver driver) {
         super(driver);

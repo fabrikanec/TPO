@@ -10,7 +10,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 
-public class UserMainPage extends MainPage {
+public class UserMainPage extends MainPage implements Page {
     public static String URL;
 
     @FindBy(xpath = "//div[@class='my-events']/div[@class='my-events__list my-events__list_wrapper']/a[@class='my-events__item my-events__item_link my-events__item_views']")

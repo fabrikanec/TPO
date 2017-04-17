@@ -14,6 +14,8 @@ import org.openqa.selenium.support.ui.Select;
 import java.util.concurrent.TimeUnit;
 
 import static functional.newPages.Page.baseUrl;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 /**
  * Created by cezar on 4/15/17.
@@ -39,50 +41,76 @@ public class CommonRoleTest extends JUnitTestBase {
         }
     }
 
+    /* SEARCH TESTS */
+
     @Test
-    public void testSearch() throws Exception {
-        selenium.open("/");
-        selenium.type("//input[@name='text']", "devops");
-        selenium.click("//button[@type='submit']");
-        selenium.waitForPageToLoad("30000");
-        selenium.click("//a[contains(text(),'DevOps Engineer')]");
+    public void testSearchVacancy() throws Exception {
+        driver.get(guestMainPage.getURL());
+
+        guestMainPage.searchForm.sendKeys("devops");
+        new Select(guestMainPage.searchTypeSelect).selectByVisibleText("Вакансии");
+        guestMainPage.searchButton.click();
+        assertTrue(driver.getCurrentUrl().contains("search/vacancy"));
     }
 
     @Test
-    public void testChangeLocate() throws Exception {
-        /*driver.get(mainPage.getURL());
-        Actions builder = new Actions(driver);
-        builder.moveToElement(mainPage.locateRu);
-        builder.moveToElement(mainPage.locateEn);
-        builder.click(mainPage.locateEn).perform();*/
+    public void testSearchCV() throws Exception {
+        driver.get(guestMainPage.getURL());
 
-        /*builder.moveToElement(mainPage.locateEn);
-        builder.click(mainPage.locateRu).perform();*/
-
-        /*selenium.open("/");
-        selenium.click("xpath=(//a[contains(text(),'Английский')])[2]");
-        selenium.waitForPageToLoad("30000");
-        selenium.click("xpath=(//a[contains(text(),'Russian')])[2]");
-        selenium.waitForPageToLoad("30000");
-        selenium.click("xpath=(//a[contains(text(),'Английский')])[2]");
-        selenium.waitForPageToLoad("30000");
-        selenium.click("//input[@value='Registration']");
-        selenium.click("xpath=(//a[contains(text(),'Russian')])[2]");
-        selenium.waitForPageToLoad("30000");*/
+        guestMainPage.searchForm.sendKeys("devops");
+        new Select(guestMainPage.searchTypeSelect).selectByVisibleText("Резюме");
+        guestMainPage.searchButton.click();
+        assertTrue(driver.getCurrentUrl().contains("search/resume"));
     }
+
+    @Test
+    public void testSearchCompany() throws Exception {
+        driver.get(guestMainPage.getURL());
+
+        guestMainPage.searchForm.sendKeys("Itiviti");
+        new Select(guestMainPage.searchTypeSelect).selectByVisibleText("Компании");
+        guestMainPage.searchButton.click();
+
+        assertEquals( "Itiviti (Айтивити)",
+                driver.findElement(By.xpath("//a/[(contains(@text, 'Itiviti')]")));
+    }
+
+    @Test
+    public void testExtendedSearch() throws Exception {
+        driver.get(guestMainPage.getURL());
+
+        guestMainPage.extendedSearchLink.click();
+        driver.findElement(By.xpath("//div[@class='line__wrapper']/input")).sendKeys("devops");
+        driver.findElement(By.xpath("//div[@class='line__element']/input")).click();
+
+        assertTrue(driver.getCurrentUrl().contains("search/vacancy"));
+    }
+
+    /* LOCATE TESTS */
+
+    @Test
+    public void testChangeLocateToEn() throws Exception {
+        driver.get(mainPage.getURL());
+        mainPage.locateEn.click();
+        assertEquals( "Search", mainPage.searchButton.getText());
+    }
+
+    @Test
+    public void testChangeLocateToEnToRu() throws Exception {
+        driver.get(mainPage.getURL());
+        mainPage.locateEn.click();
+        mainPage.locateRu.click();
+        assertEquals( "Поиск", mainPage.searchButton.getText());
+    }
+
+    /* */
 
     @Test
     public void testCatalogCom() throws Exception {
         driver.get(mainPage.getURL());
         companyCatalogPage.company.click();
         companyCatalogPage.companyCatalog.click();
-        /*selenium.open("/");
-        selenium.click("xpath=(//a[contains(@href, '/employers_company')])");
-        selenium.waitForPageToLoad("30000");
-        selenium.click("xpath=(//a[contains(text(),'Информационные технологии, системная интеграция, интернет')])");
-        selenium.waitForPageToLoad("30000");
-        selenium.click("xpath=(//a[contains(text(),'08')])");
-        selenium.waitForPageToLoad("30000");*/
+
     }
 
 

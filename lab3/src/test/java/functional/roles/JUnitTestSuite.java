@@ -6,7 +6,7 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 
 @RunWith(Suite.class)
-@Suite.SuiteClasses({CommonRoleTest.class, GuessRoleTest.class, UserRoleTest.class})
+@Suite.SuiteClasses({CommonRoleTest.class, GuestRoleTest.class, UserRoleTest.class})
 public class JUnitTestSuite {
 
     @Rule

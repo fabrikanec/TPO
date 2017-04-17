@@ -49,6 +49,13 @@ public class MainPage implements Page {
     @CacheLookup
     public WebElement registration;
 
+    @FindBy(xpath = "//div[@class='login-with__forgot']/a")
+    @CacheLookup
+    public WebElement forgotPasswordAnchor;
+
+    @FindBy(xpath = "//div[@class='navi-cell navi-cell_advanced-search HH-Navi-SearchSelector-Tab navi-cell_right']/span[@class='navi-link']/a[@class='bloko-link bloko-link_secondary']")
+    @CacheLookup
+    public WebElement extendedSearchLink;
 
     @Override
     public String getTitle() {

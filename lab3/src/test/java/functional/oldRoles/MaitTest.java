@@ -11,7 +11,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 public class MaitTest {
     public static void main(String[] args) {
         System.setProperty("webdriver.gecko.driver", "/home/cezar/Downloads/geckodriver");
-        WebDriver driver = new FirefoxDriver();
+        WebDriver driver = new ChromeDriver();
         driver.get("http://hh.ru/");
 
         System.out.println(driver.getCurrentUrl());

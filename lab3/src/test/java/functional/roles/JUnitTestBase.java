@@ -5,6 +5,7 @@ import org.junit.ClassRule;
 import org.junit.Rule;
 import org.junit.rules.ExternalResource;
 import org.openqa.selenium.Capabilities;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -31,8 +32,10 @@ public class JUnitTestBase {
             //WebDriverPool dp = new ThreadLocalSingleWebDriverPool();
             //driver = dp.getDriver(gridHubUrl, capabilities);
             System.setProperty("webdriver.gecko.driver", "/home/cezar/Downloads/geckodriver");
+            System.setProperty("webdriver.chrome.driver", "C:\\Users\\vladimirg\\chromedriver.exe");
             if (driver == null) {
-                driver = new FirefoxDriver();
+                driver = new ChromeDriver();
+                driver.manage().window().maximize();
             }
         };
     };

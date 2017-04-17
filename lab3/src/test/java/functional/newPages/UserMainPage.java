@@ -29,14 +29,14 @@ public class UserMainPage extends MainPage implements Page {
     @CacheLookup
     public WebElement userSettingsLink;
 
-
-    @FindBy(xpath = "/html/body/div[1]/div[2]/div/div/div/ul[1]/li[6]/div[2]/div/ul/li[1]/a/span")
+    @FindBy(xpath = "//a[@class='navi-dropdown-link navi-dropdown-link_emphasis']/span[@class='navi-dropdown-link__text']")
     @CacheLookup
-    public WebElement resume;
+    public WebElement createResume;
 
-    @FindBy(xpath = "//div[2]/div[2]/div/div/a/span")
+    @FindBy(xpath = "//span[@class='navi-item__employer-info']")
     @CacheLookup
-    public WebElement resumes;
+    public WebElement userName;
+
 
     public UserMainPage(WebDriver driver) {
         super(driver);

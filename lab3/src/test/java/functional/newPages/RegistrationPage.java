@@ -9,21 +9,46 @@ import org.openqa.selenium.support.FindBy;
  * Created by cezar on 4/15/17.
  */
 public class RegistrationPage extends GuestMainPage {
-    private static String emplURL;
-    private static String seekerURL;
+    private static String employerURL;
+    private static String employeeURL;
     //from GuestPage
 
     public RegistrationPage(WebDriver driver) {
         super(driver);
-        emplURL = baseUrl + "auth/employer";
-        seekerURL = baseUrl + "account/signup";
+        employerURL = baseUrl + "auth/employer";
+        employeeURL = baseUrl + "account/signup";
     }
 
-    public static String getEmplURL() {
-        return emplURL;
+    @FindBy(xpath = "//input[contains(@name, 'firstName')]")
+    @CacheLookup
+    public WebElement firstName;
+
+    @FindBy(xpath = "//input[contains(@name, 'lastName')]")
+    @CacheLookup
+    public WebElement lastName;
+
+    @FindBy(xpath = "//input[contains(@name, 'login')]")
+    @CacheLookup
+    public WebElement login;
+
+    @FindBy(xpath = "//input[contains(@name, 'password')]")
+    @CacheLookup
+    public WebElement password;
+
+    @FindBy(xpath = "//input[contains(@class, 'HH-FormLocker-Submit')]")
+    @CacheLookup
+    public WebElement submitForm;
+
+    @FindBy(xpath = "//span[@class='account-form-error']")
+    @CacheLookup
+    public WebElement errorString;
+
+
+    public static String getEmployerURL() {
+        return employerURL;
     }
 
-    public static String getSeekerURL() {
-        return seekerURL;
+    public static String getEmployeeURL() {
+        return employeeURL;
     }
 }

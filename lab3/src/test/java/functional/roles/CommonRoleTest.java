@@ -85,7 +85,7 @@ public class CommonRoleTest extends JUnitTestBase {
 
     /* LOCATE TESTS */
 
-    @Test
+     @Test
     public void testChangeLocaleToEn() throws Exception {
         /*driver.get(mainPage.getURL());
         mainPage.localeEn.click();*/
@@ -97,21 +97,26 @@ public class CommonRoleTest extends JUnitTestBase {
         assertEquals( "Search", mainPage.searchButton.getText());
     }
 
-    @Test
+     @Test
     public void testChangeLocaleToEnToRu() throws Exception {
         /*driver.get(mainPage.getURL());
         mainPage.localeEn.click();
         mainPage.localeRu.click();*/
-        selenium.waitForPageToLoad("6000");
-        selenium.mouseOver("xpath=/html/body/div[1]/div[1]/div/div[2]/div/div[7]/div/div[2]/div/ul/li[1]/span/span/span");
-        selenium.waitForPageToLoad("6000");
-        selenium.click("xpath=/html/body/div[1]/div[1]/div/div[2]/div/div[7]/div/div[2]/div/ul/li[2]/a");
-        selenium.waitForPageToLoad("6000");
+         selenium.waitForPageToLoad("6000");
+         selenium.mouseOver("xpath=/html/body/div[1]/div[1]/div/div[2]/div/div[7]/div/div[2]/div/ul/li[1]/span/span/span");
+         selenium.waitForPageToLoad("6000");
+         selenium.click("xpath=/html/body/div[1]/div[1]/div/div[2]/div/div[7]/div/div[2]/div/ul/li[2]/a");
+         selenium.waitForPageToLoad("6000");
 
-        assertEquals( "Поиск", mainPage.searchButton.getText());
-    }
+         selenium.waitForPageToLoad("10000");
+         selenium.mouseOver("xpath=/html/body/div[1]/div[1]/div/div[2]/div/div[7]/div/div[2]/div/ul/li[1]/span/span/span");
+         selenium.waitForPageToLoad("6000");
+         selenium.click("xpath=/html/body/div[1]/div[1]/div/div[2]/div/div[7]/div/div[2]/div/ul/li[2]/a");
+         selenium.waitForPageToLoad("6000");
 
-    /* */
+         assertEquals("Найти", mainPage.searchButton.getText());
+     }
+    
 
     @Test
     public void testCatalogCom() throws Exception {

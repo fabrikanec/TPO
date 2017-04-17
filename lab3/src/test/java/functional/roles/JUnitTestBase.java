@@ -38,7 +38,8 @@ public class JUnitTestBase {
             System.setProperty("webdriver.gecko.driver", "/home/cezar/Downloads/geckodriver");
             System.setProperty("webdriver.chrome.driver", "C:\\Users\\vladimirg\\chromedriver.exe");
             if (driver == null) {
-                driver = new ChromeDriver();
+                //driver = new ChromeDriver();
+                driver = new FirefoxDriver();
                 driver.manage().window().maximize();
             }
             if (selenium == null) {

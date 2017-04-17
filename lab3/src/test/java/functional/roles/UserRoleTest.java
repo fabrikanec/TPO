@@ -41,6 +41,7 @@ public class UserRoleTest extends JUnitTestBase {
         mainPage.loginFormLogin.sendKeys("monnort@gmail.com");
         mainPage.loginFormPassword.sendKeys("kukukupopo");
         mainPage.loginFormLogin.sendKeys(Keys.ENTER);
+        selenium.waitForPageToLoad("30000");
     }
 
     @Test
@@ -168,6 +169,17 @@ public class UserRoleTest extends JUnitTestBase {
         selenium.waitForPageToLoad("6000");
         selenium.click("xpath=/html/body/div[1]/div[2]/div/div/div/ul[1]/li[3]/div[2]/div/ul/li[3]/a/span[1]");
     }
+
+    @Test
+    public void testChangeSettings() throws Exception {
+        selenium.waitForPageToLoad("30000");
+        selenium.mouseOver("xpath=/html/body/div[1]/div[2]/div/div/div/ul[2]/li/div[1]/span");
+        selenium.waitForPageToLoad("30000");
+        selenium.click("xpath=/html/body/div[1]/div[2]/div/div/div/ul[2]/li/div[2]/div/ul/li[1]/a/span");
+        selenium.waitForPageToLoad("6000");
+        assertEquals("https://spb.hh.ru/applicant/settings", driver.getCurrentUrl());
+    }
+
 
     @Test
     public void testCreateCV() throws Exception {

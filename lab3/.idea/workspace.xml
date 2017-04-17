@@ -5,13 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="68085667-d30a-4043-b117-32a94be798b7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/functional/newPages/RegistrationPage.class" afterPath="$PROJECT_DIR$/target/test-classes/functional/newPages/RegistrationPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/functional/roles/GuestRoleTest.class" afterPath="$PROJECT_DIR$/target/test-classes/functional/roles/GuestRoleTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/functional/newPages/UserMainPage.class" afterPath="$PROJECT_DIR$/target/test-classes/functional/newPages/UserMainPage.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/functional/roles/CommonRoleTest.class" afterPath="$PROJECT_DIR$/target/test-classes/functional/roles/CommonRoleTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/functional/roles/JUnitTestBase$2.class" afterPath="$PROJECT_DIR$/target/test-classes/functional/roles/JUnitTestBase$2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/functional/roles/UserRoleTest.class" afterPath="$PROJECT_DIR$/target/test-classes/functional/roles/UserRoleTest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/functional/newPages/RegistrationPage.java" afterPath="$PROJECT_DIR$/src/test/java/functional/newPages/RegistrationPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/functional/newPages/UserMainPage.java" afterPath="$PROJECT_DIR$/src/test/java/functional/newPages/UserMainPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/functional/roles/GuestRoleTest.java" afterPath="$PROJECT_DIR$/src/test/java/functional/roles/GuestRoleTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/functional/roles/CommonRoleTest.java" afterPath="$PROJECT_DIR$/src/test/java/functional/roles/CommonRoleTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/functional/roles/JUnitTestBase.java" afterPath="$PROJECT_DIR$/src/test/java/functional/roles/JUnitTestBase.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/functional/roles/UserRoleTest.java" afterPath="$PROJECT_DIR$/src/test/java/functional/roles/UserRoleTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -67,20 +68,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VKLoginPage.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/functional/newPages/VKLoginPage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="12" column="5" lean-forward="false" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
-              <folding>
-                <element signature="e#766#767#0" expanded="true" />
-                <element signature="e#795#796#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserMainPage.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UserMainPage.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/functional/newPages/UserMainPage.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="624">
@@ -90,15 +78,44 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CreateVacantPage.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/functional/newPages/CreateVacantPage.java">
+      <file leaf-file-name="GuestRoleTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/functional/roles/GuestRoleTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="17" column="8" lean-forward="false" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="19" />
+            <state relative-caret-position="1664">
+              <caret line="104" column="33" lean-forward="false" selection-start-line="104" selection-start-column="33" selection-end-line="104" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CommonRoleTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/functional/roles/CommonRoleTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="166">
+              <caret line="22" column="13" lean-forward="false" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
               <folding>
-                <element signature="e#362#363#0" expanded="true" />
-                <element signature="e#388#389#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserRoleTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/functional/roles/UserRoleTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="551">
+              <caret line="183" column="9" lean-forward="true" selection-start-line="183" selection-start-column="9" selection-end-line="183" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JUnitTestBase.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/functional/roles/JUnitTestBase.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="416">
+              <caret line="41" column="45" lean-forward="false" selection-start-line="41" selection-start-column="45" selection-end-line="41" selection-end-column="45" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -108,26 +125,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="832">
               <caret line="35" column="30" lean-forward="true" selection-start-line="35" selection-start-column="30" selection-end-line="35" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Page.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/functional/newPages/Page.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="10" column="51" lean-forward="true" selection-start-line="10" selection-start-column="51" selection-end-line="10" selection-end-column="51" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OrderCVPage.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/functional/newPages/OrderCVPage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="546">
-              <caret line="24" column="30" lean-forward="false" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -144,11 +141,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>UserMain</find>
-      <find>UserMainP</find>
-      <find>UserMainPa</find>
-      <find>UserMainPag</find>
-      <find>UserMainPage</find>
       <find>UserMainPage u</find>
       <find>M u</find>
       <find>Ma u</find>
@@ -174,6 +166,11 @@
       <find>locate</find>
       <find>L</find>
       <find>Locate</find>
+      <find>@Test</find>
+      <find>@Ignore @Test</find>
+      <find>Ig</find>
+      <find>Ing</find>
+      <find>Ign</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -192,6 +189,8 @@
       <replace>GuestMainPage g</replace>
       <replace>locale</replace>
       <replace>Locale</replace>
+      <replace>@Ignore @Test</replace>
+      <replace>@Test</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$USER_HOME$/IDEs/jdk1.8.0_121/jre/lib/rt.jar!/org</dir>
@@ -252,14 +251,14 @@
         <option value="$PROJECT_DIR$/src/test/java/functional/newPages/GuestMainPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/functional/newPages/MainPage.java" />
         <option value="$PROJECT_DIR$/scripts/common/changeLocate.java" />
-        <option value="$PROJECT_DIR$/src/test/java/functional/roles/JUnitTestBase.java" />
-        <option value="$PROJECT_DIR$/src/test/java/functional/roles/CommonRoleTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/functional/roles/UserRoleTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/functional/newPages/RegistrationPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/functional/roles/GuestRoleTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/functional/newPages/CVsChekingPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/functional/newPages/UserMainPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/functional/newPages/ProfTestPage.java" />
+        <option value="$PROJECT_DIR$/src/test/java/functional/roles/JUnitTestBase.java" />
+        <option value="$PROJECT_DIR$/src/test/java/functional/roles/UserRoleTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/functional/roles/CommonRoleTest.java" />
       </list>
     </option>
   </component>
@@ -461,36 +460,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lab3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lab3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="functional" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="newPages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane" />
@@ -522,74 +491,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.UserRoleTest.testCheckCV">
-    <configuration default="false" name="GuessRoleTest.testVklogin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="functional.roles.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="lab3" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="functional.roles" />
-      <option name="MAIN_CLASS_NAME" value="functional.roles.GuessRoleTest" />
-      <option name="METHOD_NAME" value="testVklogin" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="CommonRoleTest.testChangeLocate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="functional.roles.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="lab3" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="functional.roles" />
-      <option name="MAIN_CLASS_NAME" value="functional.roles.CommonRoleTest" />
-      <option name="METHOD_NAME" value="testChangeLocate" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="Test" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="lab3" />
-      <envs />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="JUnit.CommonRoleTest.testChangeLocaleToEnToRu">
     <configuration default="false" name="UserRoleTest.testCheckCV" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -629,6 +531,84 @@
       <option name="PACKAGE_NAME" value="functional.roles" />
       <option name="MAIN_CLASS_NAME" value="functional.roles.CommonRoleTest" />
       <option name="METHOD_NAME" value="testCatalogCom" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="UserRoleTest.testChangeSettings" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="functional.roles.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="lab3" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="functional.roles" />
+      <option name="MAIN_CLASS_NAME" value="functional.roles.UserRoleTest" />
+      <option name="METHOD_NAME" value="testChangeSettings" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="CommonRoleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="functional.roles.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="lab3" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="functional.roles" />
+      <option name="MAIN_CLASS_NAME" value="functional.roles.CommonRoleTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="CommonRoleTest.testChangeLocaleToEnToRu" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="functional.roles.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="lab3" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="functional.roles" />
+      <option name="MAIN_CLASS_NAME" value="functional.roles.CommonRoleTest" />
+      <option name="METHOD_NAME" value="testChangeLocaleToEnToRu" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -1075,19 +1055,19 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Maven.Unnamed" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.GuessRoleTest.testVklogin" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.CommonRoleTest.testChangeLocate" />
-      <item index="3" class="java.lang.String" itemvalue="Application.Test" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.UserRoleTest.testCheckCV" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.CommonRoleTest.testCatalogCom" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.UserRoleTest.testCheckCV" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.CommonRoleTest.testCatalogCom" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.UserRoleTest.testChangeSettings" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.CommonRoleTest" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.CommonRoleTest.testChangeLocaleToEnToRu" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.UserRoleTest.testCheckCV" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.CommonRoleTest.testCatalogCom" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.CommonRoleTest.testChangeLocate" />
-        <item index="3" class="java.lang.String" itemvalue="Application.Test" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.GuessRoleTest.testVklogin" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.CommonRoleTest.testChangeLocaleToEnToRu" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.CommonRoleTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.UserRoleTest.testChangeSettings" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.UserRoleTest.testCheckCV" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.CommonRoleTest.testCatalogCom" />
       </list>
     </recent_temporary>
   </component>
@@ -1114,39 +1094,39 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="UserRoleTest_testCheckCV - 2017.04.17 at 05h 18m 22s.xml">
-      <configuration name="UserRoleTest.testCheckCV" configurationId="JUnit" />
+    <history-entry file="CommonRoleTest - 2017.04.17 at 17h 25m 26s.xml">
+      <configuration name="CommonRoleTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserRoleTest_testCheckCV - 2017.04.17 at 05h 19m 28s.xml">
-      <configuration name="UserRoleTest.testCheckCV" configurationId="JUnit" />
+    <history-entry file="CommonRoleTest_testChangeLocaleToEnToRu - 2017.04.17 at 17h 27m 07s.xml">
+      <configuration name="CommonRoleTest.testChangeLocaleToEnToRu" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserRoleTest_testCheckCV - 2017.04.17 at 05h 20m 51s.xml">
-      <configuration name="UserRoleTest.testCheckCV" configurationId="JUnit" />
+    <history-entry file="UserRoleTest_testChangeSettings - 2017.04.17 at 17h 09m 38s.xml">
+      <configuration name="UserRoleTest.testChangeSettings" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserRoleTest_testCheckCV - 2017.04.17 at 05h 25m 46s.xml">
-      <configuration name="UserRoleTest.testCheckCV" configurationId="JUnit" />
+    <history-entry file="UserRoleTest_testChangeSettings - 2017.04.17 at 17h 10m 12s.xml">
+      <configuration name="UserRoleTest.testChangeSettings" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserRoleTest_testCheckCV - 2017.04.17 at 05h 29m 58s.xml">
-      <configuration name="UserRoleTest.testCheckCV" configurationId="JUnit" />
+    <history-entry file="UserRoleTest_testChangeSettings - 2017.04.17 at 17h 11m 54s.xml">
+      <configuration name="UserRoleTest.testChangeSettings" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserRoleTest_testCheckCV - 2017.04.17 at 05h 30m 38s.xml">
-      <configuration name="UserRoleTest.testCheckCV" configurationId="JUnit" />
+    <history-entry file="UserRoleTest_testChangeSettings - 2017.04.17 at 17h 13m 22s.xml">
+      <configuration name="UserRoleTest.testChangeSettings" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserRoleTest_testCheckCV - 2017.04.17 at 05h 37m 09s.xml">
-      <configuration name="UserRoleTest.testCheckCV" configurationId="JUnit" />
+    <history-entry file="UserRoleTest_testChangeSettings - 2017.04.17 at 17h 16m 12s.xml">
+      <configuration name="UserRoleTest.testChangeSettings" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserRoleTest_testCheckCV - 2017.04.17 at 05h 38m 57s.xml">
-      <configuration name="UserRoleTest.testCheckCV" configurationId="JUnit" />
+    <history-entry file="UserRoleTest_testChangeSettings - 2017.04.17 at 17h 17m 14s.xml">
+      <configuration name="UserRoleTest.testChangeSettings" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserRoleTest_testCheckCV - 2017.04.17 at 05h 42m 13s.xml">
-      <configuration name="UserRoleTest.testCheckCV" configurationId="JUnit" />
+    <history-entry file="UserRoleTest_testChangeSettings - 2017.04.17 at 17h 17m 55s.xml">
+      <configuration name="UserRoleTest.testChangeSettings" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserRoleTest_testCheckCV - 2017.04.17 at 05h 42m 59s.xml">
-      <configuration name="UserRoleTest.testCheckCV" configurationId="JUnit" />
+    <history-entry file="UserRoleTest_testChangeSettings - 2017.04.17 at 17h 19m 03s.xml">
+      <configuration name="UserRoleTest.testChangeSettings" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69643000" />
+    <option name="totallyTimeSpent" value="73203000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1920" height="1030" extended-state="1" />
@@ -1162,7 +1142,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985386" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32902467" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32902467" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1214,7 +1194,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="5" />
+      <option name="time" value="7" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1474,38 +1454,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/functional/roles/UserRoleTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2834">
-          <caret line="127" column="5" lean-forward="false" selection-start-line="127" selection-start-column="5" selection-end-line="127" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/functional/roles/JUnitTestBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="22" column="32" lean-forward="false" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/functional/roles/GuestRoleTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="31">
-          <caret line="73" column="79" lean-forward="false" selection-start-line="73" selection-start-column="79" selection-end-line="73" selection-end-column="79" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/functional/roles/CommonRoleTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2111">
-          <caret line="124" column="43" lean-forward="false" selection-start-line="124" selection-start-column="43" selection-end-line="124" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/functional/newPages/CompanyCatalogPage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
@@ -1607,6 +1555,40 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="624">
           <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/functional/roles/JUnitTestBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="41" column="45" lean-forward="false" selection-start-line="41" selection-start-column="45" selection-end-line="41" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/functional/roles/UserRoleTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="183" column="9" lean-forward="true" selection-start-line="183" selection-start-column="9" selection-end-line="183" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/functional/roles/CommonRoleTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="22" column="13" lean-forward="false" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/functional/roles/GuestRoleTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1664">
+          <caret line="104" column="33" lean-forward="false" selection-start-line="104" selection-start-column="33" selection-end-line="104" selection-end-column="33" />
           <folding />
         </state>
       </provider>

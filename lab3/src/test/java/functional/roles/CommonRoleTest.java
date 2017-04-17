@@ -74,10 +74,8 @@ public class CommonRoleTest extends JUnitTestBase {
         new Select(guestMainPage.searchTypeSelect).selectByVisibleText("Компании");
         selenium.waitForPageToLoad("6000");
         guestMainPage.searchButton.click();
-        selenium.waitForPageToLoad("6000");
-        /*assertEquals( "Itiviti (Айтивити)",
-                driver.findElement(By.xpath("//a/[(contains(@text, 'Itiviti')]")));*/
-        assertTrue(driver.getCurrentUrl().contains("search/"));
+        assertEquals( "Itiviti (Айтивити)",
+                driver.findElement(By.xpath("//td[@class='l-cell b-companylist']/div/a")).getText());
     }
 
     @Test

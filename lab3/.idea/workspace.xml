@@ -5,17 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="68085667-d30a-4043-b117-32a94be798b7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/functional/newPages/MainPage.class" afterPath="$PROJECT_DIR$/target/test-classes/functional/newPages/MainPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/functional/newPages/RegistrationPage.class" afterPath="$PROJECT_DIR$/target/test-classes/functional/newPages/RegistrationPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/functional/roles/CommonRoleTest.class" afterPath="$PROJECT_DIR$/target/test-classes/functional/roles/CommonRoleTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/functional/roles/GuestRoleTest.class" afterPath="$PROJECT_DIR$/target/test-classes/functional/roles/GuestRoleTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/functional/roles/UserRoleTest.class" afterPath="$PROJECT_DIR$/target/test-classes/functional/roles/UserRoleTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/functional/newPages/MainPage.java" afterPath="$PROJECT_DIR$/src/test/java/functional/newPages/MainPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/functional/newPages/RegistrationPage.java" afterPath="$PROJECT_DIR$/src/test/java/functional/newPages/RegistrationPage.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/functional/roles/CommonRoleTest.java" afterPath="$PROJECT_DIR$/src/test/java/functional/roles/CommonRoleTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/functional/roles/GuestRoleTest.java" afterPath="$PROJECT_DIR$/src/test/java/functional/roles/GuestRoleTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/functional/roles/UserRoleTest.java" afterPath="$PROJECT_DIR$/src/test/java/functional/roles/UserRoleTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -45,6 +35,10 @@
               <caret line="62" column="44" lean-forward="false" selection-start-line="62" selection-start-column="44" selection-end-line="62" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <marker date="1492448187607" expanded="true" signature="3389:3930" ph="{...}" />
+                <marker date="1492448187607" expanded="true" signature="4023:4535" ph="{...}" />
+                <marker date="1492448187607" expanded="true" signature="4608:5529" ph="{...}" />
+                <marker date="1492448187607" expanded="true" signature="5596:6075" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -1116,7 +1110,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78817000" />
+    <option name="totallyTimeSpent" value="78970000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1920" height="1030" extended-state="1" />
@@ -1543,6 +1537,10 @@
           <caret line="62" column="44" lean-forward="false" selection-start-line="62" selection-start-column="44" selection-end-line="62" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
+            <marker date="1492448187607" expanded="true" signature="3389:3930" ph="{...}" />
+            <marker date="1492448187607" expanded="true" signature="4023:4535" ph="{...}" />
+            <marker date="1492448187607" expanded="true" signature="4608:5529" ph="{...}" />
+            <marker date="1492448187607" expanded="true" signature="5596:6075" ph="{...}" />
           </folding>
         </state>
       </provider>

@@ -69,7 +69,7 @@ public class CommonRoleTest extends JUnitTestBase {
         guestMainPage.searchButton.click();
 
         assertEquals( "Itiviti (Айтивити)",
-                driver.findElement(By.xpath("//a/[(contains(@text, 'Itiviti')]")));
+                driver.findElement(By.xpath("//td[@class='l-cell b-companylist']/div/a")).getText());
     }
 
     @Test

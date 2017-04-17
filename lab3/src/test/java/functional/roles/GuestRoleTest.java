@@ -41,6 +41,7 @@ public class GuestRoleTest extends JUnitTestBase {
         restorePasswordPage = PageFactory.initElements(driver, RestorePasswordPage.class);
         loginPage = PageFactory.initElements(driver, LoginPage.class);
         userMainPage = PageFactory.initElements(driver, UserMainPage.class);
+        driver.get(registrationPage.getEmployeeURL());
     }
 
 
@@ -49,8 +50,6 @@ public class GuestRoleTest extends JUnitTestBase {
     @Test
     @Ignore //Ignored for now to avoid redundant registration on HH
     public void testEmployeeSuccessRegistration() throws Exception {
-        driver.get(registrationPage.getEmployeeURL());
-
         registrationPage.firstName.sendKeys("Alexey");
         registrationPage.lastName.sendKeys("Vasin");
         registrationPage.login.sendKeys("justanotherrandom@gmail.com");
@@ -62,8 +61,6 @@ public class GuestRoleTest extends JUnitTestBase {
 
     @Test
     public void testEmployeeFailedRegistrationShortPassword() throws Exception {
-        driver.get(registrationPage.getEmployeeURL());
-
         registrationPage.firstName.sendKeys("Alexey");
         registrationPage.lastName.sendKeys("Vasin");
         registrationPage.login.sendKeys("justanotherrandom@gmail.com");
@@ -75,8 +72,6 @@ public class GuestRoleTest extends JUnitTestBase {
 
     @Test
     public void testEmployeeFailedRegistrationInvalidLogin() throws Exception {
-        driver.get(registrationPage.getEmployeeURL());
-
         registrationPage.firstName.sendKeys("Alexey");
         registrationPage.lastName.sendKeys("Vasin");
         registrationPage.login.sendKeys("justanotherrandom.com");

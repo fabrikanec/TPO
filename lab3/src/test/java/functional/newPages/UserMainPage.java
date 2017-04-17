@@ -38,6 +38,7 @@ public class UserMainPage extends MainPage implements Page {
     @CacheLookup
     public WebElement resumes;
 
+
     @FindBy(xpath = "//a[@class='navi-dropdown-link navi-dropdown-link_emphasis']/span[@class='navi-dropdown-link__text']")
     @CacheLookup
     public WebElement createResume;
@@ -45,6 +46,8 @@ public class UserMainPage extends MainPage implements Page {
     @FindBy(xpath = "//span[@class='navi-item__employer-info']")
     @CacheLookup
     public WebElement userName;
+
+
 
     public UserMainPage(WebDriver driver) {
         super(driver);

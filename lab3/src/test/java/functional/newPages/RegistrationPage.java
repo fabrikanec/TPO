@@ -44,11 +44,11 @@ public class RegistrationPage extends GuestMainPage {
     public WebElement errorString;
 
 
-    public static String getEmployerURL() {
+    public String getEmployerURL() {
         return employerURL;
     }
 
-    public static String getEmployeeURL() {
+    public String getEmployeeURL() {
         return employeeURL;
     }
 }

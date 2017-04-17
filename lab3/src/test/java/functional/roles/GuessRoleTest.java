@@ -17,6 +17,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
 
 import java.util.concurrent.TimeUnit;
+
+import static functional.newPages.Page.baseUrl;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertTrue;
@@ -29,7 +31,6 @@ public class GuessRoleTest extends JUnitTestBase {
 
     private GuestMainPage guestMainPage;
     private LoginPage loginPage;
-    private CoursesPage coursesPage;
     private VKLoginPage vkLoginPage;
     private RestorePasswordPage passwordPage;
     private CreateVacantPage createVacantPage;
@@ -40,7 +41,6 @@ public class GuessRoleTest extends JUnitTestBase {
     public void initPageObjects() {
         guestMainPage = PageFactory.initElements(driver, GuestMainPage.class);
         loginPage = PageFactory.initElements(driver, LoginPage.class);
-        coursesPage = PageFactory.initElements(driver, CoursesPage.class);
         vkLoginPage = PageFactory.initElements(driver, VKLoginPage.class);
         passwordPage = PageFactory.initElements(driver, RestorePasswordPage.class);
         createVacantPage = PageFactory.initElements(driver, CreateVacantPage.class);
@@ -48,12 +48,11 @@ public class GuessRoleTest extends JUnitTestBase {
         selenium = new WebDriverBackedSelenium(driver, baseUrl);
     }
 
-    @Test(expected = Exception.class)
+    @Test
     public void testLoginWithoutPassword () {
-        driver.get(GuestMainPage.URL);
+        driver.get(guestMainPage.getURL());
         guestMainPage.loginFormLogin.sendKeys("lol");
         guestMainPage.loginFormLogin.sendKeys(Keys.ENTER);
-        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
     }
 
     @Test
@@ -72,22 +71,32 @@ public class GuessRoleTest extends JUnitTestBase {
 
     @Test
     public void testFailLogin() throws Exception {
-        selenium.open("/vacancy/20122459?query=devops");
+        driver.get(guestMainPage.getURL());
+        guestMainPage.loginFormLogin.sendKeys("lol");
+        guestMainPage.loginFormPassword.sendKeys("lol");
+        guestMainPage.loginFormLogin.sendKeys(Keys.ENTER);
+
+        /*selenium.open("/vacancy/20122459?query=devops");
         selenium.type("name=username", "lol");
         selenium.type("name=password", "123");
         selenium.click("//input[@value='Войти в личный кабинет']");
-        selenium.waitForPageToLoad("30000");
+        selenium.waitForPageToLoad("30000");*/
     }
 
     @Test
     public void testLogin() throws Exception {
-        selenium.open("/");
+        driver.get(guestMainPage.getURL());
+        guestMainPage.loginFormLogin.sendKeys("monnort@gmail.com");
+        guestMainPage.loginFormPassword.sendKeys("kukukupopo");
+        guestMainPage.loginFormLogin.sendKeys(Keys.ENTER);
+
+        /*selenium.open("/");
         selenium.type("css=label.login-input > input[name=\"username\"]", "monnort@gmail.com");
         selenium.type("css=label.login-input > input[name=\"password\"]", "kukukupopo");
         selenium.click("name=action");
         selenium.waitForPageToLoad("30000");
         selenium.click("//li[3]/a/span");
-        selenium.waitForPageToLoad("30000");
+        selenium.waitForPageToLoad("30000");*/
     }
 
     @Test
@@ -100,11 +109,13 @@ public class GuessRoleTest extends JUnitTestBase {
 
     @Test
     public void testVklogin() throws Exception {
-        selenium.open("/");
+        driver.get(guestMainPage.getURL());
+        guestMainPage.vkLogin.click();
+        /*selenium.open("/");
         selenium.click("xpath=(//a[contains(@href, '/account/connect?backurl=%2F&site=VK')])[2]");
         selenium.waitForPageToLoad("30000");
         selenium.click("//a[contains(@href, '/account/connect?backurl=%2F&site=VK')]");
-        selenium.waitForPageToLoad("30000");
+        selenium.waitForPageToLoad("30000");*/
     }
 
     @Test

@@ -9,7 +9,7 @@ import org.openqa.selenium.support.FindBy;
  * Created by cezar on 4/15/17.
  */
 public class CVsChekingPage extends UserMainPage {
-    public static String URL = "http://spb.hh.ru/applicant/resumes";
+    private static String URL;
 
     @FindBy(xpath = "/x:html/x:body/x:div[2]/x:div[2]/x:div/x:div/x:div/x:ul[1]/x:li[3]/x:div[1]")
     @CacheLookup
@@ -30,7 +30,13 @@ public class CVsChekingPage extends UserMainPage {
     @FindBy(xpath = "/x:html/x:body/x:div[5]/x:div[2]/x:div[2]/x:div[2]/x:div/x:div/x:div[2]/x:span[2]/x:a")
     @CacheLookup
     public WebElement suitableVacant;
+
     public CVsChekingPage(WebDriver driver) {
         super(driver);
+        URL = baseUrl + "applicant/resumes";
+    }
+
+    public String getURL() {
+        return URL;
     }
 }

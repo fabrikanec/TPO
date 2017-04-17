@@ -5,12 +5,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
 
 /**
  * Created by cezar on 4/15/17.
  */
 public class GuestMainPage extends MainPage {
-    public static String URL = "http://spb.hh.ru/";
+    private static String URL = baseUrl;
 
     @FindBy(xpath = "//form[@class='login-form']/label[@class='login-input']/input[@type='text']")
     @CacheLookup
@@ -32,9 +33,17 @@ public class GuestMainPage extends MainPage {
     @CacheLookup
     public WebElement publishCV;
 
+    @FindBy(xpath="(//a[contains(@href, '/account/connect?backurl=%2F&site=VK')])[2]")
+    @CacheLookup
+    public WebElement vkLogin;
+
 
     public GuestMainPage(WebDriver driver) {
         super(driver);
         //URL = JUnitTestBase.baseUrl;
+    }
+
+    public String getURL() {
+        return URL;
     }
 }

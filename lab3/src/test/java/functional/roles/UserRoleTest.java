@@ -4,30 +4,46 @@ import com.thoughtworks.selenium.Selenium;
 import functional.newPages.*;
 import org.junit.Before;
 import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverBackedSelenium;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.util.concurrent.TimeUnit;
+
+import static functional.newPages.Page.baseUrl;
 
 /**
  * Created by cezar on 4/15/17.
  */
 public class UserRoleTest extends JUnitTestBase {
     private CreateCVPage createCVPage;
-    private LoginPage loginPage;
+    private UserMainPage userMainPage;
     private CVsChekingPage cVsChekingPage;
     private OrderCVPage orderCVPage;
     private SuiteableVacantPage suiteableVacantPage;
     private ProfTestPage profTestPage;
+    private GuestMainPage mainPage;
     private Selenium selenium;
 
     @Before
-    public void initPageObjects() {
+    public void initPageObjects() throws Exception {
+        mainPage = PageFactory.initElements(driver, GuestMainPage.class);
         createCVPage = PageFactory.initElements(driver, CreateCVPage.class);
-        loginPage = PageFactory.initElements(driver, LoginPage.class);
+        userMainPage = PageFactory.initElements(driver, UserMainPage.class);
         cVsChekingPage = PageFactory.initElements(driver, CVsChekingPage.class);
         orderCVPage = PageFactory.initElements(driver, OrderCVPage.class);
         suiteableVacantPage = PageFactory.initElements(driver, SuiteableVacantPage.class);
         profTestPage = PageFactory.initElements(driver, ProfTestPage.class);
-        selenium = new WebDriverBackedSelenium(driver, baseUrl);
+
+        driver.get(mainPage.getURL());
+        mainPage.loginFormLogin.sendKeys("monnort@gmail.com");
+        mainPage.loginFormPassword.sendKeys("kukukupopo");
+        mainPage.loginFormLogin.sendKeys(Keys.ENTER);
     }
 
     @Test
@@ -91,11 +107,21 @@ public class UserRoleTest extends JUnitTestBase {
 
     @Test
     public void testCheckCV() throws Exception {
-        selenium.open("/applicant/resumes/suitable_vacancies?resume=b07da8e1ff03ba331f0039ed1f7167486b526c&published");
+        driver.get(userMainPage.getURL());
+        selenium = new WebDriverBackedSelenium(driver, baseUrl);
+        selenium.waitForPageToLoad("30000");
+        selenium.mouseOver("xpath=/html/body/div[2]/div[2]/div/div/div/ul[1]/li[3]/div[1]");
+        selenium.waitForPageToLoad("30000");
+        /*selenium.mouseOver("");
+        userMainPage.resume.click();*/
+
+        //selenium.waitForPageToLoad("30000");
+        //userMainPage.resumes.click();
+        /*selenium.open("/applicant/resumes/suitable_vacancies?resume=b07da8e1ff03ba331f0039ed1f7167486b526c&published");
         selenium.click("//li[3]/a/span");
         selenium.waitForPageToLoad("30000");
         selenium.click("//div[2]/div[2]/div/div/a/span");
-        selenium.waitForPageToLoad("30000");
+        selenium.waitForPageToLoad("30000");*/
     }
 
     @Test

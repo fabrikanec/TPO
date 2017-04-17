@@ -7,23 +7,19 @@ import org.junit.rules.ExternalResource;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 /**
  * Created by cezar on 4/15/17.
  */
 public class JUnitTestBase {
-
-    public static String baseUrl;
     protected static Capabilities capabilities;
-
-
     protected WebDriver driver;
 
     @ClassRule
     public static ExternalResource webDriverProperties = new ExternalResource() {
         @Override
         protected void before() throws Throwable {
-            baseUrl = PropertyLoader.loadProperty("site.url");
             capabilities = PropertyLoader.loadCapabilities();
         }
     };
@@ -34,9 +30,9 @@ public class JUnitTestBase {
         protected void before() throws Throwable {
             //WebDriverPool dp = new ThreadLocalSingleWebDriverPool();
             //driver = dp.getDriver(gridHubUrl, capabilities);
-            System.setProperty("webdriver.chrome.driver", "/home/izoomko/wrk/3grade/testing/chromedriver");
+            System.setProperty("webdriver.gecko.driver", "/home/cezar/Downloads/geckodriver");
             if (driver == null) {
-                driver = new ChromeDriver();
+                driver = new FirefoxDriver();
             }
         };
     };

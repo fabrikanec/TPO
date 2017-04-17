@@ -4,18 +4,12 @@ import com.thoughtworks.selenium.Selenium;
 import functional.newPages.*;
 import org.junit.Before;
 import org.junit.Test;
-import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverBackedSelenium;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.Wait;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.util.concurrent.TimeUnit;
 
 import static functional.newPages.Page.baseUrl;
+import static org.junit.Assert.assertEquals;
 
 /**
  * Created by cezar on 4/15/17.
@@ -29,6 +23,8 @@ public class UserRoleTest extends JUnitTestBase {
     private ProfTestPage profTestPage;
     private GuestMainPage mainPage;
     private Selenium selenium;
+    private LoginPage loginPage;
+    private RestorePasswordPage restorePasswordPage;
 
     @Before
     public void initPageObjects() throws Exception {
@@ -39,6 +35,8 @@ public class UserRoleTest extends JUnitTestBase {
         orderCVPage = PageFactory.initElements(driver, OrderCVPage.class);
         suiteableVacantPage = PageFactory.initElements(driver, SuiteableVacantPage.class);
         profTestPage = PageFactory.initElements(driver, ProfTestPage.class);
+        restorePasswordPage = PageFactory.initElements(driver, RestorePasswordPage.class);
+        loginPage = PageFactory.initElements(driver, LoginPage.class);
 
         driver.get(mainPage.getURL());
         mainPage.loginFormLogin.sendKeys("monnort@gmail.com");
@@ -46,6 +44,67 @@ public class UserRoleTest extends JUnitTestBase {
         mainPage.loginFormLogin.sendKeys(Keys.ENTER);
     }
 
+    @Test
+    public void testLoginWithoutPassword() {
+        driver.get(mainPage.getURL());
+        mainPage.loginFormLogin.sendKeys("lol");
+        mainPage.loginFormSubmit.click();
+
+        assertEquals( "Неправильные данные для входа. Пожалуйста, попробуйте снова.",
+                loginPage.wrongCredentialsError.getText());
+    }
+
+    @Test
+    public void testLoginWithoutLogin() {
+        driver.get(mainPage.getURL());
+        mainPage.loginFormPassword.sendKeys("lel");
+        mainPage.loginFormSubmit.click();
+
+        assertEquals( "Неправильные данные для входа. Пожалуйста, попробуйте снова.",
+                loginPage.wrongCredentialsError.getText());
+    }
+
+    @Test
+    public void testLoginWrongCredentials() throws Exception {
+        driver.get(mainPage.getURL());
+        mainPage.loginFormLogin.sendKeys("lol");
+        mainPage.loginFormPassword.sendKeys("lol");
+        mainPage.loginFormSubmit.click();
+        //assertEquals();
+    }
+
+
+    @Test
+    public void testLoginForExistingUser() throws Exception {
+        driver.get(mainPage.getURL());
+        mainPage.loginFormLogin.sendKeys("monnort@gmail.com");
+        mainPage.loginFormPassword.sendKeys("kukukupopo");
+        mainPage.loginFormLogin.click();
+
+        //assertEquals();
+    }
+
+    @Test
+    public void testVklogin() throws Exception {
+        driver.get(mainPage.getURL());
+        mainPage.vkLogin.click();
+
+        //assertEquals();
+    }
+
+
+    @Test
+    public void testRestorePassForeExistingUser() throws Exception {
+        driver.get(mainPage.getURL());
+        mainPage.forgotPasswordAnchor.click();
+
+        restorePasswordPage.emailInput.sendKeys("monnort@gmail.com");
+        restorePasswordPage.restorePasswordButton.click();
+
+        //assertEquals();
+    }
+
+    /* TRASH */
     @Test
     public void testHelpLogin() throws Exception {
         selenium.open("/feedback");

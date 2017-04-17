@@ -21,7 +21,7 @@ public class GuestMainPage extends MainPage {
     @CacheLookup
     public WebElement loginFormPassword;
 
-    @FindBy(xpath = "//form[@class='login-form']/label[@class='login-input']/input[@type='submit']")
+    @FindBy(xpath = "//form[@class='login-form']/div[@class='login-submit-form']/input[@type=\"submit\"]")
     @CacheLookup
     public WebElement loginFormSubmit;
 

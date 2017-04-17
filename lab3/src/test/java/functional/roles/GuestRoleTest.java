@@ -87,65 +87,7 @@ public class GuestRoleTest extends JUnitTestBase {
     }
 
     /*
-    @Test
-    public void testLoginWithoutPassword() {
-        driver.get(guestMainPage.getURL());
-        guestMainPage.loginFormLogin.sendKeys("lol");
-        guestMainPage.loginFormSubmit.click();
 
-        assertEquals( "Неправильные данные для входа. Пожалуйста, попробуйте снова.",
-                loginPage.wrongCredentialsError.getText());
-    }
-
-    @Test
-    public void testLoginWithoutLogin() {
-        driver.get(guestMainPage.getURL());
-        guestMainPage.loginFormPassword.sendKeys("lel");
-        guestMainPage.loginFormSubmit.click();
-
-        assertEquals( "Неправильные данные для входа. Пожалуйста, попробуйте снова.",
-                loginPage.wrongCredentialsError.getText());
-    }
-
-    @Test
-    public void testLoginWrongCredentials() throws Exception {
-        driver.get(guestMainPage.getURL());
-        guestMainPage.loginFormLogin.sendKeys("lol");
-        guestMainPage.loginFormPassword.sendKeys("lol");
-        guestMainPage.loginFormSubmit.click();
-        //assertEquals();
-    }
-
-
-    @Test
-    public void testLoginForExistingUser() throws Exception {
-        driver.get(guestMainPage.getURL());
-        guestMainPage.loginFormLogin.sendKeys("monnort@gmail.com");
-        guestMainPage.loginFormPassword.sendKeys("kukukupopo");
-        guestMainPage.loginFormLogin.click();
-
-        //assertEquals();
-    }
-
-    @Test
-    public void testVklogin() throws Exception {
-        driver.get(guestMainPage.getURL());
-        guestMainPage.vkLogin.click();
-
-        //assertEquals();
-    }
-
-
-    @Test
-    public void testRestorePassForeExistingUser() throws Exception {
-        driver.get(guestMainPage.getURL());
-        guestMainPage.forgotPasswordAnchor.click();
-
-        restorePasswordPage.emailInput.sendKeys("monnort@gmail.com");
-        restorePasswordPage.restorePasswordButton.click();
-
-        //assertEquals();
-    }
 
 
     @Test

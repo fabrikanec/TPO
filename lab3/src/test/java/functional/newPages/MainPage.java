@@ -25,7 +25,7 @@ public class MainPage implements Page {
     @CacheLookup
     public WebElement searchTypeSelect;
 
-    @FindBy(xpath = "//div[@class='navi-cell navi-cell_search']/form[not(contains(@class, 'g-hidden'))]/div/div[@class='navi-search-button']/button")
+    @FindBy(xpath = "/html/body/div[1]/div[1]/div/div[2]/div/div[2]/form[1]/div/div[3]/button")
     @CacheLookup
     public WebElement searchButton;
 
@@ -53,7 +53,7 @@ public class MainPage implements Page {
     @CacheLookup
     public WebElement forgotPasswordAnchor;
 
-    @FindBy(xpath = "//div[@class='navi-cell navi-cell_advanced-search HH-Navi-SearchSelector-Tab navi-cell_right']/span[@class='navi-link']/a[@class='bloko-link bloko-link_secondary']")
+    @FindBy(xpath = "/html/body/div[1]/div[1]/div/div[2]/div/div[3]/span/a")
     @CacheLookup
     public WebElement extendedSearchLink;
 

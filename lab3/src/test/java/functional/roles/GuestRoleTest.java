@@ -72,6 +72,7 @@ public class GuestRoleTest extends JUnitTestBase {
 
     @Test
     public void testEmployeeFailedRegistrationInvalidLogin() throws Exception {
+
         registrationPage.firstName.sendKeys("Alexey");
         registrationPage.lastName.sendKeys("Vasin");
         registrationPage.login.sendKeys("justanotherrandom.com");

@@ -180,6 +180,16 @@ public class UserRoleTest extends JUnitTestBase {
         assertEquals("https://spb.hh.ru/applicant/settings", driver.getCurrentUrl());
     }
 
+    @Test
+    public void testCheckInvites() throws Exception {
+        selenium.waitForPageToLoad("30000");
+        selenium.mouseOver("xpath=/html/body/div[1]/div[2]/div/div/div/ul[1]/li[3]/div[1]");
+        selenium.waitForPageToLoad("30000");
+        selenium.click("xpath=/html/body/div[1]/div[2]/div/div/div/ul[1]/li[3]/div[2]/div/ul/li[2]/a/span[1]");
+        selenium.waitForPageToLoad("6000");
+        assertEquals("https://spb.hh.ru/applicant/negotiations", driver.getCurrentUrl());
+    }
+
 
     @Test
     public void testCreateCV() throws Exception {

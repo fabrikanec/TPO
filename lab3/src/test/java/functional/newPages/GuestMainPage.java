@@ -21,7 +21,7 @@ public class GuestMainPage extends MainPage {
     @CacheLookup
     public WebElement loginFormPassword;
 
-    @FindBy(xpath = "//form[@class='login-form']/div[@class='login-submit-form']/input[@type=\"submit\"]")
+    @FindBy(xpath = "//form[@class='login-form']/label[@class='login-input']/input[@type='submit']")
     @CacheLookup
     public WebElement loginFormSubmit;
 
@@ -36,7 +36,6 @@ public class GuestMainPage extends MainPage {
     @FindBy(xpath="(//a[contains(@href, '/account/connect?backurl=%2F&site=VK')])[2]")
     @CacheLookup
     public WebElement vkLogin;
-
 
     public GuestMainPage(WebDriver driver) {
         super(driver);

@@ -15,11 +15,11 @@ public class CVsChekingPage extends UserMainPage {
     @CacheLookup
     public WebElement cvs;
 
-    @FindBy(xpath = "/x:html/x:body/x:div[5]/x:div[2]/x:div[2]/x:div[1]/x:div[2]")
+    @FindBy(xpath = "/html/body/div[5]/div[2]/div[2]/div[1]/div[2]")
     @CacheLookup
     public WebElement autoupdateCV;
 
-    @FindBy(xpath = "/x:html/x:body/x:div[5]/x:div[2]/x:div[2]/x:div[1]/x:div[1]")
+    @FindBy(xpath = "/html/body/div[5]/div[2]/div[2]/div[1]/div[1]")
     @CacheLookup
     public WebElement selectCV;
 
@@ -27,9 +27,13 @@ public class CVsChekingPage extends UserMainPage {
     @CacheLookup
     public WebElement myCVs;
 
-    @FindBy(xpath = "/x:html/x:body/x:div[5]/x:div[2]/x:div[2]/x:div[2]/x:div/x:div/x:div[2]/x:span[2]/x:a")
+    @FindBy(xpath = "/html/body/div[5]/div[2]/div[2]/div[2]/div[1]/div/div[2]/span[2]/a")
     @CacheLookup
     public WebElement suitableVacant;
+
+    @FindBy(xpath = "/html/body/div[5]/div[2]/div[2]/div[2]/div[1]/div/div[2]/span[2]/a")
+    @CacheLookup
+    public WebElement orderCV;
 
     public CVsChekingPage(WebDriver driver) {
         super(driver);

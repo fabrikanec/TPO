@@ -11,7 +11,7 @@ import static org.junit.Assert.*;
 import java.util.regex.Pattern;
 import static org.apache.commons.lang3.StringUtils.join;
 
-public class changeLocate {
+public class changeLocale {
 	private Selenium selenium;
 
 	@Before
@@ -22,7 +22,7 @@ public class changeLocate {
 	}
 
 	@Test
-	public void testChangeLocate() throws Exception {
+	public void testChangeLocale() throws Exception {
 		selenium.open("/");
 		selenium.click("xpath=(//a[contains(text(),'Английский')])[2]");
 		selenium.waitForPageToLoad("30000");

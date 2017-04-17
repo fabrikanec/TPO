@@ -31,11 +31,11 @@ public class MainPage implements Page {
 
     @FindBy(xpath = "(//a[contains(text(),'Русский')])[2]")
     @CacheLookup
-    public WebElement locateRu;
+    public WebElement localeRu;
 
     @FindBy(xpath = "(//a[contains(text(),'Английский')])[2]")
     @CacheLookup
-    public WebElement locateEn;
+    public WebElement localeEn;
 
     @FindBy(xpath = "/x:html/x:body/x:div[1]/x:div[2]/x:div/x:div/x:div/x:ul[1]/x:li[6]/x:div[1]")
     @CacheLookup
@@ -65,4 +65,5 @@ public class MainPage implements Page {
     public String getURL() {
         return URL;
     }
+
 }

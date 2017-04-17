@@ -20,9 +20,10 @@ public class ProfTestPage extends CVsChekingPage {
     @CacheLookup
     public WebElement profTest;
 
-    @FindBy(xpath = "/x:html/x:body/x:div[5]/x:div[2]/x:div/x:div/x:div/x:div/x:div[1]/x:div/x:div/x:a")
+    @FindBy(xpath = "/html/body/div[5]/div[2]/div/div/div/div/div[1]/div/div/a")
     @CacheLookup
     public WebElement start;
+
 
     public ProfTestPage(WebDriver driver) {
         super(driver);

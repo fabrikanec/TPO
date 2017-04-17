@@ -26,7 +26,6 @@ public class CommonRoleTest extends JUnitTestBase {
     private GuestMainPage guestMainPage;
     private CompanyCatalogPage companyCatalogPage;
     private HelpPage helpPage;
-    private Selenium selenium;
 
     @Before
     public void initPageObjects() {
@@ -36,9 +35,7 @@ public class CommonRoleTest extends JUnitTestBase {
         companyCatalogPage = PageFactory.initElements(driver, CompanyCatalogPage.class);
         helpPage = PageFactory.initElements(driver, HelpPage.class);
         mainPage = PageFactory.initElements(driver, MainPage.class);
-        if (selenium == null) {
-            selenium = new WebDriverBackedSelenium(driver, baseUrl);
-        }
+        driver.get(mainPage.getURL());
     }
 
     /* SEARCH TESTS */
@@ -89,17 +86,28 @@ public class CommonRoleTest extends JUnitTestBase {
     /* LOCATE TESTS */
 
     @Test
-    public void testChangeLocateToEn() throws Exception {
-        driver.get(mainPage.getURL());
-        mainPage.locateEn.click();
+    public void testChangeLocaleToEn() throws Exception {
+        /*driver.get(mainPage.getURL());
+        mainPage.localeEn.click();*/
+        selenium.waitForPageToLoad("6000");
+        selenium.mouseOver("xpath=/html/body/div[1]/div[1]/div/div[2]/div/div[7]/div/div[2]/div/ul/li[1]/span/span/span");
+        selenium.waitForPageToLoad("6000");
+        selenium.click("xpath=/html/body/div[1]/div[1]/div/div[2]/div/div[7]/div/div[2]/div/ul/li[2]/a");
+        selenium.waitForPageToLoad("6000");
         assertEquals( "Search", mainPage.searchButton.getText());
     }
 
     @Test
-    public void testChangeLocateToEnToRu() throws Exception {
-        driver.get(mainPage.getURL());
-        mainPage.locateEn.click();
-        mainPage.locateRu.click();
+    public void testChangeLocaleToEnToRu() throws Exception {
+        /*driver.get(mainPage.getURL());
+        mainPage.localeEn.click();
+        mainPage.localeRu.click();*/
+        selenium.waitForPageToLoad("6000");
+        selenium.mouseOver("xpath=/html/body/div[1]/div[1]/div/div[2]/div/div[7]/div/div[2]/div/ul/li[1]/span/span/span");
+        selenium.waitForPageToLoad("6000");
+        selenium.click("xpath=/html/body/div[1]/div[1]/div/div[2]/div/div[7]/div/div[2]/div/ul/li[2]/a");
+        selenium.waitForPageToLoad("6000");
+
         assertEquals( "Поиск", mainPage.searchButton.getText());
     }
 
@@ -107,10 +115,14 @@ public class CommonRoleTest extends JUnitTestBase {
 
     @Test
     public void testCatalogCom() throws Exception {
-        driver.get(mainPage.getURL());
+        /*driver.get(mainPage.getURL());
         companyCatalogPage.company.click();
-        companyCatalogPage.companyCatalog.click();
-
+        companyCatalogPage.companyCatalog.click();*/
+        selenium.waitForPageToLoad("6000");
+        selenium.mouseOver("xpath=/html/body/div[1]/div[2]/div/div/div/ul[1]/li[6]/div[1]");
+        selenium.waitForPageToLoad("6000");
+        selenium.click("xpath=/html/body/div[1]/div[2]/div/div/div/ul[1]/li[6]/div[2]/div/ul/li[1]/a/span");
+        selenium.waitForPageToLoad("6000");
     }
 
 

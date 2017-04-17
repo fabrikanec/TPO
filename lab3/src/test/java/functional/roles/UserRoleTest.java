@@ -22,7 +22,6 @@ public class UserRoleTest extends JUnitTestBase {
     private SuiteableVacantPage suiteableVacantPage;
     private ProfTestPage profTestPage;
     private GuestMainPage mainPage;
-    private Selenium selenium;
     private LoginPage loginPage;
     private RestorePasswordPage restorePasswordPage;
 
@@ -46,7 +45,6 @@ public class UserRoleTest extends JUnitTestBase {
 
     @Test
     public void testLoginWithoutPassword() {
-        driver.get(mainPage.getURL());
         mainPage.loginFormLogin.sendKeys("lol");
         mainPage.loginFormSubmit.click();
 
@@ -56,7 +54,6 @@ public class UserRoleTest extends JUnitTestBase {
 
     @Test
     public void testLoginWithoutLogin() {
-        driver.get(mainPage.getURL());
         mainPage.loginFormPassword.sendKeys("lel");
         mainPage.loginFormSubmit.click();
 
@@ -66,7 +63,6 @@ public class UserRoleTest extends JUnitTestBase {
 
     @Test
     public void testLoginWrongCredentials() throws Exception {
-        driver.get(mainPage.getURL());
         mainPage.loginFormLogin.sendKeys("lol");
         mainPage.loginFormPassword.sendKeys("lol");
         mainPage.loginFormSubmit.click();
@@ -76,7 +72,6 @@ public class UserRoleTest extends JUnitTestBase {
 
     @Test
     public void testLoginForExistingUser() throws Exception {
-        driver.get(mainPage.getURL());
         mainPage.loginFormLogin.sendKeys("monnort@gmail.com");
         mainPage.loginFormPassword.sendKeys("kukukupopo");
         mainPage.loginFormLogin.click();
@@ -86,7 +81,6 @@ public class UserRoleTest extends JUnitTestBase {
 
     @Test
     public void testVklogin() throws Exception {
-        driver.get(mainPage.getURL());
         mainPage.vkLogin.click();
 
         //assertEquals();
@@ -95,7 +89,6 @@ public class UserRoleTest extends JUnitTestBase {
 
     @Test
     public void testRestorePassForeExistingUser() throws Exception {
-        driver.get(mainPage.getURL());
         mainPage.forgotPasswordAnchor.click();
 
         restorePasswordPage.emailInput.sendKeys("monnort@gmail.com");
@@ -107,80 +100,73 @@ public class UserRoleTest extends JUnitTestBase {
     /* TRASH */
     @Test
     public void testHelpLogin() throws Exception {
-        selenium.open("/feedback");
-        selenium.click("//li[6]/div[2]/div/ul/li[5]/a/span");
-        selenium.selectWindow("name=8866");
-        selenium.click("//a[contains(text(),'Автопоиск вакансий')]");
         selenium.waitForPageToLoad("30000");
+        selenium.mouseOver("xpath=/html/body/div[1]/div[2]/div/div/div/ul[1]/li[6]/div[1]");
+        selenium.waitForPageToLoad("10000");
+        selenium.click("xpath=/html/body/div[1]/div[2]/div/div/div/ul[1]/li[6]/div[2]/div/ul/li[4]/a");
+        selenium.waitForPageToLoad("8000");
     }
 
     @Test
     public void testProf() throws Exception {
-        selenium.open("/search/vacancy?resume=b07da8e1ff03ba331f0039ed1f7167486b526c");
-        selenium.click("//li[3]/a/span");
         selenium.waitForPageToLoad("30000");
-        selenium.click("//a[contains(@href, '/article/proforientation_promo?from=menu')]");
-        selenium.waitForPageToLoad("30000");
-        selenium.click("//a[contains(@href, 'http://hh.ru/applicant/proforientation')]");
+        selenium.mouseOver("xpath=/html/body/div[1]/div[2]/div/div/div/ul[1]/li[5]/div[1]");
+        selenium.waitForPageToLoad("10000");
+        selenium.click("xpath=/html/body/div[1]/div[2]/div/div/div/ul[1]/li[5]/div[2]/div/ul/li[4]/a/span");
+        selenium.waitForPageToLoad("8000");
+        profTestPage.start.click();
     }
 
     @Test
     public void testSuitableVacants() throws Exception {
-        selenium.open("/resume/b07da8e1ff03ba331f0039ed1f7167486b526c");
-        selenium.click("//li[3]/a/span");
         selenium.waitForPageToLoad("30000");
-        selenium.click("//div[2]/div[2]/div/div/a/span");
-        selenium.waitForPageToLoad("30000");
-        selenium.click("xpath=(//a[contains(text(),'подходящих вакансий к резюме')])[2]");
-        selenium.waitForPageToLoad("30000");
-        selenium.click("//a[contains(text(),'Junior C# Developer')]");
-        selenium.selectWindow("name=64504");
-        selenium.click("//div[@id='hypercontext']/index/div[3]/div/div/span");
+        selenium.mouseOver("xpath=/html/body/div[1]/div[2]/div/div/div/ul[1]/li[3]/div[1]");
+        selenium.waitForPageToLoad("10000");
+        selenium.click("xpath=/html/body/div[1]/div[2]/div/div/div/ul[1]/li[3]/div[2]/div/ul/li[3]/a/span[1]");
+        selenium.waitForPageToLoad("8000");
+        cVsChekingPage.suitableVacant.click();
     }
 
     @Test
     public void testOrderCV() throws Exception {
-        selenium.open("/applicant/resumes");
-        selenium.click("//li[3]/a/span");
         selenium.waitForPageToLoad("30000");
-        selenium.click("//a[contains(text(),'Заказать резюме')]");
-        selenium.waitForPageToLoad("30000");
-        selenium.click("//a[contains(text(),'Заказать резюме')]");
-        selenium.waitForPageToLoad("30000");
+        selenium.mouseOver("xpath=/html/body/div[1]/div[2]/div/div/div/ul[1]/li[5]/div[1]");
+        selenium.waitForPageToLoad("10000");
+        selenium.click("xpath=/html/body/div[1]/div[2]/div/div/div/ul[1]/li[5]/div[2]/div/ul/li[1]/a/span");
+        selenium.waitForPageToLoad("8000");
+        orderCVPage.orderCV.click();
     }
 
     @Test
-    public void testAutoUpdateAndSelectCV() throws Exception {
-        selenium.open("/applicant/resumes");
-        selenium.click("//li[3]/a/span");
-        selenium.waitForPageToLoad("30000");
-        selenium.click("//div[5]/div[2]/div[2]/div/div");
-        selenium.click("//div[5]/div[2]/div[2]/div/div");
-        selenium.click("//div[5]/div[2]/div[2]/div/div");
-        selenium.click("//div[5]/div[2]/div[2]/div/div");
-        selenium.click("//div[2]/div[2]/div/div[2]");
-        selenium.click("//div[2]/div[2]/div/div[2]");
-        selenium.click("//div[2]/div[2]/div/div[2]");
-        selenium.click("//div[2]/div[2]/div/div[2]");
+    public void testAutoUpdateCV() throws Exception {
+        driver.get(cVsChekingPage.getURL());
+        selenium.waitForPageToLoad("6000");
+        selenium.mouseOver("xpath=/html/body/div[1]/div[2]/div/div/div/ul[1]/li[3]/div[1]");
+        selenium.waitForPageToLoad("6000");
+        selenium.click("xpath=/html/body/div[1]/div[2]/div/div/div/ul[1]/li[3]/div[2]/div/ul/li[3]/a/span[1]");
+        selenium.waitForPageToLoad("6000");
+        driver.get(cVsChekingPage.getURL());
+        cVsChekingPage.autoupdateCV.click();
+    }
+
+    @Test
+    public void testSelectCV() throws Exception {
+        driver.get(cVsChekingPage.getURL());
+        selenium.waitForPageToLoad("6000");
+        selenium.mouseOver("xpath=/html/body/div[1]/div[2]/div/div/div/ul[1]/li[3]/div[1]");
+        selenium.waitForPageToLoad("6000");
+        selenium.click("xpath=/html/body/div[1]/div[2]/div/div/div/ul[1]/li[3]/div[2]/div/ul/li[3]/a/span[1]");
+        selenium.waitForPageToLoad("6000");
+        driver.get(cVsChekingPage.getURL());
+        cVsChekingPage.selectCV.click();
     }
 
     @Test
     public void testCheckCV() throws Exception {
-        driver.get(userMainPage.getURL());
-        selenium = new WebDriverBackedSelenium(driver, baseUrl);
-        selenium.waitForPageToLoad("30000");
-        selenium.mouseOver("xpath=/html/body/div[2]/div[2]/div/div/div/ul[1]/li[3]/div[1]");
-        selenium.waitForPageToLoad("30000");
-        /*selenium.mouseOver("");
-        userMainPage.resume.click();*/
-
-        //selenium.waitForPageToLoad("30000");
-        //userMainPage.resumes.click();
-        /*selenium.open("/applicant/resumes/suitable_vacancies?resume=b07da8e1ff03ba331f0039ed1f7167486b526c&published");
-        selenium.click("//li[3]/a/span");
-        selenium.waitForPageToLoad("30000");
-        selenium.click("//div[2]/div[2]/div/div/a/span");
-        selenium.waitForPageToLoad("30000");*/
+        selenium.waitForPageToLoad("6000");
+        selenium.mouseOver("xpath=/html/body/div[1]/div[2]/div/div/div/ul[1]/li[3]/div[1]");
+        selenium.waitForPageToLoad("6000");
+        selenium.click("xpath=/html/body/div[1]/div[2]/div/div/div/ul[1]/li[3]/div[2]/div/ul/li[3]/a/span[1]");
     }
 
     @Test

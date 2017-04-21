@@ -2,15 +2,19 @@ package functional.roles;
 
 import com.thoughtworks.selenium.Selenium;
 import functional.newPages.*;
+import org.junit.After;
+import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.Test;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriverBackedSelenium;
+import org.omg.CORBA.TIMEOUT;
+import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 import static functional.newPages.Page.baseUrl;
@@ -27,6 +31,11 @@ public class CommonRoleTest extends JUnitTestBase {
     private CompanyCatalogPage companyCatalogPage;
     private HelpPage helpPage;
 
+    @AfterClass
+    public  static void killDriver() {
+        driver.quit();
+    }
+
     @Before
     public void initPageObjects() {
         guestMainPage = PageFactory.initElements(driver, GuestMainPage.class);
@@ -35,7 +44,7 @@ public class CommonRoleTest extends JUnitTestBase {
         companyCatalogPage = PageFactory.initElements(driver, CompanyCatalogPage.class);
         helpPage = PageFactory.initElements(driver, HelpPage.class);
         mainPage = PageFactory.initElements(driver, MainPage.class);
-        driver.get(mainPage.getURL());
+        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
     }
 
     /* SEARCH TESTS */
@@ -93,43 +102,44 @@ public class CommonRoleTest extends JUnitTestBase {
 
     /* LOCATE TESTS */
 
-     @Test
+    @Test
     public void testChangeLocaleToEn() throws Exception {
-        /*driver.get(mainPage.getURL());
-        mainPage.localeEn.click();*/
-        selenium.waitForPageToLoad("6000");
-        selenium.mouseOver("xpath=/html/body/div[1]/div[1]/div/div[2]/div/div[7]/div/div[2]/div/ul/li[1]/span/span/span");
-        selenium.waitForPageToLoad("6000");
-        selenium.click("xpath=/html/body/div[1]/div[1]/div/div[2]/div/div[7]/div/div[2]/div/ul/li[2]/a");
-        selenium.waitForPageToLoad("6000");
-        assertEquals( "Search", mainPage.searchButton.getText());
+        WebElement locale = (new WebDriverWait(driver, 10))
+                .until((ExpectedCondition<WebElement>) d -> d.findElement(By.xpath("//div[@class='navi-cell navi-cell_lang navi-cell_right']/div[@class='navi-item navi-item_lang HH-Navi-MenuItems-Item navi-item_level-1']")));
+        WebElement changeLocale = (new WebDriverWait(driver, 10))
+                .until((ExpectedCondition<WebElement>) d -> d.findElement(By.xpath("((//ul[@class='navi-dropdown__list navi-dropdown__list_small'])[2]//li)[2]")));
+        Actions actions = new Actions(driver);
+        actions.pause(Duration.ofSeconds(1)).moveToElement(locale).click().pause(Duration.ofSeconds(1)).build().perform();
+        changeLocale.click();
+        assertEquals( "Search", driver.findElement(By.xpath("//div[@class='navi-search-button']/button")).getText());
     }
 
-     @Test
+    @Test
     public void testChangeLocaleToEnToRu() throws Exception {
-        /*driver.get(mainPage.getURL());
-        mainPage.localeEn.click();
-        mainPage.localeRu.click();*/
-         selenium.waitForPageToLoad("6000");
-         selenium.mouseOver("xpath=/html/body/div[1]/div[1]/div/div[2]/div/div[7]/div/div[2]/div/ul/li[1]/span/span/span");
-         selenium.waitForPageToLoad("6000");
-         selenium.click("xpath=/html/body/div[1]/div[1]/div/div[2]/div/div[7]/div/div[2]/div/ul/li[2]/a");
-         selenium.waitForPageToLoad("6000");
+        driver.get(mainPage.getURL());
+        WebElement locale = (new WebDriverWait(driver, 10))
+                .until((ExpectedCondition<WebElement>) d -> d.findElement(By.xpath("//div[@class='navi-cell navi-cell_lang navi-cell_right']/div[@class='navi-item navi-item_lang HH-Navi-MenuItems-Item navi-item_level-1']")));
+        WebElement changeLocale = (new WebDriverWait(driver, 10))
+                .until((ExpectedCondition<WebElement>) d -> d.findElement(By.xpath("((//ul[@class='navi-dropdown__list navi-dropdown__list_small'])[2]//li)[2]")));
+        Actions actions = new Actions(driver);
+        actions.pause(Duration.ofSeconds(1)).moveToElement(locale).click().pause(Duration.ofSeconds(1)).build().perform();
+        changeLocale.click();
 
-         selenium.waitForPageToLoad("10000");
-         selenium.mouseOver("xpath=/html/body/div[1]/div[1]/div/div[2]/div/div[7]/div/div[2]/div/ul/li[1]/span/span/span");
-         selenium.waitForPageToLoad("6000");
-         selenium.click("xpath=/html/body/div[1]/div[1]/div/div[2]/div/div[7]/div/div[2]/div/ul/li[2]/a");
-         selenium.waitForPageToLoad("6000");
+        locale = (new WebDriverWait(driver, 10))
+                .until((ExpectedCondition<WebElement>) d -> d.findElement(By.xpath("//div[@class='navi-cell navi-cell_lang navi-cell_right']/div[@class='navi-item navi-item_lang HH-Navi-MenuItems-Item navi-item_level-1']")));
+        changeLocale = (new WebDriverWait(driver, 10))
+                .until((ExpectedCondition<WebElement>) d -> d.findElement(By.xpath("((//ul[@class='navi-dropdown__list navi-dropdown__list_small'])[2]//li)[2]")));
+        actions = new Actions(driver);
+        actions.pause(Duration.ofSeconds(1)).moveToElement(locale).click().pause(Duration.ofSeconds(1)).build().perform();
+        changeLocale.click();
+        assertEquals( "Найти", driver.findElement(By.xpath("//div[@class='navi-search-button']/button")).getText());
+    }
 
-         assertEquals("Найти", mainPage.searchButton.getText());
-     }
-    
 
     @Test
     public void testCatalogCom() throws Exception {
-        /*driver.get(mainPage.getURL());
-        companyCatalogPage.company.click();
+        driver.get(mainPage.getURL());
+        /*companyCatalogPage.company.click();
         companyCatalogPage.companyCatalog.click();*/
         selenium.waitForPageToLoad("6000");
         selenium.mouseOver("xpath=/html/body/div[1]/div[2]/div/div/div/ul[1]/li[6]/div[1]");

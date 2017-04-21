@@ -29,13 +29,13 @@ public class MainPage implements Page {
     @CacheLookup
     public WebElement searchButton;
 
-    @FindBy(xpath = "(//a[contains(text(),'Русский')])[2]")
+    @FindBy(xpath = "//div[@class='navi-cell navi-cell_lang navi-cell_right']/div[@class='navi-item navi-item_lang HH-Navi-MenuItems-Item navi-item_level-1']")
     @CacheLookup
-    public WebElement localeRu;
+    public WebElement locale;
 
-    @FindBy(xpath = "(//a[contains(text(),'Английский')])[2]")
+    @FindBy(xpath = "((//ul[@class='navi-dropdown__list navi-dropdown__list_small'])[2]//li)[2]")
     @CacheLookup
-    public WebElement localeEn;
+    public WebElement changeLocale;
 
     @FindBy(xpath = "/x:html/x:body/x:div[1]/x:div[2]/x:div/x:div/x:div/x:ul[1]/x:li[6]/x:div[1]")
     @CacheLookup

@@ -4,7 +4,6 @@ package functional.newPages;
  * Created by cezar on 4/15/17.
  */
 
-import functional.oldRoles.JUnitTestBase;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;

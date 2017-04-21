@@ -19,7 +19,7 @@ public class JUnitTestSuite {
         @Override
         protected void after() {
             //WebDriverFactory.dismissAll();
-
+            JUnitTestBase.driver.close();
         }
     };
 }

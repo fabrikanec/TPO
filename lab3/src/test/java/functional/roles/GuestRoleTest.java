@@ -3,7 +3,6 @@ package functional.roles;
 import functional.newPages.*;
 import functional.newPages.LoginPage;
 import functional.newPages.RegistrationPage;
-import functional.pages.*;
 import functional.util.PropertyLoader;
 import org.junit.Before;
 import org.junit.Ignore;
@@ -11,6 +10,8 @@ import org.junit.Test;
 import org.openqa.grid.web.servlet.handler.SeleniumBasedRequest;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 
 import java.util.concurrent.TimeUnit;
@@ -81,34 +82,4 @@ public class GuestRoleTest extends JUnitTestBase {
 
         assertEquals("Пожалуйста, укажите email или телефон", registrationPage.errorString.getText());
     }
-
-    /*
-
-
-
-    @Test
-    public void testHelpUnlogin() throws Exception {
-
-        selenium.open("/");
-        selenium.click("//li[5]/div[2]/div/ul/li[2]/a/span");
-        selenium.waitForPageToLoad("30000");
-        selenium.click("xpath=(//input[@name='sendTo'])[3]");
-        selenium.click("xpath=(//input[@name='sendTo'])[2]");
-        selenium.click("xpath=(//input[@name='sendTo'])[5]");
-        selenium.click("xpath=(//input[@name='sendTo'])[4]");
-        selenium.click("//input[@name='sendTo']");
-
-    //assertEquals();
-    @Test
-    public void testCreateCVUnLogin() throws Exception {
-        seleniumpen("/");
-        selenium.click("//li[3]/div[2]/div/ul/li/a/span");
-        selenium.waitForPageToLoad("30000");
-        selenium.click("//input[@value='Войти в личный кабинет']");
-        selenium.waitForPageToLoad("30000");
-
-
-        //assertEquals();
-    }
-    */
 }

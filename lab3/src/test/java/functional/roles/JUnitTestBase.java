@@ -19,7 +19,7 @@ import static functional.newPages.Page.baseUrl;
  */
 public class JUnitTestBase {
     protected static Capabilities capabilities;
-    protected WebDriver driver;
+    protected static WebDriver driver;
     protected Selenium selenium;
     @ClassRule
     public static ExternalResource webDriverProperties = new ExternalResource() {
@@ -36,10 +36,10 @@ public class JUnitTestBase {
             //WebDriverPool dp = new ThreadLocalSingleWebDriverPool();
             //driver = dp.getDriver(gridHubUrl, capabilities);
             System.setProperty("webdriver.gecko.driver", "/home/cezar/Downloads/geckodriver");
-            System.setProperty("webdriver.chrome.driver", "C:\\Users\\vladimirg\\chromedriver.exe");
+            System.setProperty("webdriver.chrome.driver", "/home/izoomko/wrk/3grade/testing/chromedriver");
             if (driver == null) {
-                //driver = new ChromeDriver();
-                driver = new FirefoxDriver();
+                driver = new ChromeDriver();
+                //driver = new FirefoxDriver();
                 driver.manage().window().maximize();
             }
             if (selenium == null) {

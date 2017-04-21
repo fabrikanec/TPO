@@ -3,7 +3,6 @@ package functional.roles;
 import functional.newPages.*;
 import functional.newPages.LoginPage;
 import functional.newPages.RegistrationPage;
-import functional.pages.*;
 import functional.util.PropertyLoader;
 import org.junit.Before;
 import org.junit.Ignore;
@@ -80,6 +79,15 @@ public class GuestRoleTest extends JUnitTestBase {
         registrationPage.submitForm.click();
 
         assertEquals("Пожалуйста, укажите email или телефон", registrationPage.errorString.getText());
+    }
+
+    @Ignore
+    @Test
+    public void testVklogin() throws Exception {
+        driver.get(MainPage.baseUrl);
+        guestMainPage.vkLogin.click();
+        selenium.waitForPageToLoad("1000");
+        assertEquals("https://oauth.vk.com/authorize?display=mobile&response_type=code&client_id=3295164&redirect_uri=https%3A%2F%2Fhhid.ru%2Foauth2%2Fcode&scope=4194304&state=token%3DUW9Rqq8c27f4HP8r4ohifD91ks2bYS6%21HFyPO9oBpnlleXVcL87RDb9Snccq38DReG59U%21fhp7hRsnYSRdXLtVIBva8W%26reg%3Dhttps%253A%252F%252Fspb.hh.ru%252Faccount%252Fconnect%252Fregister%26fail%3Dhttps%253A%252F%252Fspb.hh.ru%252Faccount%252Fconnect%252Fresult%253Ffail%253Dtrue%26login%3Dhttps%253A%252F%252Fspb.hh.ru%252Faccount%252Fconnect%252Fresult%26system%3DVK%26mergeOAuth%3Dfalse", driver.getCurrentUrl());
     }
 
     /*

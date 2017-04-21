@@ -1,6 +1,5 @@
 package functional.newPages;
 
-import functional.oldRoles.JUnitTestBase;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
@@ -21,7 +20,7 @@ public class GuestMainPage extends MainPage {
     @CacheLookup
     public WebElement loginFormPassword;
 
-    @FindBy(xpath = "//form[@class='login-form']/label[@class='login-input']/input[@type='submit']")
+    @FindBy(xpath = "/html/body/div[5]/div/div[3]/div/div/div[2]/form/div[3]/input")
     @CacheLookup
     public WebElement loginFormSubmit;
 
@@ -33,7 +32,7 @@ public class GuestMainPage extends MainPage {
     @CacheLookup
     public WebElement publishCV;
 
-    @FindBy(xpath="(//a[contains(@href, '/account/connect?backurl=%2F&site=VK')])[2]")
+    @FindBy(xpath="/html/body/div[5]/div/div[3]/div/div/div[2]/p/span[4]/a")
     @CacheLookup
     public WebElement vkLogin;
 

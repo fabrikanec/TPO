@@ -20,7 +20,7 @@ import static functional.newPages.Page.baseUrl;
  */
 public class JUnitTestBase {
     protected static Capabilities capabilities;
-    protected WebDriver driver;
+    protected static WebDriver driver;
     protected Selenium selenium;
     @ClassRule
     public static ExternalResource webDriverProperties = new ExternalResource() {

@@ -2,6 +2,7 @@ package functional.roles;
 
 import com.thoughtworks.selenium.Selenium;
 import functional.util.PropertyLoader;
+import functional.util.WebDriverFactory;
 import org.junit.ClassRule;
 import org.junit.Rule;
 import org.junit.rules.ExternalResource;
@@ -36,12 +37,9 @@ public class JUnitTestBase {
             //WebDriverPool dp = new ThreadLocalSingleWebDriverPool();
             //driver = dp.getDriver(gridHubUrl, capabilities);
             System.setProperty("webdriver.gecko.driver", "/home/cezar/Downloads/geckodriver");
-            System.setProperty("webdriver.chrome.driver", "C:\\Users\\vladimirg\\chromedriver.exe");
-            if (driver == null) {
-                //driver = new ChromeDriver();
-                driver = new FirefoxDriver();
-                driver.manage().window().maximize();
-            }
+            //System.setProperty("webdriver.chrome.driver", "C:\\Users\\vladimirg\\chromedriver.exe");
+            driver = WebDriverFactory.getFirefoxDriver();
+            driver.manage().window().maximize();
             if (selenium == null) {
                 selenium = new WebDriverBackedSelenium(driver, baseUrl);
             }

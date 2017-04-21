@@ -39,7 +39,7 @@ public class RegistrationPage extends GuestMainPage {
     @CacheLookup
     public WebElement submitForm;
 
-    @FindBy(xpath = "/html/body/div[1]/div/div[2]/div/div/form/div[4]/span")
+    @FindBy(xpath = "//span[@class='account-form-error']")
     @CacheLookup
     public WebElement errorString;
 

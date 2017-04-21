@@ -3,6 +3,7 @@ package functional.roles;
 import com.thoughtworks.selenium.Selenium;
 import functional.newPages.*;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriverBackedSelenium;
@@ -36,110 +37,144 @@ public class UserRoleTest extends JUnitTestBase {
         profTestPage = PageFactory.initElements(driver, ProfTestPage.class);
         restorePasswordPage = PageFactory.initElements(driver, RestorePasswordPage.class);
         loginPage = PageFactory.initElements(driver, LoginPage.class);
-
-        driver.get(mainPage.getURL());
-        mainPage.loginFormLogin.sendKeys("monnort@gmail.com");
-        mainPage.loginFormPassword.sendKeys("kukukupopo");
-        mainPage.loginFormLogin.sendKeys(Keys.ENTER);
-        selenium.waitForPageToLoad("30000");
     }
 
     @Test
     public void testLoginWithoutPassword() {
+        driver.get(MainPage.baseUrl);
         mainPage.loginFormLogin.sendKeys("lol");
         mainPage.loginFormSubmit.click();
+        selenium.waitForPageToLoad("6000");
 
-        assertEquals( "Неправильные данные для входа. Пожалуйста, попробуйте снова.",
-                loginPage.wrongCredentialsError.getText());
+        assertEquals( "https://spb.hh.ru/account/login?state=mismatch&backurl=%2F&login=lol",
+                driver.getCurrentUrl());
     }
 
     @Test
     public void testLoginWithoutLogin() {
+        driver.get(MainPage.baseUrl);
         mainPage.loginFormPassword.sendKeys("lel");
         mainPage.loginFormSubmit.click();
 
-        assertEquals( "Неправильные данные для входа. Пожалуйста, попробуйте снова.",
-                loginPage.wrongCredentialsError.getText());
+        selenium.waitForPageToLoad("6000");
+
+        assertEquals( "https://spb.hh.ru/",
+                driver.getCurrentUrl());
     }
 
     @Test
     public void testLoginWrongCredentials() throws Exception {
+        driver.get(MainPage.baseUrl);
         mainPage.loginFormLogin.sendKeys("lol");
         mainPage.loginFormPassword.sendKeys("lol");
         mainPage.loginFormSubmit.click();
-        //assertEquals();
+        selenium.waitForPageToLoad("6000");
+        assertEquals("https://spb.hh.ru/account/login?state=mismatch&backurl=%2F&login=lol", driver.getCurrentUrl());
     }
 
 
     @Test
     public void testLoginForExistingUser() throws Exception {
+        driver.get(MainPage.baseUrl);
         mainPage.loginFormLogin.sendKeys("monnort@gmail.com");
         mainPage.loginFormPassword.sendKeys("kukukupopo");
-        mainPage.loginFormLogin.click();
+        mainPage.loginFormSubmit.click();
 
-        //assertEquals();
-    }
-
-    @Test
-    public void testVklogin() throws Exception {
-        mainPage.vkLogin.click();
-
-        //assertEquals();
+        selenium.waitForPageToLoad("6000");
+        assertEquals("https://spb.hh.ru/", driver.getCurrentUrl());
     }
 
 
+    @Ignore
     @Test
     public void testRestorePassForeExistingUser() throws Exception {
+        driver.get(MainPage.baseUrl);
         mainPage.forgotPasswordAnchor.click();
 
         restorePasswordPage.emailInput.sendKeys("monnort@gmail.com");
         restorePasswordPage.restorePasswordButton.click();
 
-        //assertEquals();
+        selenium.waitForPageToLoad("6000");
+        assertEquals("https://spb.hh.ru/applicant/resumes", driver.getCurrentUrl());
     }
 
-    /* TRASH */
     @Test
     public void testHelpLogin() throws Exception {
+        driver.get(mainPage.getURL());
+        mainPage.loginFormLogin.sendKeys("monnort@gmail.com");
+        mainPage.loginFormPassword.sendKeys("kukukupopo");
+        mainPage.loginFormLogin.sendKeys(Keys.ENTER);
+        selenium.waitForPageToLoad("30000");
+
         selenium.waitForPageToLoad("30000");
         selenium.mouseOver("xpath=/html/body/div[1]/div[2]/div/div/div/ul[1]/li[6]/div[1]");
         selenium.waitForPageToLoad("10000");
         selenium.click("xpath=/html/body/div[1]/div[2]/div/div/div/ul[1]/li[6]/div[2]/div/ul/li[4]/a");
-        selenium.waitForPageToLoad("8000");
+        selenium.waitForPageToLoad("6000");
+        assertEquals("https://spb.hh.ru/", driver.getCurrentUrl());
     }
 
     @Test
     public void testProf() throws Exception {
+        driver.get(mainPage.getURL());
+        mainPage.loginFormLogin.sendKeys("monnort@gmail.com");
+        mainPage.loginFormPassword.sendKeys("kukukupopo");
+        mainPage.loginFormLogin.sendKeys(Keys.ENTER);
+        selenium.waitForPageToLoad("30000");
+
         selenium.waitForPageToLoad("30000");
         selenium.mouseOver("xpath=/html/body/div[1]/div[2]/div/div/div/ul[1]/li[5]/div[1]");
         selenium.waitForPageToLoad("10000");
         selenium.click("xpath=/html/body/div[1]/div[2]/div/div/div/ul[1]/li[5]/div[2]/div/ul/li[4]/a/span");
         selenium.waitForPageToLoad("8000");
         profTestPage.start.click();
+        selenium.waitForPageToLoad("6000");
+        assertEquals("https://spb.hh.ru/article/proforientation_promo?from=menu", driver.getCurrentUrl());
     }
 
     @Test
     public void testSuitableVacants() throws Exception {
+        driver.get(mainPage.getURL());
+        mainPage.loginFormLogin.sendKeys("monnort@gmail.com");
+        mainPage.loginFormPassword.sendKeys("kukukupopo");
+        mainPage.loginFormLogin.sendKeys(Keys.ENTER);
         selenium.waitForPageToLoad("30000");
-        selenium.mouseOver("xpath=/html/body/div[1]/div[2]/div/div/div/ul[1]/li[3]/div[1]");
+
+        selenium.waitForPageToLoad("30000");
+        selenium.mouseOver("xpath=/html/body/div[1]/div[2]/div/div/div/ul[1]/li[4]/div[1]");
         selenium.waitForPageToLoad("10000");
-        selenium.click("xpath=/html/body/div[1]/div[2]/div/div/div/ul[1]/li[3]/div[2]/div/ul/li[3]/a/span[1]");
+        selenium.click("xpath=/html/body/div[1]/div[2]/div/div/div/ul[1]/li[4]/div[2]/div/ul/li[2]/a/span");
         selenium.waitForPageToLoad("8000");
-        cVsChekingPage.suitableVacant.click();
+        assertEquals("https://spb.hh.ru/applicant/autosearch.xml", driver.getCurrentUrl());
     }
 
     @Test
     public void testOrderCV() throws Exception {
+        driver.get(mainPage.getURL());
+        mainPage.loginFormLogin.sendKeys("monnort@gmail.com");
+        mainPage.loginFormPassword.sendKeys("kukukupopo");
+        mainPage.loginFormLogin.sendKeys(Keys.ENTER);
+        selenium.waitForPageToLoad("30000");
+
         selenium.waitForPageToLoad("30000");
         selenium.mouseOver("xpath=/html/body/div[1]/div[2]/div/div/div/ul[1]/li[5]/div[1]");
         selenium.waitForPageToLoad("10000");
         selenium.click("xpath=/html/body/div[1]/div[2]/div/div/div/ul[1]/li[5]/div[2]/div/ul/li[1]/a/span");
         selenium.waitForPageToLoad("8000");
         orderCVPage.orderCV.click();
+        selenium.waitForPageToLoad("6000");
+        assertEquals("https://spb.hh.ru/applicant/complete_resume/payment", driver.getCurrentUrl());
     }
 
+    @Ignore
     @Test
     public void testAutoUpdateCV() throws Exception {
+        driver.get(mainPage.getURL());
+        mainPage.loginFormLogin.sendKeys("monnort@gmail.com");
+        mainPage.loginFormPassword.sendKeys("kukukupopo");
+        mainPage.loginFormLogin.sendKeys(Keys.ENTER);
+        selenium.waitForPageToLoad("30000");
+
         driver.get(cVsChekingPage.getURL());
         selenium.waitForPageToLoad("6000");
         selenium.mouseOver("xpath=/html/body/div[1]/div[2]/div/div/div/ul[1]/li[3]/div[1]");
@@ -148,10 +183,19 @@ public class UserRoleTest extends JUnitTestBase {
         selenium.waitForPageToLoad("6000");
         driver.get(cVsChekingPage.getURL());
         cVsChekingPage.autoupdateCV.click();
+        selenium.waitForPageToLoad("6000");
+        assertEquals("https://spb.hh.ru/applicant/resumes", driver.getCurrentUrl());
     }
 
+    @Ignore
     @Test
     public void testSelectCV() throws Exception {
+        driver.get(mainPage.getURL());
+        mainPage.loginFormLogin.sendKeys("monnort@gmail.com");
+        mainPage.loginFormPassword.sendKeys("kukukupopo");
+        mainPage.loginFormLogin.sendKeys(Keys.ENTER);
+        selenium.waitForPageToLoad("30000");
+
         driver.get(cVsChekingPage.getURL());
         selenium.waitForPageToLoad("6000");
         selenium.mouseOver("xpath=/html/body/div[1]/div[2]/div/div/div/ul[1]/li[3]/div[1]");
@@ -160,18 +204,33 @@ public class UserRoleTest extends JUnitTestBase {
         selenium.waitForPageToLoad("6000");
         driver.get(cVsChekingPage.getURL());
         cVsChekingPage.selectCV.click();
+        selenium.waitForPageToLoad("6000");
+        assertEquals("https://spb.hh.ru/applicant/resumes", driver.getCurrentUrl());
     }
 
     @Test
     public void testCheckCV() throws Exception {
-        selenium.waitForPageToLoad("6000");
+        driver.get(mainPage.getURL());
+        mainPage.loginFormLogin.sendKeys("monnort@gmail.com");
+        mainPage.loginFormPassword.sendKeys("kukukupopo");
+        mainPage.loginFormLogin.sendKeys(Keys.ENTER);
+        selenium.waitForPageToLoad("30000");
+
         selenium.mouseOver("xpath=/html/body/div[1]/div[2]/div/div/div/ul[1]/li[3]/div[1]");
         selenium.waitForPageToLoad("6000");
         selenium.click("xpath=/html/body/div[1]/div[2]/div/div/div/ul[1]/li[3]/div[2]/div/ul/li[3]/a/span[1]");
+        selenium.waitForPageToLoad("6000");
+        assertEquals("https://spb.hh.ru/applicant/resumes", driver.getCurrentUrl());
     }
 
     @Test
     public void testChangeSettings() throws Exception {
+        driver.get(mainPage.getURL());
+        mainPage.loginFormLogin.sendKeys("monnort@gmail.com");
+        mainPage.loginFormPassword.sendKeys("kukukupopo");
+        mainPage.loginFormLogin.sendKeys(Keys.ENTER);
+        selenium.waitForPageToLoad("30000");
+
         selenium.waitForPageToLoad("30000");
         selenium.mouseOver("xpath=/html/body/div[1]/div[2]/div/div/div/ul[2]/li/div[1]/span");
         selenium.waitForPageToLoad("30000");
@@ -182,6 +241,12 @@ public class UserRoleTest extends JUnitTestBase {
 
     @Test
     public void testCheckInvites() throws Exception {
+        driver.get(mainPage.getURL());
+        mainPage.loginFormLogin.sendKeys("monnort@gmail.com");
+        mainPage.loginFormPassword.sendKeys("kukukupopo");
+        mainPage.loginFormLogin.sendKeys(Keys.ENTER);
+        selenium.waitForPageToLoad("30000");
+
         selenium.waitForPageToLoad("30000");
         selenium.mouseOver("xpath=/html/body/div[1]/div[2]/div/div/div/ul[1]/li[3]/div[1]");
         selenium.waitForPageToLoad("30000");
@@ -193,54 +258,15 @@ public class UserRoleTest extends JUnitTestBase {
 
     @Test
     public void testCreateCV() throws Exception {
+        driver.get(mainPage.getURL());
+        mainPage.loginFormLogin.sendKeys("monnort@gmail.com");
+        mainPage.loginFormPassword.sendKeys("kukukupopo");
+        mainPage.loginFormLogin.sendKeys(Keys.ENTER);
+        selenium.waitForPageToLoad("30000");
+
         selenium.open("/applicant/resumes");
-        selenium.click("//li[3]/div[2]/div/ul/li/a/span");
+        selenium.click("xpath=/html/body/div[5]/div[2]/div[2]/div[1]/a");
         selenium.waitForPageToLoad("30000");
-        selenium.click("//a[contains(@href, '/applicant/resumes/edit/personal?resume=')]");
-        selenium.waitForPageToLoad("30000");
-        selenium.type("//input[@name='middleName.string']", "Kok");
-        selenium.select("//span/select", "label=1");
-        selenium.select("//span[2]/select", "label=января");
-        selenium.select("//span[3]/select", "label=2003");
-        selenium.click("//option[@value='2003']");
-        selenium.click("//input[@name='gender.string']");
-        selenium.type("xpath=(//input[@value=''])[5]", "Ва");
-        selenium.click("//div[7]/ul/li");
-        selenium.click("//input[@value='Сохранить']");
-        selenium.waitForPageToLoad("30000");
-        selenium.click("//div[4]/div/div/div/div/div/div/a/span");
-        selenium.waitForPageToLoad("30000");
-        selenium.type("//input[@name='title.string']", "Учредитель");
-        selenium.click("//input[@type='checkbox']");
-        selenium.click("//label/span");
-        selenium.click("xpath=(//input[@name='specialization.string'])[6]");
-        selenium.click("//div[6]/label/span");
-        selenium.type("//input[@name='title.string']", "Учредительство");
-        selenium.click("//input[@value='Сохранить']");
-        selenium.waitForPageToLoad("30000");
-        selenium.click("//div[4]/div/div/div/div/div[2]/a/span");
-        selenium.waitForPageToLoad("30000");
-        selenium.type("xpath=(//input[@value=''])[4]", "Опыт");
-        selenium.click("//div[7]/ul/li");
-        selenium.click("xpath=(//button[@type='button'])[19]");
-        selenium.click("//div[2]/div/form/div");
-        selenium.type("//textarea[@name='skills.string']", "Умный");
-        selenium.click("//input[@value='Сохранить']");
-        selenium.waitForPageToLoad("30000");
-        selenium.click("//a[contains(@href, '/applicant/resumes/edit/contacts?resume=b07da8e1ff03ba331f0039ed1f7167486b526c')]");
-        selenium.waitForPageToLoad("30000");
-        selenium.type("//input[@name='phone.formatted']", "+79996666666");
-        selenium.click("//input[@value='Сохранить']");
-        selenium.waitForPageToLoad("30000");
-        selenium.click("//div[5]/a/span");
-        selenium.waitForPageToLoad("30000");
-        selenium.type("//input[@name='primaryEducation.name']", "МГУ");
-        selenium.type("//input[@name='primaryEducation.organization']", "КТиу");
-        selenium.type("//input[@name='primaryEducation.result']", "Учредитель");
-        selenium.select("//select[@name='primaryEducation.year']", "label=2010");
-        selenium.click("//input[@value='Сохранить']");
-        selenium.waitForPageToLoad("30000");
-        selenium.click("//form/span");
-        selenium.waitForPageToLoad("30000");
+        assertEquals(driver.getCurrentUrl(), "https://spb.hh.ru/applicant/resumes/view?resume=");
     }
 }
